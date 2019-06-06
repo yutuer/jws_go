@@ -1,0 +1,125 @@
+[
+  {
+    "name": "ShowBattleArmy",
+    "title": "传输战阵信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "BattleArmysInfo",
+          "BattleArmyInfo[]",
+          "所有战阵信息",
+          "battle_army_info"
+        ]
+      ]
+    },
+    "objects": [
+      {
+        "name": "BattleArmyInfo",
+        "params": [
+          [
+            "BattleArmyID",
+            "long",
+            "战阵ID",
+            "battle_army_id"
+          ],
+          [
+            "BattleArmyAvatarID",
+            "long",
+            "战阵武将",
+            "battle_army_avatarID"
+          ],
+          [
+            "BattleArmyLev",
+            "long",
+            "战阵等级",
+            "battle_army_lev"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BattleArmyLevUp",
+    "title": "战阵升级／解锁协议",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "BattleArmyID",
+          "long",
+          "战阵ID",
+          "battle_army_id"
+        ],
+        [
+          "CurrBattleArmyLevel",
+          "long",
+          "升级前显示的战阵等级",
+          "curr_battle_army_lev"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "BattleArmyID",
+          "long",
+          "战阵ID",
+          "battle_army_id"
+        ],
+        [
+          "CurrBattleArmyLevel",
+          "long",
+          "升级后显示的战阵等级",
+          "curr_battle_army_lev"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "BattleArmyChoiceAvatarID",
+    "title": "选择武将",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "BattleArmyID",
+          "long",
+          "战阵ID",
+          "battle_army_id"
+        ],
+        [
+          "CurrBattleArmyAvatarID",
+          "long",
+          "选择的武将ID",
+          "curr_battle_army_avatarID"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "BattleArmyID",
+          "long",
+          "战阵ID",
+          "battle_army_id"
+        ],
+        [
+          "CurrBattleArmyAvatarID",
+          "long",
+          "选择武将后战阵武将ID",
+          "curr_battle_army_avatarID"
+        ]
+      ]
+    }
+  }
+]

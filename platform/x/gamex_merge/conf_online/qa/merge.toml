@@ -1,0 +1,36 @@
+[MergeCfg]
+
+etcd_endpoint = ["http://10.222.1.4:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a6k"
+output_path = "/opt/supervisor/log"
+
+Gid=1
+
+# 要被merge的两个shard以及DB qa7
+ARedis="10.222.3.10:6379"
+ARedisDB=19
+ARedisDBAuth=""
+ARedisRankDB=29
+ARedisRankDBAuth=""
+AShardId=19
+
+# qa 8
+BRedis="10.222.3.10:6379"
+BRedisDB=20
+BRedisDBAuth=""
+BRedisRankDB=30
+BRedisRankDBAuth=""
+BShardId=20
+
+# merge后的shard以及DB qa7
+ResRedis="10.222.3.10:6379"
+ResRedisDB=21
+ResRedisDBAuth=""
+ResRedisRank="10.222.3.10:6379"
+ResRedisRankDB=31
+ResRedisRankDBAuth=""
+ResShardId=19 # 此必须是AShardId或BShardId其中之一
+
+DelAccountCorpLvl=30 # 角色多级之下，可能删除， 要求30
+DelAccountNotLoginMin=10080 # 角色多少分钟未登录，可能删除，要求7天=10080，方便qa测试是用p.LogoutTime+p.DebugAbsoluteTime

@@ -1,0 +1,41 @@
+ssh_key_name: timesking-awscn
+aws_region: cn-north-1
+
+#sshuser: ubuntu
+#ami_id: ami-9eaa1cf6
+sshuser: ec2-user
+ami_id: ami-bcc45885
+
+instance_type: t2.large
+vpc_id: vpc-4bdccd29
+subnet_id: subnet-dedbcabc
+#slave_count: 4
+cidr_ip: 172.31.0.0/16
+#注意这里格式是比较严格的！可能是因为Auth程序的问题，后面多个`/`都不行
+#test_host: "http://54.223.176.227:8081"
+#test_host: "http://54.223.199.238:8081"
+#testfile: app/auth_test.py
+
+
+#压测Chat
+#slave_count: 8
+#cidr_ip: 172.31.0.0/16
+#test_host: "ws://54.223.36.213:10010"
+#testfile: chatapp/chattownbots.py
+
+
+##role botx, outtemp user 只拥有tigames-dev下的文件下载权限
+aws_s3_setup_bucket: tigames-dev
+aws_region: cn-north-1
+aws_access_key: AKIAOHQYOP2O4WHUDOGA
+aws_secret_key: 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
+botx_tar_gz: botx.tar.gz
+
+botx_speed_factor: 10
+botx_target_gamex_gate: "54.223.60.135:8671"
+botx_target_gate_rpc: "54.223.60.135:8672"
+
+slave_count: 5
+cidr_ip: 172.31.0.0/16
+test_host: "54.223.60.135:8671#54.223.60.135:8081"
+testfile: gamex/dismbots.py

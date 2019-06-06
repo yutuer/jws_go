@@ -1,0 +1,47 @@
+{% set hostip = ansible_eth0.ipv4.address %}
+{% set etcdkey = item.key %}
+{% set etcdvalue = item.value %}
+
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="{{etcdvalue.run_mode}}"
+
+# 服务监听地址需要完整的内网地址
+publicip="{{ hostip }}"
+publicport={{etcdvalue.publicport}}
+internal_http_port = 40077
+
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_endpoint={{etcdvalue.etcd_endpoint}}
+etcd_root="{{etcdvalue.etcd_root}}"
+
+# db的 redis服务地址
+db_redis="127.0.0.1:6379"
+db_redis_db=8
+db_redis_Auth=""
+db_key_etcd_path="CrossService/Common/dbs"
+
+# 服务发现的redis服务地址
+discover_redis="127.0.0.1:6379"
+discover_redis_db=7
+discover_redis_Auth=""
+discover_key_etcd_path="Discover/dbs"
+
+
+#大区号
+gid={{etcdvalue.gid}}
+
+#Group参数
+shard_range=[{{etcdvalue.shard_range}}]
+exclusion_num={{etcdvalue.exclusion_num}}
+
+#sentry
+DSN = {{etcdvalue.DSN}}
+
+#ip_filter 例 ["",""]
+ip_filter={{etcdvalue.ip_filter}}

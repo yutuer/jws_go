@@ -1,0 +1,14 @@
+namespace multiplayMsg;
+
+///[RPC]获取奖励 resp
+table GetGameRewardsRsp {
+    ///是否双倍(0-否 1-是)
+    IsDouble   : int;
+    ///是否使用HC双倍(0-否 1-是)
+    IsUseHc    : int;
+    ///奖励ID列表
+    Rewards    : [string];
+    ///奖励数量列表(已做双倍四倍处理)
+    Counts     : [uint];
+}
+root_type GetGameRewardsRsp;

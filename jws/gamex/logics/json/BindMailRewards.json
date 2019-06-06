@@ -1,0 +1,22 @@
+[
+  {
+    "name": "BindMailRewards",
+    "title": "客户端绑定邮箱可以发奖",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ActivityRewardID",
+          "long",
+          "活动id",
+          "ac_rw_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  }
+]

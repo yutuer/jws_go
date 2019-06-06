@@ -1,0 +1,36 @@
+[
+  {
+    "name": "StartHeroDiffFight",
+    "title": "开始出奇制胜战斗",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "OverHeroDiffFight",
+    "title": "出奇制胜战斗结束",
+    "path": "Attr",
+    "comment": "",
+    "cheat": true,
+    "req": {
+      "params": [
+        [
+          "Score",
+          "long",
+          "分数",
+          "score"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  }
+]

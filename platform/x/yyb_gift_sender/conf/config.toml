@@ -1,0 +1,42 @@
+[CommonConfig]
+#发货URL
+GiftUrl="/ticore/yyb/gift"
+ShardUrl="/ticore/yyb/shard"
+
+#Host
+Host="127.0.0.1:8888"
+
+#Appkey and AppID
+Appkey="4ikIJ8wzQCUFXIdV"
+AppID="1105027816"
+
+etcd_root = "/a4k"
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+
+#应用宝充值的服务器列表
+recharge_etcd_root = "/a4k/0"
+
+GiftMongoDBUrl = "127.0.0.1"
+MailMongoDBUrl = "127.0.0.1"
+AuthMongoDBUrl = "127.0.0.1"
+
+
+GiftDBName = "YYBGift"
+MailDBName = "LocalMail"
+AuthDBName = "AuthDB"
+DeviceSuffix="@32@quick.com"
+
+dynamo_region="cn-north-1"
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+dynamo_db_Device="LocalDevice"
+dynamo_db_Name="LocalName"
+dynamo_db_UserInfo="LocalUserInfo"
+dynamo_db_GM="LocalGM"
+
+db = "DynamoDB"
+
+
+

@@ -1,0 +1,15 @@
+{
+  "entry": {
+    "index": "./index.js"
+  },
+  "dependencies": {
+    "antd": "*"
+  },
+  "devDependencies": {
+    "antd-bin": "0.x"
+  },
+  "scripts": {
+    "dev": "antd server",
+    "build": "antd build"
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "name": "BuyItem",
+    "title": "购买部分道具",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "PropID",
+          "string",
+          "想要购买的物品ID",
+          "prop_id"
+        ],
+        [
+          "PropCount",
+          "long",
+          "想要购买的物品数量",
+          "prop_c"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  }
+]

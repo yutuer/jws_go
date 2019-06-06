@@ -1,0 +1,4 @@
+include "fenghuo.fbs";
+namespace fenghuomsg;
+
+

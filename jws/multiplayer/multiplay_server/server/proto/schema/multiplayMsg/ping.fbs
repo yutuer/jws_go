@@ -1,0 +1,10 @@
+namespace multiplayMsg;
+
+// multi -> client 战斗信息
+
+table Ping {
+    time: long;
+    acid : string;
+}
+
+root_type Ping;

@@ -1,0 +1,9 @@
+// ser->cli, 服务广播消息
+namespace gen;
+
+table BroadCastMsg {
+  typ: string;
+  msg: string;
+}
+
+root_type BroadCastMsg;

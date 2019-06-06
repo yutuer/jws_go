@@ -1,0 +1,10 @@
+// cli->ser, 本人退出房间时发
+// ser->cli, 收到其他人退出房间的通告
+namespace gen;
+
+table UnRegNotify {
+  account_id: string;
+  name: string;
+}
+
+root_type UnRegNotify;

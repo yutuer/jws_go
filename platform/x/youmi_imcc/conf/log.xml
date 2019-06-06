@@ -1,0 +1,11 @@
+<seelog>
+    <outputs>
+        <filter levels="trace,debug,info,error,critical">
+            <console formatid="common"/>
+            <!--<file formatid="common" path="./log/log.log"/>-->
+        </filter>
+    </outputs>
+    <formats>
+        <format id="common"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+    </formats>
+</seelog>

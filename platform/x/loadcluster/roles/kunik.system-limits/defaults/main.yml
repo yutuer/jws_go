@@ -1,0 +1,13 @@
+system_limits:
+  ulimits:
+    - 'root soft nofile 100000'
+    - 'root hard nofile 100000'
+    - '* soft nofile 100000'
+    - '* hard nofile 100000'
+  sysctl:
+    - { name: 'net.ipv4.tcp_tw_recycle',      value: '1' }
+    - { name: 'net.ipv4.tcp_tw_reuse',        value: '1' }
+    - { name: 'net.ipv4.tcp_fin_timeout',     value: '10' }
+    - { name: 'net.ipv4.ip_local_port_range', value: '10000 65000' }
+    - { name: 'fs.file-max',                  value: '100000' }
+    - { name: 'vm.swappiness',                value: '10' }

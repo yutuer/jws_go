@@ -1,0 +1,73 @@
+{
+  "Table": {
+    "GlobalSecondaryIndexes": [
+      {
+        "IndexSizeBytes": 1402162, 
+        "IndexName": "uid-tistatus-index", 
+        "Projection": {
+          "ProjectionType": "INCLUDE", 
+          "NonKeyAttributes": [
+            "order_no", 
+            "tistatus", 
+            "game_order", 
+            "amount", 
+            "uid"
+          ]
+        }, 
+        "IndexStatus": "ACTIVE", 
+        "ProvisionedThroughput": {
+          "NumberOfDecreasesToday": 0, 
+          "WriteCapacityUnits": 50, 
+          "LastIncreaseDateTime": 1476839642.418, 
+          "ReadCapacityUnits": 50, 
+          "LastDecreaseDateTime": 1476426548.197
+        }, 
+        "KeySchema": [
+          {
+            "KeyType": "HASH", 
+            "AttributeName": "uid"
+          }, 
+          {
+            "KeyType": "RANGE", 
+            "AttributeName": "tistatus"
+          }
+        ], 
+        "IndexArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/AndroidPay/index/uid-tistatus-index", 
+        "ItemCount": 14152
+      }
+    ], 
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "order_no", 
+        "AttributeType": "S"
+      }, 
+      {
+        "AttributeName": "tistatus", 
+        "AttributeType": "S"
+      }, 
+      {
+        "AttributeName": "uid", 
+        "AttributeType": "S"
+      }
+    ], 
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/AndroidPay", 
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0, 
+      "WriteCapacityUnits": 50, 
+      "LastIncreaseDateTime": 1476839642.405, 
+      "ReadCapacityUnits": 50, 
+      "LastDecreaseDateTime": 1476426548.206
+    }, 
+    "TableSizeBytes": 7036881, 
+    "TableName": "AndroidPay", 
+    "TableStatus": "ACTIVE", 
+    "KeySchema": [
+      {
+        "KeyType": "HASH", 
+        "AttributeName": "order_no"
+      }
+    ], 
+    "ItemCount": 14152, 
+    "CreationDateTime": 1449294261.058
+  }
+}

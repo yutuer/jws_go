@@ -1,0 +1,12 @@
+package protogen;
+
+import "common.proto";
+
+message GetBagInfoReq {
+    required Req Req = 1;
+}
+
+message GetBagInfoResp {
+    required Resp Resp = 1;
+    repeated string ItemId = 2;
+}

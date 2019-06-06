@@ -1,0 +1,29 @@
+{% set etcdkey = item.key %}
+{% set etcdvalue = item.value %}
+
+
+
+
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="dev"
+
+# 游戏同步服务地址 需要完整的公网地址
+listen=":10012"
+publicip = "aws"
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+etcd_root = {{etcdvalue.etcd_root}}
+
+match_token={{etcdvalue.match_token}}
+
+# 游戏开始通知api地址 需要内网ip
+listen_notify_addr="{{ ansible_eth0.ipv4.address }}:8792"
+
+
+# 游戏大区ID GID
+gid = "{{etcdvalue.gid}}"

@@ -1,0 +1,11 @@
+namespace multiplayMsg;
+
+/// [Notify]主动离开战斗服务器(状态算退出)
+table LeaveMultiplayGameNotify {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+}
+
+root_type LeaveMultiplayGameNotify;

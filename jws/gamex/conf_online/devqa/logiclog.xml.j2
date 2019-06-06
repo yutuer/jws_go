@@ -1,0 +1,10 @@
+{% set etcdvalue = item.value %}
+<seelog>
+    <outputs formatid="common">
+        <rollingfile type="date" filename="/opt/supervisor/log/logics_shard{{etcdvalue.shard_id}}" datepattern="02.01.2006.log" maxrolls="30" />
+        <custom name="herologiclog" formatid="common" data-filename="/opt/supervisor/log/134_13013400{{etcdvalue.shard_id}}_event.log"/>
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

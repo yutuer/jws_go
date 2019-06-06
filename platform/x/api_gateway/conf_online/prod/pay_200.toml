@@ -1,0 +1,38 @@
+[PayConfig]
+sdk_http_port=":9080" # 对外公开
+dynamo_db_pay_index = "uid-tistatus-index"
+SentryDSN="https://be6857e4cfd8492faaecb01944f28e08:0b562b7924074c2181ed45868eaefc47@sentry.io/111080"
+
+[[PayService]]
+name="android"
+
+[PayService.SDK.QUICK]
+sdk_url_rel_path="quick/android/v1/billingcb"
+params = ["36883952788207341780469960584187"]
+
+[PayService.SDK.QUICKMUBAO]
+sdk_url_rel_path="quickmubao/android/v1/billingcb"
+params = ["83103548193506109841635344185783"]
+
+[PayService.SDK.VIVO]
+sdk_url_rel_path="vivo/android/v1/billingcb"
+params = ["798fd875853cee449c088c8187984425"]
+
+[PayService.SDK.SAMSUNG]
+sdk_url_rel_path="samsung/android/v1/billingcb"
+# 私钥,公钥
+params = ["MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKoV4XnueeNAkvzsgyCAzddxGZXybbQa8ZIwAzQmDurTNzbSctHU6kkJuapsgdyD2Aq39k8nieFUYonYot3v0pqy5OzVeZDZ0mu/GiwCx9nMkKJtjlgdSaRji8ffZeUvZ/JGY+3C1pTB4v15+0ky5SqXkHoGqFgNyTXCJayAnPZDAgMBAAECgYAulGd3mRPQZLLciXkvwZad1d+H7SiWFnrp6jQ2Z+XV8ZpBbUj8pi6zafJq9eRqm8Dizpap/s4H47BIyAdyeGdYfCsEar0VaACSJcTZS5hnnzVdb5gX6pdbvun/Fi1HNZFW+XCByyNPGQuLjczg4dvFY/2bNYt6LpPLHrJsChuogQJBANV+GBdwGIqnnjOQGH+UWbxyzm3QrILxBqGltgS/8UB0obHYEZMIL6UUjDfW40J7xPXhYsNqwU7KO+Q8xs/XEfECQQDL80n2cRPSegUU/v4cbFY/g5pN01uTSCbEnMjEDL5u+Jzvf1G48peZmiw0RZ9LzWxA0jC4gTOOs0xx8TAjV1dzAkBOfq4c7/oWAMsJ6lEXl1PnFc8QUUkcW8I0bNkfpfLt3/QTj33msXvTFlr3rOqh5x/jx5qofvfUIEclA7OVd14BAkAUjGeYT95KZ4bZjbN2k6fA8HZ8ft4MIcneJ1nG/u206pGNQ8utEawaisEHZzhcf873XPYRsNrL9t6t4DoUZXlnAkEAgZa3aD/rvNPNVp64+KEFBh3XyTodrE5jmLgNBQUsV7VQNT9/qkPJrAniMys4gCeWZZCc3ayVnc/qmHO3mS+UCg==","MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCn3RIAam9MMoEMtFz82DfByfMoWIcMqDtUILkzWdyXK7/oAL2bzc1BdU9BnEuI2ZoiMVWYkDoGksVxaODfbAiTjACiqsubiRT+s0TouLYiUMA3I/ncS6UEwqR0hrWIAJe0Bv8VmHcgvhu/SbMv2Uloc/eEKl4sxzMb+fMfc/80UQIDAQAB"]
+
+
+[PayService.Mail.PROD]
+db_name="Mail_G200"
+dynamo_region="cn-north-1"
+db_driver= "DynamoDB"
+mongo_url="127.0.0.1"
+
+
+[PayService.Pay.PROD]
+db_name="QuickPay_G200"
+dynamo_region="cn-north-1"
+db_driver= "DynamoDB"
+mongo_url="127.0.0.1"

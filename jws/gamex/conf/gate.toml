@@ -1,0 +1,246 @@
+# [prod]标签为运维需要在修改的项
+# [dev]只开发环境需要
+[GameConfig]
+#
+# runmode = [dev, test, preview, prod]
+# dev:开发环境 test:qa环境 prod:生产环境
+run_mode="dev" #[prod]
+
+listen=":8444" # allinone模式这个参数没有意义
+redis_auth=""
+redis_dns_valid=false
+redis=":6379"       #[prod]
+redis_db=1          #[prod]
+shard_id=[10]     #[prod] 布多个服务器的时候，这里也需要多个
+merge_rel=[10]      #[prod] 合服映射关系，第一项是合服后的shardid，后面是被合并的shardid
+
+#Mail服务使用的数据库类型DynamoDB or MongoDB
+MailDBDriver="DynamoDB"
+
+#MongoDB的链接参数参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+MailMongoUrl="127.0.0.1"
+
+#数据库的名称, DynamoDB表名,或者MongoDB数据库名称
+#如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+MailDBName="LocalMail"                        #[prod]
+
+PayDBDriver="DynamoDB"
+PayMongoUrl="127.0.0.1"
+PayAndroidDBName="LocalAndroidPay"               #[prod]
+PayIOSDBName="LocalIOSPay"                       #[prod]
+
+RedeemCodeMongoUrl = "127.0.0.1"
+RedeemCodeDriver = "DynamoDB"
+
+#[dev] 只开发环境需要
+# zhangzhen aws key
+AWS_AccessKey="AKIAOXC6JHPK7YYB6QBA"
+AWS_SecretKey="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"
+
+# aws配置
+AWS_Region="cn-north-1"
+AWS_InitialInterval=500 # 以time.Millisecond为单位
+AWS_Multiplier=1.5
+AWS_MaxElapsedTime= 300 # 以time.Second为单位
+
+time_local="Asia/Shanghai"
+#逻辑相关的启动服务器的时间, 是正式放玩家进来的时间 格式: 2015/03/24 08:00
+server_start_time=["2015/09/15 08:00"] # 布多个服务器的时候，这里也需要多个
+
+# etcd
+etcd_endpoint = ["http://127.0.0.1:2379/"] #[prod] 用来注册次服务器的配置到etcd，为gmtools使用
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+
+discover_redis="127.0.0.1:6379"
+discover_redis_db=7
+discover_redis_Auth=""
+discover_key_etcd_path="Discover/dbs"
+
+# chattown相关
+broadCast_url="http://127.0.0.1:10011/broadcast"    #[prod]
+chatAuth_url="http://127.0.0.1:10011/auth"          #[prod]
+sysnotice_valid = 1
+
+# 建立新角色时通知auth的url
+auth_notifyNewRole_url="http://127.0.0.1:8081/login/v1/api/notifyuserinfo"      #[prod]
+
+# 协议频率限制
+limit_valid = false     #[prod] 生产环境要改为true
+# 限制url的信息格式：url,单位时间(秒),单位时间内的次数，并用";"隔开
+ratelimit_url_info = "PlayLevel/DeclareLvlEnmyLootRequest,1,1;PlayerAttr/GetInfoRequest,1,10;PlayerAttr/TrialSweepAwardForShowReq,5,1"
+
+# 禁言相关
+ban_url = "http://127.0.0.1:8789/auth/v1/api/user/ban"      #[prod]
+ban_time = 300 # 封禁时间，秒
+
+# 查找账号是否已注册Url
+auth_isreg_url = "http://127.0.0.1:8789/auth/v1/api/user/isHasReg"
+
+# 内部通知Post监听地址
+listen_post_addr = ["127.0.0.1:8790"] # 布多个服务器的时候，这里也需要多个
+
+# 数据热更，url
+hot_data_url = "gamex/v1/hotupdatedata"
+hot_s3_path = "teamcity"
+
+cloud_db_driver = "S3"
+oss_endpoint=""
+oss_access_id=""
+oss_access_key=""
+
+
+# rank reload
+rank_reload_url = "gamex/v1/api/rank/reload"
+
+# 多语言选择
+lang = "zh-Hans"
+
+#[dev] 为机器人测试用
+debug_account_time_valid = true # 协议能够设置account的createtime
+
+hour_log_valid = false
+
+new_redisPool = true
+
+# 反作弊
+anticheat_valid = true
+[[GameConfig.AntiCheat]] # 0 最大单招伤害
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 1 最大防御力
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 2 MP消耗和获取
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 3 通关时间
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 4 HP/MP/Rage上限
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 5 技能CD
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 6 免伤
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 7 HP/MP/Rage消耗和获取
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 8 hero gs 检查
+is_check = true
+is_rec = true
+is_ban = false
+param_int = 10
+
+[[GameConfig.AntiCheat]] # 9 通关时间 检查
+is_check = true
+is_rec = true
+is_ban = false
+
+# limit ip 白名单，在limit_valid为true时有效
+[[GameConfig.AdminIPs]]
+from = "218.247.7.194"
+to = "218.247.7.194"
+
+[[GameConfig.AdminIPs]]
+from = "121.69.47.158"
+to = "121.69.47.158"
+
+[[GameConfig.AdminIPs]]
+from = "114.111.167.236"
+to = "114.111.167.236"
+
+[JWSConfig]
+# MatchServer Url
+match_url = "http://127.0.0.1:8791"
+match_token = "dev"
+
+# GVE通知相关Post Url
+gve_start_url = "gamex/v1/api/user/gvestart"
+gve_stop_url = "gamex/v1/api/user/gvestop"
+
+[GateConfig]
+#
+# runmode = [dev, test, prod]
+# dev:开发环境 test:qa环境 prod:生产环境，控制gate是否向etcd注册
+run_mode="local"                      #[prod]
+publicip="10.0.1.179:8667"           #[prod] 生产环境："aws"
+listen = ":8667"                    #[prod] 如果gate直接面向公网进行服务则需要公网IP，必须完整ip:port
+shard_id=[10]                       #[prod] 数字用来告知login服务器本服务器服务哪一个shard；布多个服务器的时候，这里也需要多个
+merge_rel=[10]                      #[prod] 合服映射关系，第一项是合服后的shardid，后面是被合并的shardid
+maxconn =  3
+
+#[dev] 只开发环境需要
+gameservers = [
+"127.0.0.1:8444",
+]
+
+[GateConfig.SslCfg]
+cert = "conf/server.crt"
+key = "conf/server.key"
+
+[GateConfig.SslCaCfg]
+cert = "conf/ca.crt"
+
+[SentryConfig]
+DSN="https://cce76e02e7124976967d90d71085263a:174cabdcfef346d6bafd9cb7fe70c901@app.getsentry.com/39313" #[prod]
+
+[RPCConfig]
+listen_addr = "127.0.0.1:8668"  #[prod] 请指定内网IP，必须完整ip:port, 请保证这种格式x.x.x.x:xx
+
+[CCUMetricsConfig]
+etcd_endpoint = ["http://127.0.0.1:2379/"] #[prod] 当GateConfig的run_mode是prod时有效
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+loginurl = "http://127.0.0.1:8081/login/v1/api" #[prod] 请保证这种格式: http://x.x.x.x:xx/...
+URI_ccu = "gateregister"
+URI_login = "notifylogin"
+URI_logout = "notifylogout"
+LoginConnector_tick_time = 6
+
+[RankConfig]
+rank_redis=":6379"          #[prod]
+rank_redis_db=5             #[prod]
+redis_dns_valid=false
+rank_redis_auth=""
+
+[ChatConfig]
+publicip="127.0.0.1:10010"  # 线上用 aws
+listen = ":10010"
+
+[VivoConfig]
+url="https://pay.vivo.com.cn/vcoin/trade"
+sdk_notify_url=""
+app_id="8fa36149ea45179061a6062c7a3aa780"
+cp_id="20150701180733584845"
+cp_key="798fd875853cee449c088c8187984425"
+
+[SamsungConfig]
+url="http://siapcn1.ipengtai.com:7002/payapi/order"
+sdk_notify_url="http://54.223.61.58:9080/samsung/android/v1/billingcb"
+app_id="5000204106"
+private_key="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKoV4XnueeNAkvzsgyCAzddxGZXybbQa8ZIwAzQmDurTNzbSctHU6kkJuapsgdyD2Aq39k8nieFUYonYot3v0pqy5OzVeZDZ0mu/GiwCx9nMkKJtjlgdSaRji8ffZeUvZ/JGY+3C1pTB4v15+0ky5SqXkHoGqFgNyTXCJayAnPZDAgMBAAECgYAulGd3mRPQZLLciXkvwZad1d+H7SiWFnrp6jQ2Z+XV8ZpBbUj8pi6zafJq9eRqm8Dizpap/s4H47BIyAdyeGdYfCsEar0VaACSJcTZS5hnnzVdb5gX6pdbvun/Fi1HNZFW+XCByyNPGQuLjczg4dvFY/2bNYt6LpPLHrJsChuogQJBANV+GBdwGIqnnjOQGH+UWbxyzm3QrILxBqGltgS/8UB0obHYEZMIL6UUjDfW40J7xPXhYsNqwU7KO+Q8xs/XEfECQQDL80n2cRPSegUU/v4cbFY/g5pN01uTSCbEnMjEDL5u+Jzvf1G48peZmiw0RZ9LzWxA0jC4gTOOs0xx8TAjV1dzAkBOfq4c7/oWAMsJ6lEXl1PnFc8QUUkcW8I0bNkfpfLt3/QTj33msXvTFlr3rOqh5x/jx5qofvfUIEclA7OVd14BAkAUjGeYT95KZ4bZjbN2k6fA8HZ8ft4MIcneJ1nG/u206pGNQ8utEawaisEHZzhcf873XPYRsNrL9t6t4DoUZXlnAkEAgZa3aD/rvNPNVp64+KEFBh3XyTodrE5jmLgNBQUsV7VQNT9/qkPJrAniMys4gCeWZZCc3ayVnc/qmHO3mS+UCg=="
+public_key="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCn3RIAam9MMoEMtFz82DfByfMoWIcMqDtUILkzWdyXK7/oAL2bzc1BdU9BnEuI2ZoiMVWYkDoGksVxaODfbAiTjACiqsubiRT+s0TouLYiUMA3I/ncS6UEwqR0hrWIAJe0Bv8VmHcgvhu/SbMv2Uloc/eEKl4sxzMb+fMfc/80UQIDAQAB"

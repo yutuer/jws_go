@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Hello</title>
+      <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+      <script src="./bower_components/react/react.js"></script>
+      <script src="./bower_components/react/JSXTransformer.js"></script>
+  <body>
+    <script type="text/javascript">
+      function getValue()
+      {
+          var x=document.getElementById("t1")
+          alert(x.value)
+      }
+    </script>
+    <div>
+        <h2>Hello Web!</h2>
+        <hr />
+        <form>
+            Text1：<input id="t1" type="text" name="firstname">
+            <br />
+            Text2：<input id="t2" type="text" name="lastname">
+            <br />
+            <input id="myHeader" onclick="getValue()" type="button" value="Hello!">
+        </form>
+
+        <div id="example" />
+    </div>
+
+    <script type="text/jsx">
+        var name = "React";
+
+        React.render(
+          <div>
+            <hr />
+            <h1>Hello, {name}!</h1>
+            <input type="button" value="Hello!" />
+          </div>
+          ,document.getElementById('example')
+        );
+    </script>
+
+    <div id="example2" />
+    <script type="text/jsx;harmony=true" src="./test_react.js" />
+
+  </body>
+</html>

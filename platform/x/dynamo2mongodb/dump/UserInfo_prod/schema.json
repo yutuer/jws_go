@@ -1,0 +1,29 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/UserInfo_prod", 
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Uid", 
+        "AttributeType": "S"
+      }
+    ], 
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0, 
+      "WriteCapacityUnits": 50, 
+      "LastIncreaseDateTime": 1476839677.711, 
+      "ReadCapacityUnits": 50, 
+      "LastDecreaseDateTime": 1476426611.753
+    }, 
+    "TableSizeBytes": 14091214, 
+    "TableName": "UserInfo_prod", 
+    "TableStatus": "ACTIVE", 
+    "KeySchema": [
+      {
+        "KeyType": "HASH", 
+        "AttributeName": "Uid"
+      }
+    ], 
+    "ItemCount": 94427, 
+    "CreationDateTime": 1458722716.165
+  }
+}

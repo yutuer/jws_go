@@ -1,0 +1,6 @@
+package loot
+
+import (
+
+)
+

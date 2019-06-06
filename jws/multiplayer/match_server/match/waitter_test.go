@@ -1,0 +1,112 @@
+package match
+
+import (
+	"math/rand"
+	"strconv"
+	"testing"
+	"vcs.taiyouxi.net/platform/planx/util/logs"
+)
+
+func TestTicket0(t *testing.T) {
+	w := new(waitters)
+	w.Init(normalTickCounter, 16)
+	w.OnTick()
+	w.OnTick()
+	w.OnTick()
+	w.OnTick()
+	w.OnTick()
+	logs.Flush()
+}
+
+func TestTicket1(t *testing.T) {
+	w := new(waitters)
+	w.Init(normalTickCounter, 16)
+	w.OnTick()
+	w.AddWaitter("A11", 1)
+	w.AddWaitter("A12", 2)
+	w.AddWaitter("A13", 100)
+	w.logSelf(1)
+	w.OnTick()
+	w.AddWaitter("A21", 1)
+	w.AddWaitter("A22", 2)
+	w.AddWaitter("A23", 100)
+	w.logSelf(2)
+	w.OnTick()
+	w.AddWaitter("A31", 1)
+	w.AddWaitter("A32", 2)
+	w.AddWaitter("A33", 100)
+	w.logSelf(3)
+	w.OnTick()
+	w.AddWaitter("A41", 1)
+	w.AddWaitter("A42", 2)
+	w.AddWaitter("A43", 100)
+	w.logSelf(4)
+	w.OnTick()
+	w.AddWaitter("A51", 1)
+	w.AddWaitter("A52", 2)
+	w.AddWaitter("A53", 100)
+	w.logSelf(5)
+	w.OnTick()
+	w.AddWaitter("A61", 1)
+	w.AddWaitter("A62", 2)
+	w.AddWaitter("A63", 100)
+	w.logSelf(6)
+	w.OnTick()
+	w.logSelf(7)
+	w.OnTick()
+	w.logSelf(8)
+	w.OnTick()
+	w.logSelf(9)
+	w.OnTick()
+	w.AddWaitter("A71", 1)
+	w.AddWaitter("A72", 2)
+	w.AddWaitter("A73", 100)
+	w.logSelf(10)
+	w.OnTick()
+	w.AddWaitter("A81", 1)
+	w.AddWaitter("A82", 2)
+	w.AddWaitter("A83", 100)
+	w.logSelf(11)
+	w.OnTick()
+	w.AddWaitter("A91", 1)
+	w.AddWaitter("A92", 2)
+	w.AddWaitter("A93", 100)
+	w.logSelf(12)
+	w.OnTick()
+	w.AddWaitter("A101", 1)
+	w.AddWaitter("A102", 2)
+	w.AddWaitter("A103", 100)
+	w.logSelf(13)
+	w.OnTick()
+	w.AddWaitter("A111", 1)
+	w.AddWaitter("A112", 2)
+	w.AddWaitter("A113", 100)
+	w.logSelf(99)
+	w.matchWaitTicketMoreThan(0, 0)
+	w.matchWaitTicketMoreThan(5, 1)
+	w.logSelf(102)
+	w.matchWaitTicketMoreThan(0, 0)
+	w.matchWaitTicketMoreThan(5, 1)
+	w.logSelf(102)
+
+	logs.Flush()
+}
+
+func TestMaxMax(t *testing.T) {
+	w := new(waitters)
+	w.Init(normalTickCounter, 10240)
+	logs.Trace("Start")
+	logs.Flush()
+	for i := 0; i < 10000; i++ {
+		for j := 0; j < 10; j++ {
+			w.AddWaitter("Wait"+strconv.Itoa(i*10000+j), uint32(rand.Int31n(75)+1))
+		}
+		w.matchNewEnter(1)
+		w.OnTick()
+		w.TestMatch()
+		w.logMatchInfo()
+	}
+	logs.Trace("End")
+	w.logMatchInfo()
+	logs.Flush()
+}

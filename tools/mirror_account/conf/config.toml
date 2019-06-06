@@ -1,0 +1,26 @@
+
+
+rank_redis_db = 17
+rank_redis = "10.222.0.103:6379"
+rank_redis_auth = ""
+rank_table = "202:3163:RankCorpGs"
+
+dynamo_region = "cn-north-1"
+dynamodb_gm = "GMInfo"
+
+gamex_logic_log = "/opt/supervisor/log/logics_shard3163.08.08.2017.log"
+auth_logic_log = "/opt/supervisor/log/logics_auth.08.08.2017.log"
+
+#gamex_logic_log = "/Users/timesking/Downloads/logics_shard3161.08.08.2017.log"
+#auth_logic_log = "/Users/timesking/Downloads/logics_auth.08.08.2017.log"
+
+mirror_account_name = ["hefu21",
+                       "hefu22",
+                       "hefu23",
+                       "hefu24",
+                       "hefu25",
+                       "hefu26",
+                       "hefu27",
+                       "hefu28",
+                       "hefu29",
+                       "hefu30"]

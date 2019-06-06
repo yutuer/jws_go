@@ -1,0 +1,33 @@
+// cli->ser, 建立连接时第一次发
+namespace gen;
+
+table RoleInfo {
+  account_id: string;
+  name: string;
+  level: int;
+  vip: int;
+  gs: int;
+  role: int;
+  equips:[string];
+  guild: string;
+  title: string;
+  title_timeout: long;
+  char_star_level: int;
+  weapon_star_level: int;
+  role_pos: RolePos;
+  swing: int;
+  magicPetfigure: int;
+}
+
+table RolePos {
+  pos: [float];
+  rotate:float;
+}
+
+table RegReq {
+  town: string;
+  client_auth: string;
+  role_info: RoleInfo;
+}
+
+root_type RegReq;

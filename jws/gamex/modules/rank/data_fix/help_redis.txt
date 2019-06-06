@@ -1,0 +1,3 @@
+DEL "2:12:RankCorpTrial" "2:12:RankCorpHeroStar" "1:11:RankCorpHeroStar" "1:11:RankCorpTrial" "Back:1:11:RankCorpHeroStar" "Back:1:11:RankCorpHeroDiff:SHI" "Back:1:11:RankCorpTrial" "Back:1:11:RankCorpHeroDiff:TU" "Back:1:11:RankCorpHeroDiff:HU" "1:11:RankCorpHeroStar" "Back:1:11:RankCorpHeroDiff:ZHAN" "1:11:RankCorpTrial" "Back:2:12:RankCorpHeroDiff:HU" "Back:2:12:RankCorpTrial" "Back:2:12:RankCorpHeroDiff:ZHAN" "Back:2:12:RankCorpHeroStar" "Back:2:12:RankCorpHeroDiff:TU" "Back:2:12:RankCorpHeroDiff:SHI"
+KEYS *:12:*
+KEYS *:11:*

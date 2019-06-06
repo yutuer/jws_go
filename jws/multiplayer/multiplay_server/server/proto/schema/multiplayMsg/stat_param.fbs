@@ -1,0 +1,11 @@
+namespace multiplayMsg;
+
+///Boss状态(数组中以Boss数据中的idx为索引)
+table StateParam {
+    // id
+    AccountID        : string;
+    // 参数
+    Param    : string;
+}
+
+root_type StateParam;

@@ -1,0 +1,9 @@
+namespace multiplayMsg;
+
+// multi -> client 战斗信息
+
+table TestMult {
+    playerStat : [PlayerState];
+}
+
+root_type TestMult;

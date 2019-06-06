@@ -1,0 +1,25 @@
+include "stat_info2.fbs";
+
+namespace multiplayMsg;
+
+/// [Notify]伤害\损失HP通知
+table HPNotify {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    ///玩家自身血量变化
+    playerHpD : int;
+    ///玩家对Boss造成的血量变化
+    bossHpD   : [int];
+    ///boss护甲
+    bossArmor : [long];
+    /// 本次伤害类型
+    damageTyp: int;
+    /// 队友血量变化
+    othersHpD : [PlayerState];
+    /// self avatar id
+    avatarID : int;
+}
+
+root_type HPNotify;

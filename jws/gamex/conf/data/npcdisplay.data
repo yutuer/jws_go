@@ -1,0 +1,49 @@
+
+µ
+npc_blacksmithk1_2_1"GIDS_NPC_PUYUAN_MEET_001,IDS_NPC_PUYUAN_MEET_002,IDS_NPC_PUYUAN_MEET_003*IDS_NPC_BLAKSMITH2IDS_TERM_EQUIPMENT:	InventoryBui_an_fenlei11Jnpc_blacksmith
+´
+npc_businessmank1_1"MIDS_NPC_SUSHUANG_MEET_001,IDS_NPC_SUSHUANG_MEET_002,IDS_NPC_SUSHUANG_MEET_003*IDS_NPC_BUSINESSMAN2IDS_SHOP_TITLE:ShopBui_an_fenlei08Jnpc_businessman
+0
+npc_civilian*IDS_NPC_CIVILIANJnpc_civilian
+‰
+	npc_extra"2IDS_NPC_MIJI_001,IDS_NPC_MIJI_002,IDS_NPC_MIJI_003*IDS_NPC_EXTRA2IDS_TERM_TREASURE_BOX:GachaBui_an_fenlei09J	npc_extra
+x
+npc_dongzhuo">IDS_NPC_DONGZHUO_001,IDS_NPC_DONGZHUO_002,IDS_NPC_DONGZHUO_003*IDS_BOSS_HULAO_DONGZHUOJboss_dongzhuo
+p
+
+npc_caocaok2_1"8IDS_NPC_CAOCAO_001,IDS_NPC_CAOCAO_002,IDS_NPC_CAOCAO_003*IDS_BOSS_WEI_CAOCAOJboss_caocao
+@
+npc_main_character*	IDS_SPACE2IDS_TERM_LORD:TeamMemberInfo
+”
+npc_beigongk1_2_1";IDS_NPC_BEIGONG_001,IDS_NPC_BEIGONG_002,IDS_NPC_BEIGONG_003*IDS_BOSS_HUANG_BEIGONGBOYU2IDS_TERM_SYS_GENERALJboss_beigong
+š
+npc_diaochank2_5">IDS_NPC_DIAOCHAN_001,IDS_NPC_DIAOCHAN_002,IDS_NPC_DIAOCHAN_003*IDS_BOSS_HULAO_DIAOCHAN2IDS_TERM_SYS_GENERAL_GACHAJboss_diaochan
+Á
+npc_zhangjiaok1_5"AIDS_NPC_ZHANGJIAO_001,IDS_NPC_ZHANGJIAO_002,IDS_NPC_ZHANGJIAO_003*IDS_BOSS_HUANG_ZHANGJIAO2IDS_TITLE_DESTINYGENERAL:DestinyGeneralBui_destinyGeneralJboss_zhangjiao
+
+npc_boy*IDS_NPC_CIVILIAN
+$
+npc_talk_woman*IDS_NPC_CIVILIAN
+
+npc_man*IDS_NPC_CIVILIAN
+
+npc_girl*IDS_NPC_CIVILIAN
+
+	npc_woman*IDS_NPC_CIVILIAN
+"
+npc_talk_man*IDS_NPC_CIVILIAN
+*
+
+npc_liubei*IDS_NPC_LIUBEIJ
+npc_liubei
+9
+npc_daughter_happy*IDS_NPC_DAU_HAPPYJdaughter_happy
+3
+npc_daughter_sad*IDS_NPC_DAU_SADJdaughter_sad
+*
+npc_kongming*IDS_BOSS_ZHUGELIANGJZGL
+(
+npc_lusu*IDS_NPC_LUSUJnpc_civilian
+(
+	npc_sunce*IDS_NPC_SUNCEJ
+npc_caoren

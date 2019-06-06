@@ -1,0 +1,17 @@
+include "vector.fbs";
+namespace multiplayMsg;
+/// [Notify]伤害\损失HP通知
+table BossSimpleData {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    bossState: int;
+    bossPosition : Vector;
+    bossDirection : Vector;
+    bossCurSpeed : float;
+    bossNotifyTimeStamp : long;
+    anim : int;
+}
+
+root_type BossSimpleData;

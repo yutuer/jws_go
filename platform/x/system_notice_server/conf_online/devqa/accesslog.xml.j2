@@ -1,0 +1,8 @@
+<seelog type="adaptive" mininterval="2000000" maxinterval="100000000" critmsgcount="50" minlevel="info">
+    <outputs formatid="common">
+        <rollingfile type="date" filename="/opt/supervisor/log/notice_access" datepattern="02.01.2006.log" maxrolls="7" />
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

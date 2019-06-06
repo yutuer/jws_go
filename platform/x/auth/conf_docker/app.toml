@@ -1,0 +1,164 @@
+[CommonConfig]
+# EnableHttpListen = "false"
+
+# [local, dev, test, prod]
+# prod: 1.从etcd获得shard信息 2.错误信息加密
+# test: 1.从etcd获得shard信息
+runmode = "local"
+
+inner_experience = false # 标示auth是否体验服状态，即只运行体验服的服务器可见
+
+# [allinone, auth, login]
+#servertyp = "allinone"
+#autorender = "false"
+#copyrequestbody ="true"
+#EnableDocs = "true"
+
+#EnableHttpTLS = "true"
+HttpsPort = ":10443"
+HttpCertFile = "conf/server.crt"
+HttpKeyFile = "conf/server.key"
+
+auth_redis_addr="{{CFG_AUTHREDISHOST}}"
+auth_redis_db="0"
+auth_redis_db_pwd=""
+
+login_redis_addr="{{CFG_LOGINREDISHOST}}"
+login_redis_db="0"
+login_redis_db_pwd=""
+
+dynamo_region="cn-north-1"
+#asw key zhangzhen
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+
+#选择使用哪种数据库运行Auth注册服务DynamoDB or MongoDB
+#auth_db_driver="DynamoDB"
+auth_db_driver="DynamoDB"
+
+#Auth注册服务DynamoDB的链接参数
+dynamo_db_Device="LocalDevice"
+dynamo_db_Name="LocalName"
+dynamo_db_UserInfo="LocalUserInfo"
+dynamo_db_GM="LocalGM"
+# dynamo_db_DeviceTotal="LocalDeviceTotal"
+dynamo_db_AuthToken="LocalAuthToken"
+dynamo_db_UserShardInfo="LocalUserShardInfo"
+
+
+
+
+#Auth注册服务MongoDB的链接参数
+#参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+mongodb_url="127.0.0.1"
+
+#数据库的名称, 如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+mongodb_name="AuthDB"
+
+verupdate_valid = true
+s3_buckets_verupdate = "verupdate"
+verupdate_is_remote = false
+verupdate_filename = "ver_url.csv"
+verupdate_meta_filename = "ver_url_meta"
+
+#选择使用哪种云存储
+store_driver = "S3"
+
+oss_endpoint = ""
+oss_access_id = ""
+oss_access_key = ""
+oss_bucket=""
+
+login_api_addr="http://127.0.0.1:8081/login/v1/api/authtoken"
+login_kick_api_addr="http://127.0.0.1:8081/login/v1/api/kick"
+login_gag_api_addr="http://127.0.0.1:8081/login/v1/api/gag"
+
+passwd_b64map="b5lI9j_WtiXL4GHkOQaf1ADngvx2sqBF8YEdNpmwSRhyPurT-CV0JUzoMZc67e3K"
+passwd_salt="fmdsa48idm38jd"
+
+httpport = ":8081"
+gmhttpport = ":8789"
+
+#EnableAdmin="true"
+#AdminHttpAddr="127.0.0.1"
+#AdminHttpPort=8888
+
+SentryDSN="https://48a37f2dec3f49c295b71efda5d4b641:7bd6357255584ceea7b187173182e49f@app.getsentry.com/53404"
+
+etcd_endpoint = ["http://{{CFG_ETCDPOINT}}/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+gids=["0", "1"]
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.0.0.0"
+to = "10.255.255.255"
+
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.255.255.255"
+
+[[LimitConfig.InternalIPs]]
+from = "172.17.0.0"
+to = "172.17.0.255"
+
+limit_url_regex = ".*" # 这些url做限制（http header和ratelimit）
+rate_limit_valid = true                 # 限制访问速度的开关
+rate_limit_Average = 10                 # 限速每秒平均数量
+rate_limit_Burst = 10                  # 限速每秒最多数量
+
+# 正式android
+#appKey        = "uamrtl39jjworgcrlt7z"
+#productId     = "D10083A"
+#projectId     = "P31209A"
+#client_secret = "kp4wvh3bc4l8jb49mu1s"
+#serverId      = "M1068A"
+
+[SdkQuickConfig]
+url = "http://checkuser.sdk.quicksdk.net:10080/v2/checkUserInfo"
+android_product_code = "08310020990747178836418134348679"
+android_product_code_mubao1 = "29259317678129344544413592742784"
+ios_product_code = "43450692080863266385159137543807"
+
+[SdkVivoConfig]
+url = "https://usrsys.vivo.com.cn/sdk/user/auth.do"
+
+[SdkHeroConfig]
+url           = "http://yx.sdksrv.com/sdksrv/auth/"
+url_token     = "getToken.lg"
+url_userinfo  = "getUserInfo.lg"
+appKey        = "uamrtl39jjworgcrlt7z"
+productId     = "D10083A"
+projectId     = "P31209A"
+client_secret = "kp4wvh3bc4l8jb49mu1s"
+serverId      = "M1068A"
+
+[SdkEnjoyConfig]
+url = "http://egapi.enjoygame.com:8093/gameusersdk/user/login_token/check"
+test_url = "http://123.59.61.216/gameusersdk/user/login_token/check"
+
+
+[SdkVNConfig]
+url           = "http://th.srv.0sdk.com/sdkcom/auth/"
+url_token     = "getToken.lg"
+url_userinfo  = "getUserInfo.lg"
+appKey        = "3a810uoglbigabq9sglh"
+productId     = "126"
+client_secret = "51fmc3pqsy1cjycn510n"
+serverId      = "1022"
+projectId     = "10031"
+ios_appKey        = "h9i3k3lu22m56yhjkih7"
+ios_productId     = "222"
+ios_client_secret = "xe33aoigjpyqo973i8b7"
+ios_serverId      = "2016"
+ios_projectId     = "20022"
+
+

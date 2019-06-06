@@ -1,0 +1,16 @@
+package protogen;
+
+message Req {
+    required string PassthroughID = 1;
+    required int32 HotVer = 2;
+    required string TIDs = 3;
+}
+
+message Resp {
+    required string PassthroughID = 1;
+    required string MsgOK = 2;
+    required uint32 Code = 3;
+}
+
+message EmptyMessage {
+}

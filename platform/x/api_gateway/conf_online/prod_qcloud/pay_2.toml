@@ -1,0 +1,26 @@
+[PayConfig]
+sdk_http_port=":9080" # 对外公开
+SentryDSN="https://4e43e5e0fb1a4fc7b1514bc56b59a103:f08ac315558a44f683976367b441a7cb@app.getsentry.com/59001"
+
+[[PayService]]
+name="android"
+
+[PayService.SDK.QUICK]
+sdk_url_rel_path="quick/android/v1/billingcb"
+params = ["36883952788207341780469960584187"]
+
+[PayService.SDK.VIVO]
+sdk_url_rel_path="vivo/android/v1/billingcb"
+params = ["798fd875853cee449c088c8187984425"]
+
+[PayService.Mail.QADEV]
+db_name="Mail_G2"
+db_driver= "MongoDB"
+mongo_url="mongodb://mongouser:eC3XRJDhn6f3@10.30.4.203:27017/?authSource=admin"
+
+
+[PayService.Pay.QADEV]
+db_name="QuickPay_G2"
+db_driver= "MongoDB"
+mongo_url="mongodb://mongouser:eC3XRJDhn6f3@10.30.4.203:27017/?authSource=admin"
+

@@ -1,0 +1,175 @@
+namespace multiplayMsg;
+
+/// 玩家装备数据
+table EquipInfo {
+    ///当前战斗状态(等待开始\已开始\已结束)
+    id      : uint;
+
+    ///当前状态开始时间
+    tableid : string;
+
+    ///当前状态结束时间
+    itemid  : string;
+
+    ///战斗难度
+    count   : long;
+
+    ///战斗场景信息
+    data    : string;
+}
+
+///玩家时装数据
+table FashionItemInfo {
+    ///当前战斗状态(等待开始\已开始\已结束)
+    id      : uint;
+
+    ///当前状态开始时间
+    tableid : string;
+
+    ///当前状态结束时间
+    ot      : long;
+}
+
+table Attr {
+    atk             : float;
+    def             : float;
+    hp              : float;
+    critRate        : float;
+    resilienceRate  : float;
+    critValue       : float;
+    resilienceValue : float;
+    iceDamage       : int;
+    iceDefense      : int;
+    iceBonus        : float;
+    iceResist       : float;
+    fireDamage      : int;
+    fireDefense     : int;
+    fireBonus       : float;
+    fireResist      : float;
+    lightingDamage  : int;
+    lightingDefense : int;
+    lightingBonus   : float;
+    lightingResist  : float;
+    poisonDamage    : int;
+    poisonDefense   : int;
+    poisonBonus     : float;
+    poisonResist    : float;
+}
+
+///玩家数据(结构上和客户端获取到的Account2Client一致)
+table AccountInfo {
+    ///玩家的IDX 对应状态信息中的位置
+    idx          : int;
+
+    ///玩家AccountID
+    accountId : string;
+
+    ///当前玩家角色
+    avatarId  : int;
+
+    ///战队等级
+    corpLv    : uint;
+
+    ///战队经验
+    corpXp    : uint;
+
+    ///玩家角色觉醒等级
+    arousals  : [uint];
+
+    ///玩家技能等级
+    skills    : [uint];
+
+    ///玩家修炼技能等级
+    skillps   : [uint];
+
+    ///
+    heroStar  : [uint];
+    heroLv    : [uint];
+
+    ///玩家昵称
+    name      :string;
+
+    ///玩家vip等级
+    vip       : uint;
+
+    ///玩家已解锁角色
+    avatarlockeds : [int];
+
+    ///玩家战队战力
+    gs        :int;
+
+    ///pvp积分
+    pvpScore  :long;
+
+    ///pvp等级
+    pvpRank   :int;
+
+    ///玩家装备
+    equips       : [EquipInfo];
+
+    ///装备强化等级
+    equipUpgrade : [uint];
+
+    ///装备升星等级
+    equipStar    : [uint];
+
+
+    ///玩家当前时装
+    avatarEquips : [uint];
+
+    ///玩家所有的时装
+    allFashions  : [FashionItemInfo];
+
+
+    ///玩家当前副将
+    generals : [string];
+
+    ///玩家当前副将星级
+    genstar  : [uint];
+
+    ///玩家副将羁绊
+    genrels  : [string];
+
+    ///玩家副将羁绊等级
+    genrellv : [uint];
+
+    ///玩家角色宝石
+    avatarJade      : [string];
+
+    ///玩家神将宝石
+    destGeneralJade : [string];
+
+    ///玩家当前最高神兽ID
+    dg    : int;
+    ///玩家当前最高神兽等级
+    dglv  : int;
+    ///玩家神兽技能
+    dgss  : [int];
+
+    ///玩家公会uuid
+    guuid : string;
+    ///玩家公会名称
+    gname : string;
+    ///玩家公会职务
+    gpos  : int;
+    ///玩家官阶
+    post  : string;
+    ///玩家官阶过期时间
+    postt : long;
+
+    /// 主将被动技能
+    pskillid : [string];
+    cskillid : [string];
+    tskillid : [string];
+
+    title : string;
+    titles : [string];
+    heroAttr: Attr;
+
+    ///玩家当前角色神翼
+    heroSwing : int;
+    ///玩家当前灵宠形象
+    magicPetfigure : uint;
+}
+
+root_type AccountInfo;

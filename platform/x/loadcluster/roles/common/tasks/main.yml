@@ -1,0 +1,23 @@
+- name: "Update apt package cache"
+  apt: update_cache=yes
+  when: ansible_pkg_mgr == 'apt'
+
+- name: "Install common packages debian/ubuntu"
+  apt: pkg={{ item }} state=latest
+  when: ansible_pkg_mgr == 'apt'
+  with_items:
+    - build-essential
+    - git
+    - supervisor
+    - libxml2-dev
+    - cmake
+    - pkg-config
+
+- name: "Install common packages RedHat"
+  yum: name={{ item }} state=latest
+  when: ansible_pkg_mgr == 'yum'
+  with_items:
+    - gcc
+    - gcc-c++
+    - libevent
+    - libevent-devel

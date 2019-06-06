@@ -1,0 +1,12 @@
+FROM 10.222.0.168:5000/golang:1.8.3-alpine
+
+RUN mkdir /workspace
+COPY auth_docker /workspace/auth
+COPY conf_docker /workspace/conf
+COPY docker_entrypoint.sh /workspace/entrypoint.sh
+RUN chmod a+x /workspace/entrypoint.sh
+WORKDIR /workspace
+
+EXPOSE 8081
+
+ENTRYPOINT ["./entrypoint.sh"]

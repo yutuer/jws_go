@@ -1,0 +1,17 @@
+
+maxRetainMsgCount = 5
+
+legalInterval = 20
+
+maxListLen = 10000
+
+url =  "/imcc"
+
+host = ":40080"
+
+similarityVal = 0.8
+similarityGagTime = 0
+
+smtpInfo = "{\"username\":\"crashsmtp@mg.taiyouxi.cn\",\"password\":\"E2quirR6ouCs0at\",\"host\":\"smtp.mailgun.org\",\"port\":587}"
+sendFrom = "server@mg.taiyouxi.cn"
+sendTo = ["liujingzhao@taiyouxi.cn","lixiao@taiyouxi.cn","wangxiwang@enjoygame.com"]

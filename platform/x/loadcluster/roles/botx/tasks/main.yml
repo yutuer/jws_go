@@ -1,0 +1,44 @@
+---
+
+#https://github.com/ansible/ansible/issues/5442
+- name: Remove botx if it exists locally
+  file: path="/tmp/{{botx_tar_gz}}"  state=absent
+
+# 请手动上传botx的可执行zip包到相关的S3上，必要时指定相关下载用的key
+- name: copy botx from s3
+  s3: bucket={{aws_s3_setup_bucket}}
+    object="/outtemp/{{item}}"
+    dest="/tmp/{{item}}"
+    mode=get
+    aws_access_key="{{ aws_access_key }}"
+    aws_secret_key="{{ aws_secret_key }}"
+    region="{{ aws_region }}"
+  with_items:
+    - "{{botx_tar_gz}}"
+
+- name: "Create /opt/botx"
+  file: dest=/opt/botx mode=755 state=directory
+
+
+- name: try to stop running botx on server
+  supervisorctl: name=botx state=stopped supervisorctl_path=/usr/local/bin/supervisorctl
+  ignore_errors: yes
+  become: yes
+
+- name: Extract to botx /opt/botx
+  unarchive: src="/tmp/{{botx_tar_gz}}"
+             dest="/opt/botx/"
+             copy=no
+             mode=0755
+             owner=root
+             group=root
+
+- name: "Set botx entry on supervisord"
+  template: src=botx.conf.j2 dest=/etc/supervisor/conf.d/botx.conf
+
+- name: try to reread supervisor on server
+  supervisorctl: name=botx state=present supervisorctl_path=/usr/local/bin/supervisorctl
+
+
+- name: try to restart supervisor on server
+  supervisorctl: name=botx state=restarted supervisorctl_path=/usr/local/bin/supervisorctl

@@ -1,0 +1,45 @@
+#https://github.com/locustio/locust/commit/b026baf63e29326dc4250231e245d6d04718d48d
+- name: "Install locust deps fixversion for 0.7.3"
+  pip: name="{{item.name}}" version="{{item.ver}}"
+  with_items:
+    - {name: 'gevent', ver: '1.0.1'}
+
+- name: "Install locust"
+  pip: name=locustio state=latest
+
+- name: "Create /opt/app"
+  file: dest=/opt/app/{{item}} mode=755 state=directory
+  with_items:
+    - app
+    - chatapp
+    - gamex
+
+- name: "Copy test agent to /opt/app"
+  copy: src={{item}} dest=/opt/app/
+  with_items:
+    - app
+    - chatapp
+    - gamex
+
+- name: "Set locustslave entry on supervisord"
+  template: src=locustslave.conf.j2 dest=/etc/supervisor/conf.d/locustslave.conf
+  when: master_node == False
+
+- name: "Start application"
+  supervisorctl: name=locustslave state=started supervisorctl_path=/usr/local/bin/supervisorctl
+  when: master_node == False
+
+- name: "Set locustmaster entry on supervisord"
+  template: src=locustmaster.conf.j2 dest=/etc/supervisor/conf.d/locustmaster.conf
+  when: master_node == True
+
+- name: "Start application"
+  supervisorctl: name=locustmaster state=started supervisorctl_path=/usr/local/bin/supervisorctl
+  when: master_node == True
+
+- name: "Restart supervisord"
+  service: name=supervisor state=restarted
+
+- name: "Print master address"
+  debug: msg="{{ master }}"
+  when: master_node == True

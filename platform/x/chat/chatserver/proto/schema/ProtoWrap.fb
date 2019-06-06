@@ -1,0 +1,9 @@
+// 包装协议, ser->cli, cli->ser
+namespace gen;
+
+table ProtoWrap {
+    id:string;
+    sub_proto:[byte];
+}
+
+root_type ProtoWrap;

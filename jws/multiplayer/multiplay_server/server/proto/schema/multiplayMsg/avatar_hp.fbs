@@ -1,0 +1,8 @@
+namespace multiplayMsg;
+
+table AvatarHP {
+    avatar :int;
+    hp : int;
+}
+
+root_type AvatarHP;

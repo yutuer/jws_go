@@ -1,0 +1,54 @@
+[Dir]
+# 是否读取TC配置
+runOnTeamcity = true
+
+# 客户端工程所在目录
+# clientProjectDir = "D:/Projects/Comic/trunk/Assets"
+clientProjectDir = "D:/Projects/the-last-of-shuang/trunk"
+
+# 数据工程所在目录
+# dataProjectDir = "D:/Projects/comicdata/a3k"
+dataProjectDir = "D:/Projects/jws-devlop-data/a3k"
+
+# 本地化txt文本资源所在目录
+#localProjectDir = "D:/Projects/Comic/trunk/Assets/Resources"
+localProjectDir = "D:/Projects/the-last-of-shuang/trunk/Assets/Resources"
+
+# data文件所在目录
+gamedataDir = "jws/gamex/conf/data"
+
+# Teamcity 使用的Checkout目录; 一般留空从TC环境变量读取
+TCCheckOutDir = ""
+
+# Teamcity Client传递的Artifacts相对路径
+TCClientArtiRelPath = "artifacts/client"
+
+# TC Data传递的Artifacts相对路径
+TCDataArtiRelPath = "artifacts/data"
+
+# 传递的文件名的txt文件
+TCClientFileList = "ProjectFileList.txt"
+
+
+[Sheet]
+# 遍历所有Sheet时，Sheet的起始序号 （0默认为说明表)
+sheetStartNum = 1
+
+# 列类型所在行数
+fieldType = 0
+
+# 数据类型所在行数
+dataTypeRow = 1
+
+# 标题所在行数
+colNameIdx = 2
+
+# 正式数据开始行数
+dataStartRow = 4
+
+[Local]
+# 多语言列表
+locals = ["zh-Hans", "zh-HMT", "zh-SG", "en", "vi", "ko", "th"]
+
+# 首选多语言表
+defaultLocal = "zh-Hans"

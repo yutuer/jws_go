@@ -1,0 +1,7 @@
+namespace gen;
+
+table ErrMsg {
+    err: string;
+}
+
+root_type ErrMsg;

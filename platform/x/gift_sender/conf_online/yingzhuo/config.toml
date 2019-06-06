@@ -1,0 +1,30 @@
+etcd_root = "/SL100"
+etcd_endpoint = ["http://10.31.1.4:2379/","http://10.31.1.5:2379/","http://10.31.1.6:2379/"]
+secret_key = "b0802611d6a412603f7dfc3bf99494be"
+
+key = ""
+aws_region = "ap-southeast-1"
+
+aws_access_key = ""
+aws_secret_key = ""
+
+[mail_db]
+  [mail_db.205]
+    name = "Mail_G205"
+
+[host]
+    [host.hmt_gift]
+     host = ":7779"
+
+[uc]
+     dynamo_db_Device="Devices_G205"
+     dynamo_db_Name="Name_G205"
+     dynamo_db_UserInfo="UserInfo_G205"
+     dynamo_db_GM="GMInfo"
+     dynamo_db_UserShardInfo="UserShardInfo_G205"
+     apiKey="cd1892bfde1fdde92c3c974c275449f3"
+     caller="taihehudong"
+     SecretKey="3p3286dw7zQ5s1eK"
+     gid=205
+
+

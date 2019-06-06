@@ -1,0 +1,51 @@
+[DynamoConfig]
+#asw key zhangzhen
+dynamo_region="cn-north-1"
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+# if [FilterConfig.Output.item] is none, import all except [FilterConfig.Output.ignore]
+# [FilterConfig.Output.keymap] means the json's key map to the new table's key
+#[[FilterConfig]]
+#    name = ["mails_4001.json", "mails_4002.json", "mails_4003.json", "mails_4004.json", "mails_4005.json",
+#            "mails_4006.json", "mails_4007.json", "mails_4008.json", "mails_4009.json", "mails_4010.json",
+#            "mails_4011.json", "mails_4012.json", "mails_4013.json", "mails_4014.json", "mails_4015.json",
+#            "mails_4016.json", "mails_4017.json", "mails_4018.json", "mails_4019.json"]
+#    [[FilterConfig.Output]]
+#        table = "Mail_G203"
+#        partition = "uid"
+#        ignore = ["_id"]
+#[[FilterConfig]]
+#    name = ["Pay.json"]
+#    [[FilterConfig.Output]]
+#        table = "Pay_G203"
+#        partition = "order_no"
+#        ignore = ["_id"]
+#[[FilterConfig]]
+#    name = ["UserShardInfos.json"]
+#    [[FilterConfig.Output]]
+#        table = "QaUserShardInfo_G203"
+#        partition = "Uid"
+#        ignore = ["_id"]
+#        keymap = ["user_id->Uid"]
+[[FilterConfig]]
+    name = ["Devices.json"]
+    [[FilterConfig.Output]]
+        table = "Device_G203"
+        partition = "Id"
+        item = ["user_id", "id", "lasttime", "createtime", "name", "dn",
+                "channelid", "device"]
+        keymap = ["id->Id"]
+    [[FilterConfig.Output]]
+        table = "UserInfo_G203"
+        partition = "Uid"
+        item = ["user_id", "id", "lasttime", "gid_sid", "bantime", "createtime", "gagtime",
+                "name", "pwd", "authtoken"]
+        keymap = ["user_id->Uid", "id->device"]
+[[FilterConfig]]
+    name = ["YYBGift.json"]
+    [[FilterConfig.Output]]
+        table = "YYBGift"
+        partition = "id"
+        ignore = ["_id"]
+

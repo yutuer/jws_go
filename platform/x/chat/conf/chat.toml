@@ -1,0 +1,36 @@
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="dev"
+
+# etcd
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+
+# net config, public network
+net_type="websocket" # websocket tcp
+net_address=":10010"
+
+# net, private network
+net_gamex_address=":10011"
+
+# auto adjust room config
+city_init_room_num=1
+room_player_max_num=25
+room_player_min_num=5
+room_player_adjust_num=10
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.0.0.0"
+to = "10.255.255.255"
+
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.255.255.255"

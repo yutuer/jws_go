@@ -1,0 +1,9 @@
+// ser->cli, 本人在房间里时，收到其他人进入的通告
+include "RegReq.fb";
+namespace gen;
+
+table RoleEnterNotify {
+    role: RoleInfo;
+}
+
+root_type RoleEnterNotify;

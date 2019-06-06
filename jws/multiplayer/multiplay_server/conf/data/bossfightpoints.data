@@ -1,0 +1,298 @@
+
+(
+PVE_boss_beigong_lv1_T 
+(08ê@åy
+(
+PVE_boss_beigong_lv1_D 
+(08ê@åy
+(
+PVE_boss_beigong_lv1_R 
+(08ê@åy
++
+PVE_boss_zhangjiao_lv1_T (08ê@ËÑ
++
+PVE_boss_zhangjiao_lv1_D (08ê@ËÑ
++
+PVE_boss_zhangjiao_lv1_R (08ê@ËÑ
+*
+PVE_boss_dongzhuo_lv1_T P(08†8@¿ª
+*
+PVE_boss_dongzhuo_lv1_D P(08†8@¿ª
+*
+PVE_boss_dongzhuo_lv1_R P(08†8@¿ª
+)
+PVE_boss_xuhuang_lv1_T x(08†8@‡⁄
+)
+PVE_boss_xuhuang_lv1_D x(08†8@‡⁄
+)
+PVE_boss_xuhuang_lv1_R x(08†8@‡⁄
++
+PVE_boss_diaochan_lv1_T †(08∞T@Ä˙
++
+PVE_boss_diaochan_lv1_D †(08∞T@Ä˙
++
+PVE_boss_diaochan_lv1_R †(08∞T@Ä˙
+'
+PVE_boss_lvbu_lv1_T ¨(08∞T@¸§
+'
+PVE_boss_lvbu_lv1_D ¨(08∞T@¸§
+'
+PVE_boss_lvbu_lv1_R ¨(08∞T@¸§
+)
+PVE_boss_beigong_lv2_T x(08ê@òÚ
+)
+PVE_boss_beigong_lv2_D x(08ê@òÚ
+)
+PVE_boss_beigong_lv2_R x(08ê@òÚ
+,
+PVE_boss_zhangjiao_lv2_T »(08ê@ËÅ
+,
+PVE_boss_zhangjiao_lv2_D »(08ê@ËÅ
+,
+PVE_boss_zhangjiao_lv2_R »(08ê@ËÅ
++
+PVE_boss_dongzhuo_lv2_T ﬁ(#08†8@îã
++
+PVE_boss_dongzhuo_lv2_D ﬁ(#08†8@îã
++
+PVE_boss_dongzhuo_lv2_R ﬁ(#08†8@îã
+*
+PVE_boss_xuhuang_lv2_T §(*08†8@•
+*
+PVE_boss_xuhuang_lv2_D §(*08†8@•
+*
+PVE_boss_xuhuang_lv2_R §(*08†8@•
+)
+PVE_boss_guojia_lv2_T Ù(208†8@¯Ã
+)
+PVE_boss_guojia_lv2_D Ù(208†8@¯Ã
+)
+PVE_boss_guojia_lv2_R Ù(208†8@¯Ã
++
+PVE_boss_diaochan_lv2_T ÿ(<08∞T@ÄÙ
++
+PVE_boss_diaochan_lv2_D ÿ(<08∞T@ÄÙ
++
+PVE_boss_diaochan_lv2_R ÿ(<08∞T@ÄÙ
+'
+PVE_boss_lvbu_lv2_T Ë(d08∞T@ﬁÛ
+'
+PVE_boss_lvbu_lv2_D Ë(d08∞T@ﬁÛ
+'
+PVE_boss_lvbu_lv2_R Ë(d08∞T@ﬁÛ
+*
+PVE_boss_beigong_lv3_T Ù(208ê@‡‘
+*
+PVE_boss_beigong_lv3_D Ù(208ê@‡‘
+*
+PVE_boss_beigong_lv3_R Ù(208ê@‡‘
+,
+PVE_boss_zhangjiao_lv3_T º(F08ê@†ì
+,
+PVE_boss_zhangjiao_lv3_D º(F08ê@†ì
+,
+PVE_boss_zhangjiao_lv3_R º(F08ê@†ì
++
+PVE_boss_dongzhuo_lv3_T ∞	(x08†8@Ú•
++
+PVE_boss_dongzhuo_lv3_D ∞	(x08†8@Ú•
++
+PVE_boss_dongzhuo_lv3_R ∞	(x08†8@Ú•
+-
+PVE_boss_zhangliao_lv3_T î
+(Ç08†8@ñ«
+-
+PVE_boss_zhangliao_lv3_D î
+(Ç08†8@ñ«
+-
+PVE_boss_zhangliao_lv3_R î
+(Ç08†8@ñ«
++
+PVE_boss_xuhuang_lv3_T ¯
+(å08†8@∫Ë
++
+PVE_boss_xuhuang_lv3_D ¯
+(å08†8@∫Ë
++
+PVE_boss_xuhuang_lv3_R ¯
+(å08†8@∫Ë
+*
+PVE_boss_guojia_lv3_T ‹(ñ08†8@ﬁâ
+*
+PVE_boss_guojia_lv3_D ‹(ñ08†8@ﬁâ
+*
+PVE_boss_guojia_lv3_R ‹(ñ08†8@ﬁâ
+,
+PVE_boss_diaochan_lv3_T ¿(†08∞T@Ç´
+,
+PVE_boss_diaochan_lv3_D ¿(†08∞T@Ç´
+,
+PVE_boss_diaochan_lv3_R ¿(†08∞T@Ç´
+(
+PVE_boss_lvbu_lv3_T –(»08∞T@∆ˇ
+(
+PVE_boss_lvbu_lv3_D –(»08∞T@∆ˇ
+(
+PVE_boss_lvbu_lv3_R –(»08∞T@∆ˇ
++
+PVE_boss_beigong_lv4_T ‹(ñ08ê@†ç
++
+PVE_boss_beigong_lv4_D ‹(ñ08ê@†ç
++
+PVE_boss_beigong_lv4_R ‹(ñ08ê@†ç
+-
+PVE_boss_zhangjiao_lv4_T à(¥08ê@®¥
+-
+PVE_boss_zhangjiao_lv4_D à(¥08ê@®¥
+-
+PVE_boss_zhangjiao_lv4_R à(¥08ê@®¥
+,
+PVE_boss_dongzhuo_lv4_T ò(‹08†8@“£
+,
+PVE_boss_dongzhuo_lv4_D ò(‹08†8@“£
+,
+PVE_boss_dongzhuo_lv4_R ò(‹08†8@“£
+-
+PVE_boss_zhangliao_lv4_T ¸(Ê08†8@®±
+-
+PVE_boss_zhangliao_lv4_D ¸(Ê08†8@®±
+-
+PVE_boss_zhangliao_lv4_R ¸(Ê08†8@®±
++
+PVE_boss_xuhuang_lv4_T ‡(08†8@¯¿
++
+PVE_boss_xuhuang_lv4_D ‡(08†8@¯¿
++
+PVE_boss_xuhuang_lv4_R ‡(08†8@¯¿
+*
+PVE_boss_guojia_lv4_T ƒ(˙08†8@‡»
+*
+PVE_boss_guojia_lv4_D ƒ(˙08†8@‡»
+*
+PVE_boss_guojia_lv4_R ƒ(˙08†8@‡»
+)
+PVE_boss_xuchu_lv4_T ®(Ñ08†8@»–
+)
+PVE_boss_xuchu_lv4_D ®(Ñ08†8@»–
+)
+PVE_boss_xuchu_lv4_R ®(Ñ08†8@»–
+,
+PVE_boss_diaochan_lv4_T (˙08∞T@ÍÊ
+,
+PVE_boss_diaochan_lv4_D (˙08∞T@ÍÊ
+,
+PVE_boss_diaochan_lv4_R (˙08∞T@ÍÊ
+(
+PVE_boss_lvbu_lv4_T ∏(ò08∞T@‡≈
+(
+PVE_boss_lvbu_lv4_D ∏(ò08∞T@‡≈
+(
+PVE_boss_lvbu_lv4_R ∏(ò08∞T@‡≈
++
+PVE_boss_beigong_lv5_T ƒ(˙08ê@»–
++
+PVE_boss_beigong_lv5_D ƒ(˙08ê@»–
++
+PVE_boss_beigong_lv5_R ƒ(˙08ê@»–
+-
+PVE_boss_zhangjiao_lv5_T å(é08ê@–˜
+-
+PVE_boss_zhangjiao_lv5_D å(é08ê@–˜
+-
+PVE_boss_zhangjiao_lv5_R å(é08ê@–˜
+,
+PVE_boss_dongzhuo_lv5_T ú(∂08†8@¿ÿ
+,
+PVE_boss_dongzhuo_lv5_D ú(∂08†8@¿ÿ
+,
+PVE_boss_dongzhuo_lv5_R ú(∂08†8@¿ÿ
+-
+PVE_boss_zhangliao_lv5_T Ä(¿08†8@ËÏ
+-
+PVE_boss_zhangliao_lv5_D Ä(¿08†8@ËÏ
+-
+PVE_boss_zhangliao_lv5_R Ä(¿08†8@ËÏ
++
+PVE_boss_xuhuang_lv5_T ‰( 08†8@¨Ä	
++
+PVE_boss_xuhuang_lv5_D ‰( 08†8@¨Ä	
++
+PVE_boss_xuhuang_lv5_R ‰( 08†8@¨Ä	
+*
+PVE_boss_guojia_lv5_T »(‘08†8@ì	
+*
+PVE_boss_guojia_lv5_D »(‘08†8@ì	
+*
+PVE_boss_guojia_lv5_R »(‘08†8@ì	
+)
+PVE_boss_xuchu_lv5_T ¨(ﬁ08†8@¥ß	
+)
+PVE_boss_xuchu_lv5_D ¨(ﬁ08†8@¥ß	
+)
+PVE_boss_xuchu_lv5_R ¨(ﬁ08†8@¥ß	
+,
+PVE_boss_diaochan_lv5_T ÿ(¸08∞T@¯∫	
+,
+PVE_boss_diaochan_lv5_D ÿ(¸08∞T@¯∫	
+,
+PVE_boss_diaochan_lv5_R ÿ(¸08∞T@¯∫	
+(
+PVE_boss_lvbu_lv5_T †(ê08∞T@Ä‚	
+(
+PVE_boss_lvbu_lv5_D †(ê08∞T@Ä‚	
+(
+PVE_boss_lvbu_lv5_R †(ê08∞T@Ä‚	
++
+PVE_boss_beigong_lv6_T ¨(˙08ê@»–
++
+PVE_boss_beigong_lv6_D ¨(˙08ê@»–
++
+PVE_boss_beigong_lv6_R ¨(˙08ê@»–
+-
+PVE_boss_zhangjiao_lv6_T ÿ(é08ê@–˜
+-
+PVE_boss_zhangjiao_lv6_D ÿ(é08ê@–˜
+-
+PVE_boss_zhangjiao_lv6_R ÿ(é08ê@–˜
+,
+PVE_boss_dongzhuo_lv6_T Ë (∂08†8@¿ÿ
+,
+PVE_boss_dongzhuo_lv6_D Ë (∂08†8@¿ÿ
+,
+PVE_boss_dongzhuo_lv6_R Ë (∂08†8@¿ÿ
+-
+PVE_boss_zhangliao_lv6_T Ä(¿08†8@ËÏ
+-
+PVE_boss_zhangliao_lv6_D Ä(¿08†8@ËÏ
+-
+PVE_boss_zhangliao_lv6_R Ä(¿08†8@ËÏ
++
+PVE_boss_xuhuang_lv6_T ‰( 08†8@¨Ä	
++
+PVE_boss_xuhuang_lv6_D ‰( 08†8@¨Ä	
++
+PVE_boss_xuhuang_lv6_R ‰( 08†8@¨Ä	
+*
+PVE_boss_guojia_lv6_T »(‘08†8@ì	
+*
+PVE_boss_guojia_lv6_D »(‘08†8@ì	
+*
+PVE_boss_guojia_lv6_R »(‘08†8@ì	
+)
+PVE_boss_xuchu_lv6_T ¨(ﬁ08†8@¥ß	
+)
+PVE_boss_xuchu_lv6_D ¨(ﬁ08†8@¥ß	
+)
+PVE_boss_xuchu_lv6_R ¨(ﬁ08†8@¥ß	
+,
+PVE_boss_diaochan_lv6_T ÿ(¸08∞T@¯∫	
+,
+PVE_boss_diaochan_lv6_D ÿ(¸08∞T@¯∫	
+,
+PVE_boss_diaochan_lv6_R ÿ(¸08∞T@¯∫	
+(
+PVE_boss_lvbu_lv6_T †(ê08∞T@Ä‚	
+(
+PVE_boss_lvbu_lv6_D †(ê08∞T@Ä‚	
+(
+PVE_boss_lvbu_lv6_R †(ê08∞T@Ä‚	

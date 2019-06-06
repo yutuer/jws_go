@@ -1,0 +1,34 @@
+<seelog>
+    <outputs>
+        <filter levels="trace">
+            <console formatid="common"/>
+        </filter>
+        <filter levels="debug">
+            <console formatid="coloredmagenta"/>
+        </filter>
+        <filter levels="info">
+            <console formatid="coloredmagenta"/>
+        </filter>
+        <filter levels="error">
+            <console formatid="coloredred"/>
+        </filter>
+        <filter levels="warn,error,critical">
+            <splitter formatid="coloredred">
+                <file path="./log/cri_log.log"/>
+                <custom name="sentry" formatid="sentry"/>
+            </splitter>
+        </filter>
+        <file formatid="common" path="./log/log.log"/>
+    </outputs>
+    <formats>
+        <!--颜色信息已删除，命名不改了先。。。。。。。。-->
+        <format id="coloredblue"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="coloredred"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="coloredgreen"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="coloredyellow"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="coloredcyan"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="coloredmagenta"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="common"  format="[%Date %Time] [%LEV] [%File(%Line)] [%Func] %Msg%n"/>
+        <format id="sentry"  format="%Msg%n"/>
+    </formats>
+</seelog>

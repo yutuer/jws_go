@@ -1,0 +1,29 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/Name_prod", 
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Name", 
+        "AttributeType": "S"
+      }
+    ], 
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0, 
+      "WriteCapacityUnits": 50, 
+      "LastIncreaseDateTime": 1476839661.597, 
+      "ReadCapacityUnits": 50, 
+      "LastDecreaseDateTime": 1476426575.404
+    }, 
+    "TableSizeBytes": 5796, 
+    "TableName": "Name_prod", 
+    "TableStatus": "ACTIVE", 
+    "KeySchema": [
+      {
+        "KeyType": "HASH", 
+        "AttributeName": "Name"
+      }
+    ], 
+    "ItemCount": 104, 
+    "CreationDateTime": 1458722657.5
+  }
+}

@@ -1,0 +1,32 @@
+- name: "Install supervisor"
+  pip: name={{ item }} state=present
+  with_items:
+    - supervisor
+
+- name: configure supervisord
+  shell: echo_supervisord_conf > {{supervisor_config_file}}
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:{{ ansible_env.PATH }}"
+
+- name: prepare necessary directories
+  file: path={{item}} state=directory recurse=yes mode=777
+  with_items:
+    - "{{supervisor_config_dir}}"
+    - "{{supervisor_log_dir}}"
+
+- name: supervisor configurations initialize
+  ini_file: dest={{supervisor_config_file}}
+            section={{item.section}}
+            option={{item.option}}
+            value={{item.value}}
+            state=present
+  with_items:
+      - { section: include, option: files, value: "{{supervisor_config_dir}}/*.conf"  }
+      - { section: inet_http_server, option: port, value: "{{supervisor_http.port}}" }
+      - { section: inet_http_server, option: username, value: "{{supervisor_http.username}}" }
+      - { section: inet_http_server, option: password, value: "{{supervisor_http.password}}" }
+
+- name: Copy supervisord init.d script
+  template: src=supervisord.j2 dest=/etc/init.d/supervisor mode=0700
+  notify:
+      - run supervisor

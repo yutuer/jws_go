@@ -1,0 +1,430 @@
+
+N
+TASK0_1IsInTown&IsPass&IsNotPassnull&k0_2&k1_1"QuickRequestjTownHomep
+4
+TASK0_2"LevelBtnjLevelMappzIDS_FTE_CAIWENJI_03
+<
+TASK0_3IsUIOpenLevelInfoWnd"	InterpassjLevelInfoWndp
+)
+TASK0_4"
+LevelFightjBattleChooseHerop
+€
+EQUIP_1IsInTown&IsPass	null&k1_1"	Equipment2IDS_FTE_INI_EQUIP:0,101BGuideSuccessJTASK0jTownHomepzIDS_FTE_CAIWENJI_05
+3
+EQUIP_2"Bracerj	InventorypzIDS_FTE_CAIWENJI_06
+B
+EQUIP_3"	EquipList*
+BR_ALL_1_1j	InventorypzIDS_FTE_CAIWENJI_07
+)
+EQUIP_4"EquipjItemDetailCompareInfop
+1
+EQUIP_5"Ringj	InventorypzIDS_FTE_CAIWENJI_08
+-
+EQUIP_6"	EquipList*
+RG_ALL_1_1j	Inventoryp
+)
+EQUIP_7"EquipjItemDetailCompareInfop
+F
+EQUIP_8"QuitBGuideSuccessJEQUIPj	InventorypzIDS_FTE_CAIWENJI_09
+U
+	REWARD1_1IsInTown&IsPass&IsGuideSuccessnull&k1_1&EQUIP"QuickRewardjTownHomep
+ 
+	REWARD1_2"	RequestOKjRewardp
+i
+TASK1_1(IsInTown&IsPass&IsNotPass&IsGuideSuccessnull&k1_1&k1_1_add&REWARD1"QuickRequestjTownHomep
+4
+TASK1_2"LevelBtnjLevelMappzIDS_FTE_CAIWENJI_10
+9
+TASK1_3"	InterpassjLevelInfoWndpzIDS_FTE_CAIWENJI_11
+)
+TASK1_4"
+LevelFightjBattleChooseHerop
+•
+TASK2_1IsUIOpen&IsPass&IsNotPassLevelMap&k1_1_add&k1_2"LevelBtn*k1_2BGuideSuccess&GuideSuccessJTASK1&TASK2jLevelMappzIDS_FTE_CAIWENJI_12
+$
+TASK2_2"	InterpassjLevelInfoWndp
+>
+TASK2_3"
+LevelFightBGuideSuccessJTASK2jBattleChooseHerop
+|
+	SPTASK2_1IsInTown&IsPass&IsNotPassnull&k1_1_add&k1_2"QuickRequestBGuideSuccess&GuideSuccessJTASK1&TASK2jTownHomep
+'
+	SPTASK2_2"LevelBtn*k1_2jLevelMapp
+&
+	SPTASK2_3"	InterpassjLevelInfoWndp
++
+	SPTASK2_4"
+LevelFightjBattleChooseHerop
+„
+EQUIP3_1IsInTown&IsPass	null&k1_2"	Equipment2IDS_FTE_INI_EQUIP2:0,101BGuideSuccessJSPTASK2jTownHomepzIDS_FTE_CAIWENJI_13
+2
+EQUIP3_2"Ringj	InventorypzIDS_FTE_CAIWENJI_14
+C
+EQUIP3_3"	EquipList*
+RG_ALL_1_2j	InventorypzIDS_FTE_CAIWENJI_15
+*
+EQUIP3_4"EquipjItemDetailCompareInfop
+H
+EQUIP3_5"QuitBGuideSuccessJEQUIP3j	InventorypzIDS_FTE_CAIWENJI_16
+V
+	REWARD3_1IsInTown&IsPass&IsGuideSuccessnull&k1_2&EQUIP3"QuickRewardjTownHomep
+ 
+	REWARD3_2"	RequestOKjRewardp
+i
+TASK3_1(IsInTown&IsPass&IsNotPass&IsGuideSuccessnull&k1_2&k1_2_add&REWARD3"QuickRequestjTownHomep
+4
+TASK3_2"LevelBtnjLevelMappzIDS_FTE_CAIWENJI_17
+$
+TASK3_3"	InterpassjLevelInfoWndp
+)
+TASK3_4"
+LevelFightjBattleChooseHerop
+™
+TASK4_1IsUIOpen&IsPass&IsNotPassLevelMap&k1_2_add&k1_2_1"LevelBtn*k1_2_1BGuideSuccess&GuideSuccessJTASK3&TASK4jLevelMappzIDS_FTE_CAIWENJI_18
+$
+TASK4_2"	InterpassjLevelInfoWndp
+)
+TASK4_3"
+LevelFightjBattleChooseHerop
+~
+	SPTASK4_1IsInTown&IsPass&IsNotPassnull&k1_2_add&k1_2_1"QuickRequestBGuideSuccess&GuideSuccessJTASK3&TASK4jTownHomep
+)
+	SPTASK4_2"LevelBtn*k1_2_1jLevelMapp
+&
+	SPTASK4_3"	InterpassjLevelInfoWndp
++
+	SPTASK4_4"
+LevelFightjBattleChooseHerop
+y
+STRENGTHEN_1IsInTown&IsPassnull&k1_2_1"	Equipment2IDS_FTE_INI_STRENGTHEN:0,101BGuideSuccessJSPTASK4jTownHomep
+*
+STRENGTHEN_2"Strengtheningj	Inventoryp
+!
+STRENGTHEN_3"Ringj	Inventoryp
+y
+STRENGTHEN_4"
+Strengthen2IDS_FTE_INI_STRENGTHEN3:-295,-10BGuideSuccessJ
+STRENGTHENj	InventorypzIDS_FTE_CAIWENJI_21
+_
+STRENGTHEN_5"
+Strengthen2IDS_FTE_INI_STRENGTHEN2:-295,-10j	InventorypzIDS_FTE_CAIWENJI_22
+Ž
+EQUIP6_1IsUIOpen&IsPass&IsGuideSuccessInventory&k1_2&STRENGTHEN"
+Equipment22IDS_FTE_INI_EQUIP2:0,101j	InventorypzIDS_FTE_CAIWENJI_20
+C
+EQUIP6_2"	EquipList*
+BR_ALL_1_2j	InventorypzIDS_FTE_CAIWENJI_23
+Z
+EQUIP6_3"Equip2IDS_FTE_INI_EQUIP3:0,101jItemDetailCompareInfopzIDS_FTE_CAIWENJI_24
+H
+EQUIP6_4"QuitBGuideSuccessJEQUIP6j	InventorypzIDS_FTE_CAIWENJI_25
+“
+
+SPEQUIP6_10IsInTown&IsPass&IsGuideSuccess&IsGuideNotSuccessnull&k1_2_1&STRENGTHEN&EQUIP6"	Equipment2IDS_FTE_INI_STRENGTHEN:0,101jTownHomep
+!
+
+SPEQUIP6_2"Bracerj	Inventoryp
+E
+
+SPEQUIP6_3"	EquipList*
+BR_ALL_1_2j	InventorypzIDS_FTE_CAIWENJI_20
+G
+
+SPEQUIP6_4"Equip2IDS_FTE_INI_EQUIP3:0,101jItemDetailCompareInfop
+K
+
+SPEQUIP6_5"QuitBGuideSuccess&GuideSuccessJSPEQUIP6&EQUIP6j	Inventoryp
+p
+	STARBOX_1IsUIOpen&IsPass&IsNotPassLevelMap&k1_2_1_add&k1_3"StarBox1Z5.0jLevelMappzIDS_FTE_CAIWENJI_26
+@
+	STARBOX_2"TakeStarBoxBGuideSuccessJSTARBOXZ5.0jLevelMapp
+%
+	STARBOX_3"	RequestOKZ5.0jRewardp
+<
+	STARBOX_4"	LevelQuitZ5.0jLevelMappzIDS_FTE_CAIWENJI_27
+2
+	STARBOX_5"MapQuitZ5.0jStoryChapterMainPanelp
+w
+SPSTARBOX_1+IsInTown&IsPass&IsNotPass&IsGuideNotSuccessnull&k1_2_1_add&k1_3&STARBOX"GoToStoryMapZ5.0jTownHomep
+5
+SPSTARBOX_2"Chapter1Z5.0jStoryChapterMainPanelp
+(
+SPSTARBOX_3"StarBox1Z5.0jLevelMapp
+Y
+SPSTARBOX_4"TakeStarBoxBGuideSuccess&GuideSuccessJSTARBOX&SPSTARBOXZ5.0jLevelMapp
+'
+SPSTARBOX_5"	RequestOKZ5.0jRewardp
+)
+SPSTARBOX_6"	LevelQuitZ5.0jLevelMapp
+4
+SPSTARBOX_7"MapQuitZ5.0jStoryChapterMainPanelp
+Ž
+
+HEROSTAR_1IsInTown&IsPass&IsGuideSuccessnull&k1_2_1_add&STARBOX"Role2IDS_FTE_INI_HEROSTAR:0,101Z5.0jTownHomepzIDS_FTE_CAIWENJI_29
+M
+
+HEROSTAR_2"
+ChoiceRole*HERO_GYZ5.0jTeamMemberInfopzIDS_FTE_CAIWENJI_30
+-
+
+HEROSTAR_3"HeroStarZ5.0jTeamMemberInfop
+G
+
+HEROSTAR_4"
+HeroStarUpBGuideSuccessJHEROSTARZ5.0jTeamMemberInfop
+W
+GACHA_1IsInTown&IsPass	null&k1_3"
+EnterGachaZ5.0jTownHomepzIDS_FTE_CAIWENJI_31
+U
+GACHA_2"	HCOneTime2IDS_FTE_GENERALGACHA1:0,101BGuideSuccessJGACHAZ5.0jGachap
+&
+GACHA_3"GachaOkZ5.0jGachaResultp
+"
+GACHA_4"	GachaQuitZ5.0jGachap
+[
+HEROSTAR2_1IsInTown&IsPass&IsGuideSuccessnull&k1_3&GACHA"RoleZ5.0jTeamMemberInfop
+9
+HEROSTAR2_2"
+ChoiceRole*HERO_SXZ5.0jTeamMemberInfop
+,
+HEROSTAR2_3"HeroLvZ5.0jTeamMemberInfop
+H
+HEROSTAR2_4"	HeroLvUp3BGuideSuccessJ	HEROSTAR2Z5.0jTeamMemberInfop
+.
+HEROSTAR2_5"RoleQuitZ5.0jTeamMemberInfop
+p
+TASK5_1(IsInTown&IsPass&IsNotPass&IsGuideSuccessnull&k1_3&k1_3_add&HEROSTAR2"GoToStoryMapZ5.0jTownHomep
+1
+TASK5_2"Chapter1Z5.0jStoryChapterMainPanelp
+.
+TASK5_3"LevelBtn*k1_3_addZ5.0jLevelMapp
+)
+TASK5_4"	InterpassZ5.0jLevelInfoWndp
+F
+TASK5_5"Hero*HERO_SXZ5.0jBattleChooseHeropzIDS_FTE_CAIWENJI_33
+C
+TASK5_6"
+LevelFightBGuideSuccessJTASK5Z5.0jBattleChooseHerop
+n
+	SPTASK5_1(IsInTown&IsPass&IsNotPass&IsGuideSuccessnull&k1_3&k1_3_add&TASK5"GoToStoryMapZ5.0jTownHomep
+3
+	SPTASK5_2"Chapter1Z5.0jStoryChapterMainPanelp
+0
+	SPTASK5_3"LevelBtn*k1_3_addZ5.0jLevelMapp
++
+	SPTASK5_4"	InterpassZ5.0jLevelInfoWndp
+0
+	SPTASK5_5"
+LevelFightZ5.0jBattleChooseHerop
+t
+RANK_1IsInTown&IsPassnull&k1_4_add"	Equipment2IDS_FTE_INI_RANK:0,101BGuideSuccessJSPTASK5Z5.0jTownHomep
+)
+RANK_2"StrengtheningZ5.0j	Inventoryp
+"
+RANK_3"BracerZ5.0j	Inventoryp
+T
+RANK_4"AddRankMaterialBGuideSuccessJRANKZ5.0j	InventorypzIDS_FTE_CAIWENJI_36
+>
+RANK_5"RankMaterial1Z5.0j	InventorypzIDS_FTE_CAIWENJI_37
+-
+RANK_6"Level*k1_5Z5.0jMaterialComposep
+o
+RANK2_1IsInTown&IsPass	null&k1_5"	Equipment2IDS_FTE_INI_RANK:0,101Z5.0jTownHomepzIDS_FTE_CAIWENJI_38
+*
+RANK2_2"StrengtheningZ5.0j	Inventoryp
+#
+RANK2_3"BracerZ5.0j	Inventoryp
+A
+RANK2_4"AddRankMaterialBGuideSuccessJRANK2Z5.0j	Inventoryp
+,
+RANK2_5"AddRankMaterialZ5.0j	Inventoryp
+s
+
+ABSTRACT_1IsInTown&IsPass	null&k2_1"	Equipment2IDS_FTE_ABSTRACT2:0,101Z5.0jTownHomepzIDS_FTE_CAIWENJI_39
+9
+
+ABSTRACT_2"RingZ5.0j	InventorypzIDS_FTE_CAIWENJI_40
+5
+
+ABSTRACT_3"	EquipList*
+RG_ALL_1_2Z5.0j	Inventoryp
+2
+
+ABSTRACT_4"AbstractZ5.0jItemDetailInfoPanelp
+[
+
+ABSTRACT_5"
+AbstractOpBGuideSuccessJABSTRACTZ5.0jEquipAbstractpzIDS_FTE_CAIWENJI_41
+C
+
+ABSTRACT_6"
+AbstractOKZ5.0jEquipAbstractpzIDS_FTE_CAIWENJI_42
+$
+
+ABSTRACT_7"QuitZ5.0j	Inventoryp
+„
+GUILD_1IsInTown&IsPass&IsGuideSuccessnull&k2_1&ABSTRACT"Guild2IDS_FTE_INI_GUILD:0,101BGuideSuccessJGUILDZ5.0jTownHomep
+y
+ABSTRACT2_1IsInTown&IsPassnull&k2_1_add"	Equipment2IDS_FTE_INI_EQUIP2:0,101Z5.0jTownHomepzIDS_FTE_CAIWENJI_44
+%
+ABSTRACT2_2"RingZ5.0j	Inventoryp
+K
+ABSTRACT2_3"	EquipList*
+RG_ALL_1_3Z5.0j	InventorypzIDS_FTE_CAIWENJI_45
+|
+ABSTRACT2_4"ChangeAbstract2IDS_FTE_ABSTRACT3:0,101BGuideSuccessJ	ABSTRACT2Z5.0jItemDetailInfopzIDS_FTE_CAIWENJI_46
+2
+ABSTRACT2_5"EquipZ5.0jItemDetailCompareInfop
+o
+ROLE2_1IsInTown&IsPass	null&k2_2"Role2IDS_FTE_INI_ZHANGFEI1:0,101Z5.0jTownHomepzIDS_FTE_CAIWENJI_47
+J
+ROLE2_2"
+ChoiceRole*HERO_ZFBGuideSuccessJROLE2Z5.0jTeamMemberInfop
+S
+	DGFIGHT_1IsInTown&IsPass	null&k2_4"DG2IDS_FTE_INI_DG:0,101Z5.0jTownHomep
+Y
+	DGFIGHT_2"DGFight2IDS_FTE_INI_DG2:80,101Z5.0jDestinyGeneralpzIDS_FTE_CAIWENJI_49
+E
+	DGFIGHT_3"BaihuBGuideSuccessJDGFIGHTZ5.0jDestinyGeneralSkillp
+1
+	DGFIGHT_4"BackToDGZ5.0jDestinyGeneralSkillp
+@
+	DGFIGHT_5"DGLevelZ5.0jDestinyGeneralpzIDS_FTE_CAIWENJI_50
+i
+DESTINYPASS_1IsInTown&IsPassnull&k2_4_add"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+/
+DESTINYPASS_2"ResourceLevelZ5.0jTownHomep
+J
+DESTINYPASS_3"DestinyPassBGuideSuccessJDESTINYPASSZ5.0j
+ChapterMapp
+
+DAILYQUEST_1IsInTown&IsPassnull&k2_5_add"Quest2IDS_FTE_INI_DAILYQUEST:284,4BGuideSuccessJ
+DAILYQUESTZ5.0jTownHomep
+1
+DAILYQUEST_2"
+DailyQuest*11025.0Z5.0jQuestp
+<
+EATBUN_1IsInTown&IsPass	null&k2_6"GoToMapZ5.0jEatBun
+
+EATBUN_2"EatBunZ5.0jEatBun
+7
+EATBUN_3"StartEatBGuideSuccessJEATBUNZ5.0jEatBun
+y
+ELITE_1(IsUIOpen&IsPass&IsNotPass&IsGuideSuccessReward&k2_6&k3_1&EATBUN"	RequestOKBGuideSuccessJELITEZ5.0jEatBun
+6
+ELITE_2"	GoToEliteZ5.0jEatBunzIDS_FTE_CAIWENJI_54
+"
+ELITE_3"LevelBtnZ5.0jLevelMap
+'
+ELITE_4"	InterpassZ5.0jLevelInfoWnd
+¦
+	SPELITE_1:IsInTown&IsPass&IsNotPass&IsGuideSuccess&IsGuideNotSuccessnull&k2_6&k3_1&EATBUN&ELITE"GoToMapBGuideSuccess&GuideSuccessJELITE&SPELITEZ5.0jEatBunp
+"
+	SPELITE_2"EatBunZ5.0jEatBunp
+%
+	SPELITE_3"	GoToEliteZ5.0jEatBunp
+&
+	SPELITE_4"LevelBtnZ5.0jLevelMapp
++
+	SPELITE_5"	InterpassZ5.0jLevelInfoWndp
+]
+PVP_1IsInTown&IsPass	null&k3_1"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+$
+PVP_2"PvpEnterZ5.0j
+ChapterMapp
+N
+PVP_3"FightBGuideSuccessJPVPZ5.0jPVPBattleMainUIpzIDS_FTE_CAIWENJI_56
+b
+
+TPVEBOSS_1IsInTown&IsPass	null&k3_3"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+A
+
+TPVEBOSS_2"TPVEBossBGuideSuccessJTPVEBOSSZ5.0j
+ChapterMapp
+^
+TPVP_1IsInTown&IsPass	null&k3_6"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+&
+TPVP_2"	TPvpEnterZ5.0j
+ChapterMapp
+R
+TPVP_3"	TPvpFightBGuideSuccessJTPVPZ5.0jTeamPVPMainUIpzIDS_FTE_CAIWENJI_58
+T
+JADE_1IsInTown&IsPass	null&k4_2"Jade2IDS_FTE_INI_JADE:0,101Z5.0jTownHomep
+M
+JADE_2"BesetAllBGuideSuccessJJADEZ5.0j	JadePanelpzIDS_FTE_CAIWENJI_60
+d
+	COMBINE_1IsGuideSuccess&IsUIOpenJADE&JadePanel"RedJadeZ5.0j	JadePanelpzIDS_FTE_CAIWENJI_61
+*
+	COMBINE_2"CombinationZ5.0j	JadePanelp
+1
+	COMBINE_3"JadeList*JD_RED_1Z5.0j	JadePanelp
+9
+	COMBINE_4"PutInZ5.0j	JadePanelpzIDS_FTE_CAIWENJI_62
+=
+	COMBINE_5"CombineBGuideSuccessJCOMBINEZ5.0j	JadePanelp
+)
+	COMBINE_6"
+BackToJadeZ5.0j	JadePanelp
+ž
+SPCOMBINE_10IsInTown&IsPass&IsGuideSuccess&IsGuideNotSuccessnull&k4_2&JADE&COMBINE"Jade2IDS_FTE_INI_JADE:0,101BGuideSuccessJCOMBINEZ5.0jTownHomep
+(
+SPCOMBINE_2"RedJadeZ5.0j	JadePanelp
+,
+SPCOMBINE_3"CombinationZ5.0j	JadePanelp
+3
+SPCOMBINE_4"JadeList*JD_RED_1Z5.0j	JadePanelp
+&
+SPCOMBINE_5"PutInZ5.0j	JadePanelp
+A
+SPCOMBINE_6"CombineBGuideSuccessJ	SPCOMBINEZ5.0j	JadePanelp
++
+SPCOMBINE_7"
+BackToJadeZ5.0j	JadePanelp
+b
+
+IRONPASS_1IsInTown&IsPass	null&k4_4"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+,
+
+IRONPASS_2"ResourceLevelZ5.0jTownHomep
+?
+
+IRONPASS_3"EXPassBGuideSuccessJIRONPASSZ5.0j
+ChapterMapp
+a
+	PVEBOSS_1IsInTown&IsPass	null&k4_6"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+>
+	PVEBOSS_2"PVEBossBGuideSuccessJPVEBOSSZ5.0j
+ChapterMapp
+^
+HELL_1IsInTown&IsPass	null&k5_1"GoToStoryMap2IDS_FTE_INI_HELL:-151,88Z5.0jTownHomep
+,
+HELL_2"HellZ5.0jStoryChapterMainPanelp
+0
+HELL_3"Chapter1Z5.0jStoryChapterMainPanelp
+*
+HELL_4"LevelBtn*hk1_1Z5.0jLevelMapp
+<
+HELL_5"	InterpassBGuideSuccessJHELLZ5.0jLevelInfoWndp
+h
+STARLEVELUP_1IsInTown&IsPass	null&k5_2"	Equipment2IDS_FTE_INI_STARLEVELUP1:0,101Z5.0jTownHomep
+,
+STARLEVELUP_2"	StarlevelZ5.0j	Inventoryp
+I
+STARLEVELUP_3"StarlevelupBGuideSuccessJSTARLEVELUPZ5.0j	Inventoryp
+z
+TRIAL_1IsInTown&IsPass&IsGuideSuccessnull&k5_2&STARLEVELUP"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+8
+TRIAL_2"TrialBGuideSuccessJTRIALZ5.0j
+ChapterMapp
+c
+MONEYPASS_1IsInTown&IsPass	null&k5_3"GoToMap2IDS_FTE_INI_WORLDMAP:-160,101Z5.0jTownHomep
+-
+MONEYPASS_2"ResourceLevelZ5.0jTownHomep
+D
+MONEYPASS_3"	MoneyPassBGuideSuccessJ	MONEYPASSZ5.0j
+ChapterMapp
+E
+BLOODBATTLE_1IsInTown&IsPass	null&k5_6"GoToMapZ5.0jTownHomep
+J
+BLOODBATTLE_2"BloodBattleBGuideSuccessJBLOODBATTLEZ5.0j
+ChapterMapp

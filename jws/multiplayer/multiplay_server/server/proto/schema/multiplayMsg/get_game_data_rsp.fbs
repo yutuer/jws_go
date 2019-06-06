@@ -1,0 +1,23 @@
+include "ac_data_info.fbs";
+include "account_info.fbs";
+include "stat_info.fbs";
+include "stat_info2.fbs";
+
+namespace multiplayMsg;
+
+///[RPC]获取当前战斗状态,resp
+table GetGameStateRsp {
+    ///当前战斗状态(等待开始\已开始\已结束)
+    stat       : int;
+    ///当前状态开始时间
+    startTime  : long;
+    ///当前状态结束时间
+    endTime    : long;
+    ///战斗难度
+    GameClass  : int;
+    ///战斗场景信息
+    GameScene  : string;
+    playerStat : [PlayerState];
+    bossStat   : [BossState];
+}
+root_type GetGameStateRsp;

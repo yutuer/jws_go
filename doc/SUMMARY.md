@@ -1,0 +1,52 @@
+# Summary
+
+This is the summary of my book.
+* [基础](Basic.md)
+* [游戏认证和登录](Auth&Login/README.md)
+    * 游戏认证(Auth) HTTP
+        * [认证设计](Auth&Login/Auth.md)
+        * [数据库设计](Auth&Login/Auth_Data.md)
+        * [Dynamodb](Auth&Login/Dynamodb.md)
+        * [数据读写接口](Auth&Login/Auth_DB_Interface.md)
+        * [TODO](Auth&Login/Auth_TODO.md)
+        * [客户端UI](Auth&Login/Auth_ClientUI.md)
+    * [游戏登录Login](Auth&Login/Login.md)
+        * [Shard](Auth&Login/Login_Shard.md)
+        * [找到适合的Gate](Auth&Login/Login_FindGate.md)
+        * [实现的API](Auth&Login/Login_API.md)
+        * [多帐号登录的处理](Auth&Login/Login_Multilogin.md)
+        * [TODO](Auth&Login/Login_TODO.md)
+            * [握手和重连](Auth&Login/Login_Reconnect.md)
+    * [TODO LIST](Auth&Login/TODOTASK.md)
+* [数据更新和热更](数据更新和热更.md)
+* [背包](Bag.md)
+* [掉落Loot](Loot/README.md)
+    * [掉落TODO](Loot/TODO.md)
+* [关卡奖励](Stage/StageReward.md)
+* [体力系统](Energy.md)
+* [压力测试](LoadTest.md)
+* [Redis键值整理](RedisInfo.md)
+* [邮件系统](Mail.md)
+* [IAP]
+    * [Android 支付系统对接-QuickSDK](IAP/IAPAndroid.md)
+    * [IOS 支付系统对接-AppStore](IAP/IAPIOS.md)
+    * [IAPGamex相关功能](IAP/IAPGamex.md)  
+* 草稿
+    * [All in One](Draft.md)
+    * 游戏数据的加载Protobuf
+    * [数据落地](RedisStorage/resdis_storage.md)
+        * [数据落地工具使用文档](RedisStorage/resdis_storage_readme.md)
+        * [数据落地测试](RedisStorage/OnlandTest.md)
+        * [数据回档测试](RedisStorage/RestoreTest.md)
+        * [冷热数据](RedisStorage/hotcold.md)
+    * [分服的设计](ShardWorld.md)
+    * [TODO](TODO.md)
+	* [奖励系统](Reward.md)
+    * [协议文档](Protocol.md)
+    * [同步](Sync.md)
+    * [用DynamoDB实现排行榜能力的研究](RankBaseByDynamoDB.md)
+    * [广播系统架构](ChatServer.md)
+    * [兑换码礼包系统](RedeemCode.md)
+    * [合服](MergeShard.md)
+
+

@@ -1,0 +1,18 @@
+{% set etcdvalue = item.value %}
+[MergeCfg]
+
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+output_path = "/opt/supervisor/log"
+
+Gid={{etcdvalue.gid}}
+
+# 要被merge的两个shard以及DB
+ARedis="{{etcdvalue.redis}}"
+ARedisDB={{etcdvalue.redis_db}}
+ARedisDBAuth={{etcdvalue.redis_auth}}
+ARedisRank="{{etcdvalue.redis}}"
+ARedisRankDB={{etcdvalue.rank_redis_db}}
+ARedisRankDBAuth={{etcdvalue.redis_auth}}
+AShardId={{etcdvalue.shard_id}}

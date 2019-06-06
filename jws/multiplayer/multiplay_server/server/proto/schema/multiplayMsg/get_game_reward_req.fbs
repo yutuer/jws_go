@@ -1,0 +1,12 @@
+namespace multiplayMsg;
+
+/// [RPC]获取奖励
+// client -> multi 申请进入房间
+table GetGameRewardsReq {
+    ///玩家账号ID
+    accountId : string;
+    ///请求房间ID
+    roomID    : string;
+}
+
+root_type GetGameRewardsReq;

@@ -1,0 +1,16 @@
+[
+  {
+    "name": "HeroDiffSweep",
+    "title": "出奇制胜扫荡",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  }
+]
+

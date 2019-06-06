@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+.idea
+*.iml
+demo/assets/*
+bower_components/*

@@ -1,0 +1,8 @@
+namespace multiplayMsg;
+
+// multi -> client 战斗信息
+
+table Pong {
+}
+
+root_type Pong;

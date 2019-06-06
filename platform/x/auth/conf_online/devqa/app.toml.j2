@@ -1,0 +1,149 @@
+
+{% set etcdvalue = item.value %}
+
+[CommonConfig]
+# [dev, test, prod]
+runmode = "test"
+
+inner_experience = {{etcdvalue.inner_experience}} # 标示auth是否体验服状态，即只运行体验服的服务器可见
+
+EnableHttpTLS = ""
+HttpsPort = ":10443"
+HttpCertFile = "conf/server.crt"
+HttpKeyFile = "conf/server.key"
+
+auth_redis_addr="{{etcdvalue.auth_redis_addr}}"
+auth_redis_db="{{etcdvalue.auth_redis_db}}"
+auth_redis_db_pwd={{etcdvalue.auth_redis_db_pwd|default('""')}}
+
+login_redis_addr="{{etcdvalue.login_redis_addr}}"
+login_redis_db="{{etcdvalue.login_redis_db}}"
+login_redis_db_pwd={{etcdvalue.login_redis_db_pwd|default('""')}}
+
+#选择使用哪种数据库运行Auth注册服务DynamoDB or MongoDB
+auth_db_driver={{etcdvalue.auth_db_driver}}
+
+gids={{etcdvalue.gids}}
+
+
+#Auth注册服务MongoDB的链接参数
+#参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+mongodb_url="{{etcdvalue.mongodb_url}}"
+
+#数据库的名称, 如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+mongodb_name={{etcdvalue.mongodb_name}}
+
+dynamo_region="cn-north-1"
+#dynamo_accessKeyID="AKIAPLNPSQYENX3LGB5A"
+#dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+verupdate_valid = true
+s3_buckets_verupdate = {{etcdvalue.s3_buckets_verupdate}}
+verupdate_is_remote = true
+verupdate_filename = "ver_url.csv"
+verupdate_meta_filename = "ver_url_meta"
+
+dynamo_db_Device={{etcdvalue.dynamo_db_Device}}
+dynamo_db_Name={{etcdvalue.dynamo_db_Name}}
+dynamo_db_UserInfo={{etcdvalue.dynamo_db_UserInfo}}
+dynamo_db_GM={{etcdvalue.dynamo_db_GM}}
+dynamo_db_UserShardInfo={{etcdvalue.dynamo_db_UserShardInfo}}
+
+
+login_api_addr="http://127.0.0.1:8081/login/v1/api/authtoken"
+login_kick_api_addr="http://127.0.0.1:8081/login/v1/api/kick"
+
+passwd_b64map="f1zJ7AerIatj_gncV0y26ZwqTS4vF3okHxRUQY8GENBlK5O9PpuCLhWDMsXb-dmi"
+passwd_salt="fmdsa48idm38jd"
+
+httpport = ":8081"
+gmhttpport = ":8789"
+
+
+#SentryDSN={{etcdvalue.DSN}}
+
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+
+#选择使用哪种云存储
+store_driver = "S3"
+
+oss_endpoint = ""
+oss_access_id = ""
+oss_access_key = ""
+oss_bucket=""
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.222.0.0"
+to = "10.222.0.255"
+
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.0.0.255"
+
+[[LimitConfig.AdminIPs]]
+from = "218.247.7.194"
+to = "218.247.7.194"
+
+[[LimitConfig.AdminIPs]]
+from = "121.69.47.158"
+to = "121.69.47.158"
+
+[[LimitConfig.AdminIPs]]
+from = "114.111.167.236"
+to = "114.111.167.236"
+
+limit_url_regex = ".*" # 这些url做限制（http header和ratelimit）
+rate_limit_valid = true                 # 限制访问速度的开关
+rate_limit_Average = 10                 # 限速每秒平均数量
+rate_limit_Burst = 10                  # 限速每秒最多数量
+
+[SdkHeroConfig]
+url           = "http://yx.sdksrv.com/sdksrv/auth/"
+url_token     = "getToken.lg"
+url_userinfo  = "getUserInfo.lg"
+appKey        = "uamrtl39jjworgcrlt7z"
+productId     = "D10083A"
+projectId     = "P31209A"
+client_secret = "kp4wvh3bc4l8jb49mu1s"
+serverId      = "M1068A"
+
+[SdkQuickConfig]
+url            = "http://checkuser.sdk.quicksdk.net:10080/v2/checkUserInfo"
+android_product_code = "08310020990747178836418134348679"
+android_product_code_mubao1 = "29259317678129344544413592742784"
+ios_product_code = "43450692080863266385159137543807"
+
+[SdkVivoConfig]
+url = "https://usrsys.vivo.com.cn/sdk/user/auth.do"
+[SdkEnjoyConfig]
+url = "http://egapi.enjoygame.com:8093/gameusersdk/user/login_token/check"
+test_url = "http://123.59.61.216/gameusersdk/user/login_token/check"
+
+
+[SdkVNConfig]
+url           = "http://th.srv.0sdk.com/sdkcom/auth/"
+url_token     = "getToken.lg"
+url_userinfo  = "getUserInfo.lg"
+appKey        = "35dbtjh7q9261vyppxi3"
+productId     = "134"
+client_secret = "kzoz1yx86b9fq0tmhqvg"
+serverId      = "1029"
+projectId     = "10039"
+ios_appKey        = "h9i3k3lu22m56yhjkih7"
+ios_productId     = "222"
+ios_client_secret = "xe33aoigjpyqo973i8b7"
+ios_serverId      = "2016"
+ios_projectId     = "20022"
+
+[Sdk6wavesConfig]
+url = "https://account-api.6waves.com/v1/gokumuso/token"
+test_url = "https://account-api.6waves.com/stage.v1/testapp/token"

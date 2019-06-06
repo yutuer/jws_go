@@ -1,0 +1,11 @@
+namespace multiplayMsg;
+
+// client -> multi 申请进入房间
+
+table GetGameDatasReq {
+    accountId : string;
+    roomID    : string;
+    secret    : string;
+}
+
+root_type GetGameDatasReq;

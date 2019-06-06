@@ -1,0 +1,23 @@
+[CommonConfig]
+gid="0"
+market_version="4.0.0"
+
+[CommonConfig.EtcdConfig]
+etcd_root = "/a4k"
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+
+[CommonConfig.DynamoConfig]
+dynamo_region="cn-north-1"
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+dynamo_deviceName="Device"
+
+[[CommonConfig.Platform]]
+name="EG"
+host="127.0.0.1:8083"
+key="7nYfm4NG$Bz8zr&r"
+
+
+
+

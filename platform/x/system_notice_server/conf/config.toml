@@ -1,0 +1,69 @@
+[CommonConfig]
+# EnableHttpListen = "false"
+
+# [local, dev, test, prod]
+# prod: 1.从etcd获得shard信息 2.错误信息加密
+# test: 1.从etcd获得shard信息
+runmode = "local"
+
+#EnableHttpTLS = "true" 
+HttpsPort = ":10443"
+HttpCertFile = "conf/server.crt"
+HttpKeyFile = "conf/server.key"
+
+dynamo_region="cn-north-1"
+#asw key zhangzhen
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+#选择使用哪种云存储
+store_driver = "S3"
+
+oss_endpoint = ""
+oss_access_id = ""
+oss_access_key = ""
+oss_bucket=""
+
+
+httpport = ":8084"
+
+#EnableAdmin="true"
+#AdminHttpAddr="127.0.0.1"
+#AdminHttpPort=8888
+
+SentryDSN="https://48a37f2dec3f49c295b71efda5d4b641:7bd6357255584ceea7b187173182e49f@app.getsentry.com/53404"
+
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+
+watch_key = "notice_watch"
+s3_bucket_notice = "gonggao"
+
+maxconn = 3
+listen_try_ssl = ":8085"
+[GateConfig.SslCfg]
+cert = "conf/gate.crt"
+key = "conf/gate.key"
+
+[GateConfig.SslCaCfg]
+cert = "conf/ca.crt"
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.0.0.0"
+to = "10.255.255.255"
+
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.255.255.255"
+
+limit_url_regex = ".*" # 这些url做限制（http header和ratelimit）
+rate_limit_valid = true                 # 限制访问速度的开关
+rate_limit_Average = 10                 # 限速每秒平均数量
+rate_limit_Burst = 10                  # 限速每秒最多数量
+
+
+

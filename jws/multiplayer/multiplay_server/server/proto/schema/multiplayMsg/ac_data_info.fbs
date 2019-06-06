@@ -1,0 +1,36 @@
+namespace multiplayMsg;
+
+///Boss数据(结构上和AcDataList表一致)
+table AcDataInfo {
+    idx          : int;
+
+    id           : string;
+    characterID  : string;
+    typ          : string;
+    idid         : string;
+
+    nameIDs      : string;
+    stageIDs     : string;
+    faction      : string;
+    isPlayer     : uint;
+    speed        : uint;
+    angleSpeed   : uint;
+    hitPoint     : uint;
+    hpSectionNum : uint;
+    thresholdMin : uint;
+    thresholdMax : uint;
+    thresholdRatio   : uint;
+    guard            : uint;
+    shieldAbsorbRate : float;
+    physicalDamage   : uint;
+    physicalResist   : uint;
+    critRate         : float;
+    critDamage       : float;
+    equip1  : string;
+    equip2  : string;
+    aura    : string;
+    cantbeBlackHole  : uint;
+    cantbeSpecialHit : uint;
+}
+
+root_type AcDataInfo;

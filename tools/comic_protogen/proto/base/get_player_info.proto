@@ -1,0 +1,11 @@
+package protogen;
+import "common.proto";
+
+message GetPlayerInfoReq {
+    required Req Req = 1;
+}
+
+message GetPlayerInfoResp {
+    required Resp Resp = 1;
+    required int32 SC = 2;
+}

@@ -1,0 +1,12 @@
+// cli->ser, 本人移动时发
+// ser->cli, 收到其他人位置变化
+include "RegReq.fb";
+namespace gen;
+
+table PosNotify {
+    account_id: string;
+    name: string;
+    pos: RolePos;
+}
+
+root_type PosNotify;

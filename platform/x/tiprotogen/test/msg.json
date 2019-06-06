@@ -1,0 +1,136 @@
+[
+  {
+    "name": "ActivateExclusiveWeapon",
+    "title": "激活专属兵器",
+    "path": "Attr",
+    "comment": "激活专属兵器",
+    "cheat":true,
+    "req": {
+      "params": [
+        [
+          "AvatarId",
+          "long",
+          "武将ID",
+          "avatar"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "EvolveExclusiveWeapon",
+    "title": "专属兵器升品",
+    "path": "Attr",
+    "comment": "专属兵器升品",
+    "req": {
+      "params": [
+        [
+          "AvatarId",
+          "long",
+          "武将ID",
+          "avatar"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "PromoteExclusiveWeapon",
+    "title": "培养兵器升品",
+    "path": "Attr",
+    "comment": "培养兵器升品",
+    "req": {
+      "params": [
+        [
+          "AvatarId",
+          "long",
+          "武将ID",
+          "avatar"
+        ],
+        [
+          "PromoteType",
+          "long",
+          "培养类型，0=培养 1=保存 2=取消",
+          "pro_type"
+        ],
+        [
+          "PromoteByTen",
+          "bool",
+          "true=培养十次",
+          "pro_ten"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "RealPromoteTime",
+          "long",
+          "实际培养次数",
+          "real_pro_time"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "ResetExclusiveWeapon",
+    "title": "重置神兵",
+    "path": "Attr",
+    "comment": "重置神兵",
+    "req": {
+      "params": [
+        [
+          "AvatarId",
+          "long",
+          "武将ID",
+          "avatar"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "RealPromoteTime",
+          "long",
+          "实际培养次数",
+          "real_pro_time"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "ResetExclusiveWeapon",
+    "title": "重置神兵",
+    "path": "Attr",
+    "comment": "重置神兵",
+    "req": {
+      "params": [
+        [
+          "AvatarId",
+          "long",
+          "武将ID",
+          "avatar"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "RealPromoteTime",
+          "long",
+          "实际培养次数",
+          "real_pro_time"
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,9 @@
+namespace multiplayMsg;
+
+table Vector {
+    x: float;
+    y : float;
+    z  : float;
+}
+
+root_type Vector;

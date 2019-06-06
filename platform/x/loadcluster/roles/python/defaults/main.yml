@@ -1,0 +1,8 @@
+---
+supervisor_config_file: /etc/supervisord.conf
+supervisor_config_dir: /etc/supervisor/conf.d
+supervisor_log_dir: /opt/supervisor/log
+supervisor_http:
+    port: 127.0.0.1:9001
+    username: user
+    password: 123

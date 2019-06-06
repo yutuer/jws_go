@@ -1,0 +1,15 @@
+namespace multiplayMsg;
+
+
+/// [RPC]进入同步战斗服务器
+/// client -> multi 申请进入房间
+table EnterMultiplayGameReq {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    ///房间密码
+    secret    : string;
+}
+
+root_type EnterMultiplayGameReq;

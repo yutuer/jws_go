@@ -1,0 +1,1 @@
+给qa镜像服导账号的工具，可以把指定redis_rank的排行榜的前几名对应到qa提供的账号上，并写到dynamo的gminfo表中

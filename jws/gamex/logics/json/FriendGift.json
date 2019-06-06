@@ -1,0 +1,94 @@
+[
+  {
+    "name": "GiveGiftToFriend",
+    "title": "给友人赠送礼品",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "TargetID",
+          "string",
+          "友人的ACID",
+          "target_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "ReceiveGiftFromFriend",
+    "title": "收取好友赠送的礼品",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "TargetID",
+          "string",
+          "友人的ACID",
+          "target_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  },
+  {
+    "name": "BatchGiveGift2Friend",
+    "title": "批量给友人赠送礼品",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "BatchReceiveGiftFromFriend",
+    "title": "批量收取好友赠送的礼品",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  },
+  {
+    "name": "GetReceiveGiftInfo",
+    "title": "获得收到的好友礼品列表信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  },
+  {
+    "name": "GetFriendGiftAcID",
+    "title": "获得已赠予礼品的好友的名单",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  }
+]

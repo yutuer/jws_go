@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BotX Server Monitor</title>
+        <!-- jQuery -->
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- EPOCH -->
+        <script src="/bower_components/d3/d3.min.js"></script>
+        <script src="/bower_components/epoch/epoch.min.js"></script>
+        <link rel="stylesheet" href="/bower_components/epoch/epoch.min.css">
+        <script src="/myjs/realtime.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- react -->
+        <script src="/bower_components/react/react.js"></script>
+        <script src="/bower_components/react/JSXTransformer.js"></script>
+        <script src="/bower_components/react-bootstrap/react-bootstrap.min.js"></script>
+
+        <script>
+            var Alert           = ReactBootstrap.Alert;
+            var ButtonToolbar   = ReactBootstrap.ButtonToolbar;
+            var Button          = ReactBootstrap.Button;
+            var MenuItem        = ReactBootstrap.MenuItem;
+            var DropdownButton  = ReactBootstrap.DropdownButton;
+            var Table           = ReactBootstrap.Table;
+            var ModalTrigger    = ReactBootstrap.ModalTrigger;
+            var Modal           = ReactBootstrap.Modal;
+            var Navbar          = ReactBootstrap.Navbar;
+            var Nav             = ReactBootstrap.Nav;
+            var NavItem         = ReactBootstrap.NavItem;
+            var Input           = ReactBootstrap.Input;
+            var ListGroup       = ReactBootstrap.ListGroup;
+            var ListGroupItem   = ReactBootstrap.ListGroupItem;
+            var TabbedArea      = ReactBootstrap.TabbedArea
+            var TabPane         = ReactBootstrap.TabPane
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+              StartRealtime({{.timestamp}});
+            });
+        </script>
+        <style>
+            body { padding-top: 50px; }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <h2>Realtime server stats</h2>
+                <div class="col-md-6">
+                    <h3>LiveBots and CCU</h3>
+                    <p>
+                        <div id="ccuChart" class="epoch category20c"></div>
+                    </p>
+                    <p>
+                        <span style="font-size:20px; color:#1f77b4">◼︎</span>Live bots
+                        <br>
+                        <span style="font-size:20px; color:#aec7e8">◼︎</span>CCU
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="reactbot"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/jsx;harmony=true" src="/myjs/bot.js"></script>
+    </body>
+</html>

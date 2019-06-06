@@ -1,0 +1,23 @@
+[CommonConfig]
+gid="205"
+market_version="2.0.0"
+
+[CommonConfig.EtcdConfig]
+etcd_root = "/SL100"
+etcd_endpoint =  ["http://10.31.1.4:2379/","http://10.31.1.5:2379/","http://10.31.1.6:2379/"]
+
+[CommonConfig.DynamoConfig]
+dynamo_region="ap-southeast-1"
+dynamo_accessKeyID=""
+dynamo_secretAccessKey=""
+dynamo_sessionToken=""
+dynamo_deviceName="Devices_G205"
+
+[[CommonConfig.Platform]]
+name="EG"
+host=":8900"
+key="7nYfm4NG$Bz8zr&r"
+
+
+
+

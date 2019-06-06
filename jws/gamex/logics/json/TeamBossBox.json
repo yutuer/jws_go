@@ -1,0 +1,194 @@
+[
+    {
+        "name": "TBBattleStart",
+        "title": "组队BOSS战开始",
+        "path": "Attr",
+        "comment": "组队BOSS战开始",
+        "req": {
+            "params": [
+                [
+                    "TBBattleSTeamId",
+                    "string",
+                    "开始战斗的teamId",
+                    "b_bs_tid"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TBBattleServUrl",
+                    "string",
+                    "开始战斗的服务器url",
+                    "b_bs_su"
+                ],[
+                    "TBBattleSGlobalTeamId",
+                    "string",
+                    "开始战斗的GloablteamId",
+                    "b_bs_gtid"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "TBBattleEnd",
+        "title": "组队BOSS战结束",
+        "path": "Attr",
+        "comment": "组队BOSS战结束",
+        "req": {
+            "params": [
+                [
+                    "TBBattleETeamId",
+                    "string",
+                    "结束战斗的teamId",
+                    "b_bs_tid"
+                ],
+                [
+                    "TBBattleEGlobalTeamId",
+                    "string",
+                    "结束战斗的GloablteamId",
+                    "b_be_gtid"
+                ]
+
+            ]
+        },
+        "rsp": {
+            "base": "WithRewards",
+            "params": [
+                [
+                    "TBBoxIsFull",
+                    "bool",
+                    "仓库中宝箱是否满",
+                    "b_bb_if"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "TBOpenStorage",
+        "title": "打开组队BOSS仓库",
+        "path": "Attr",
+        "comment": "打开组队BOSS仓库",
+        "req": {
+            "params": [ ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TBBoxInfo",
+                    "TBBoxInfo[]",
+                    "仓库中宝箱信息",
+                    "b_in"
+                ],
+                [
+                    "TBBoxHCOpenTimes",
+                    "long",
+                    "仓库中宝箱用钻石已开次数",
+                    "b_op_t"
+                ]
+            ]
+        },
+        "objects": [
+            {
+                "name": "TBBoxInfo",
+                "params": [
+                    [
+                        "TBBoxId",
+                        "string",
+                        "仓库中宝箱id",
+                        "b_id"
+                    ],
+                    [
+                        "TBBoxPos",
+                        "long",
+                        "仓库中宝箱的位置",
+                        "b_po"
+                    ],
+                    [
+                        "TBBoxEndTime",
+                        "long",
+                        "仓库中宝箱到期截止时间",
+                        "b_e_t"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TBOpenBox",
+        "title": "打开组队BOSS宝箱",
+        "path": "Attr",
+        "comment": "打开组队BOSS宝箱",
+        "req": {
+            "params": [
+                [
+                    "TBBoxOpIndex",
+                    "long",
+                    "打开箱子的位置",
+                    "op_b_in"
+                ],[
+                    "TBBoxOpType",
+                    "long",
+                    "打开宝箱的方式 0等时间 1花钻石",
+                    "op_b_tp"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "WithRewards",
+            "params": [
+                [
+                    "TBBoxInfo",
+                    "TBBoxInfo[]",
+                    "仓库中宝箱信息",
+                    "b_in"
+                ],
+                [
+                    "TBBoxHCOpenTimes",
+                    "long",
+                    "仓库中宝箱用钻石已开次数",
+                    "b_op_t"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "TBDelBox",
+        "title": "删除组队BOSS宝箱",
+        "path": "Attr",
+        "comment": "删除组队BOSS宝箱",
+        "req": {
+            "params": [
+                [
+                    "TBBoxPos",
+                    "long",
+                    "打开箱子的位置下标",
+                    "de_b_in"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TBBoxInfo",
+                    "TBBoxInfo[]",
+                    "仓库中宝箱信息",
+                    "b_in"
+                ],
+                [
+                    "TBBoxHCOpenTimes",
+                    "long",
+                    "仓库中宝箱用钻石已开次数",
+                    "b_op_t"
+                ]
+            ]
+        },
+        "objects": [ ]
+    }
+]

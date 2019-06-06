@@ -1,0 +1,207 @@
+{
+    "default": {
+        "AddrPort": "10.33.4.81:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1001": {
+        "AddrPort": "10.33.4.81:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1002": {
+        "AddrPort": "10.33.4.81:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1003": {
+        "AddrPort": "10.33.4.81:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1004": {
+        "AddrPort": "10.33.4.81:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1005": {
+        "AddrPort": "10.33.4.82:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1006": {
+        "AddrPort": "10.33.4.82:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1007": {
+        "AddrPort": "10.33.4.82:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1008": {
+        "AddrPort": "10.33.4.82:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1009": {
+        "AddrPort": "10.33.4.83:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1010": {
+        "AddrPort": "10.33.4.83:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1011": {
+        "AddrPort": "10.33.4.83:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1012": {
+        "AddrPort": "10.33.4.83:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1013": {
+        "AddrPort": "10.33.4.84:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1014": {
+        "AddrPort": "10.33.4.84:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1015": {
+        "AddrPort": "10.33.4.84:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1016": {
+        "AddrPort": "10.33.4.84:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1017": {
+        "AddrPort": "10.33.4.85:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1018": {
+        "AddrPort": "10.33.4.85:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1019": {
+        "AddrPort": "10.33.4.85:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1020": {
+        "AddrPort": "10.33.4.85:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1021": {
+        "AddrPort": "10.33.4.86:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1022": {
+        "AddrPort": "10.33.4.86:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1023": {
+        "AddrPort": "10.33.4.86:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1024": {
+        "AddrPort": "10.33.4.86:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1025": {
+        "AddrPort": "10.33.4.87:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1026": {
+        "AddrPort": "10.33.4.87:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1027": {
+        "AddrPort": "10.33.4.87:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1028": {
+        "AddrPort": "10.33.4.87:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1029": {
+        "AddrPort": "10.33.4.88:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1030": {
+        "AddrPort": "10.33.4.88:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1031": {
+        "AddrPort": "10.33.4.88:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1032": {
+        "AddrPort": "10.33.4.88:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1033": {
+        "AddrPort": "10.33.4.89:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1034": {
+        "AddrPort": "10.33.4.89:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1035": {
+        "AddrPort": "10.33.4.89:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1036": {
+        "AddrPort": "10.33.4.89:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    },
+    "1037": {
+        "AddrPort": "10.33.4.90:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 28
+    },
+    "1038": {
+        "AddrPort": "10.33.4.90:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 29
+    },
+    "1039": {
+        "AddrPort": "10.33.4.90:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 30
+    },
+    "1040": {
+        "AddrPort": "10.33.4.90:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 31
+    }
+}

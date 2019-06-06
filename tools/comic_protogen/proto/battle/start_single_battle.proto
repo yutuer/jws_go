@@ -1,0 +1,22 @@
+package protogen;
+
+import "common.proto";
+
+// 战斗类型
+enum SingleBattleType {
+    Battle_Level = 0; // 挑战关卡
+}
+
+// 请求单人战斗（客户端计算，不需要战斗服务器）
+message StartSingleBattleReq {
+    required Req Req = 1;
+    required SingleBattleType BattleType = 2; // 战斗类型
+    repeated int32 HeroIds = 3;
+
+    optional string ConfigId = 4; // 不同的战斗对应不同的ID
+}
+
+message StartSingleBattleResp {
+    required Resp Resp = 1;
+    required int32 BattleId = 2;
+}

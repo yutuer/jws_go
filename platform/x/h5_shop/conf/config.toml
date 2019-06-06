@@ -1,0 +1,4 @@
+etcd_root = "/a6k"
+etcd_endpoint = ["http://10.222.1.4:2379/"]
+secret_key = "b0802611d6a412603f7dfc3bf99494be"
+port = ":1222"

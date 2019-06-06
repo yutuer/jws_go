@@ -1,0 +1,12 @@
+{
+    "Gid":1,
+    "Group":1012,
+    "ServerAddr":"127.0.0.1:9527",
+    "Interval":1000,
+    "Concurrence":400,
+    "ClientNum": 1,
+    "DiscoverAddr":"127.0.0.1:6379",
+    "DiscoverDB":7,
+    "DiscoverAuth":"",
+    "StaticInterval":5
+}

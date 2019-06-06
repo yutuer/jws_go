@@ -1,0 +1,9 @@
+namespace multiplayMsg;
+
+/// [SceneActivity]伤害\损失HP通知
+table SceneActivity {
+    typ    :  int;
+    param  :  int;
+}
+
+root_type SceneActivity;

@@ -1,0 +1,6 @@
+npm run build //打包不压缩的js css文件,适用于调试阶段
+npm run watch //监控js css文件的变化,并且不压缩,适用于调试
+npm run cbuild //打包并且压缩js css文件,调试完请运行这行代码上传
+
+
+cjsx -cw //暂时不要使用 - -

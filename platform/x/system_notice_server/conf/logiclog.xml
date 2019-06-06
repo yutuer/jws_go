@@ -1,0 +1,8 @@
+<seelog>
+    <outputs formatid="common">
+        <rollingfile type="date" filename="logics_notice" datepattern="02.01.2006.log" maxrolls="7" />
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

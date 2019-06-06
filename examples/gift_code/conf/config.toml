@@ -1,0 +1,8 @@
+[CommonConfig]
+Dynamo_DB="RedeemCodeTest"
+AWS_Region="cn-north-1"
+AWS_AccessKey="AKIAOXC6JHPK7YYB6QBA"
+AWS_SecretKey="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"
+MongoURL="127.0.0.1"
+IsToDynamoDB=false
+

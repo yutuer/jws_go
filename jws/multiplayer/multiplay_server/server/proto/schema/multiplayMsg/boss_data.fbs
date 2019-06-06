@@ -1,0 +1,15 @@
+include "vector.fbs";
+include "boss_simple_data.fbs";
+namespace multiplayMsg;
+
+/// [Notify]伤害\损失HP通知
+table BossData {
+    bossReleaseSkillID : int;
+    bossComboCount : int;
+    bossStartAttackPos : Vector;
+    bossStartAttackDir : Vector;
+    bossStartAttackTimeStamp : long;
+    simpleData : BossSimpleData;
+}
+
+root_type BossData;

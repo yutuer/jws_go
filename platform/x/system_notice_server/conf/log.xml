@@ -1,0 +1,19 @@
+<seelog>
+    <!--should have minlevel="info"-->
+    <outputs formatid="common" >
+        <console formatid="debug"/>
+        <filter levels="info"  formatid="common">
+            <!--access log-->
+            <rollingfile type="date" filename="notice_info" datepattern="02.01.2006.log" maxrolls="7" />
+        </filter>
+        <filter levels="warn,error,critical" formatid="error">
+            <!--access log-->
+            <rollingfile type="date" filename="notice_error" datepattern="02.01.2006.log" maxrolls="7" />
+        </filter>
+    </outputs>
+	<formats>
+        <format id="common"  format="%Msg%n"/>
+        <format id="error"  format="[%Date %Time] [%LEV] [%Func] %Msg%n"/>
+        <format id="debug"  format="[%Date %Time] [%LEV] [%Func] %Msg%n"/>
+	</formats>
+</seelog>

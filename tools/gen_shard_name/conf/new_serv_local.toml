@@ -1,0 +1,10 @@
+[NewServCfg]
+
+# 对应的csv是“shards.csv”
+# 要处理哪些shard，如果第一项是 “all”，表示处理csv中的所有shard
+shards = ["all"]
+#shards = ["1004","1005","1006"]
+
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"

@@ -1,0 +1,5 @@
+GM嫁接账号功能
+
+1.dynamodb表GMInfo
+2.若用unity模拟器登录，device列填登录的用户名，value填uid
+3.若用设备登录，device列填deviceid，value填uid

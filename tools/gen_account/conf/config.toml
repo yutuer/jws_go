@@ -1,0 +1,19 @@
+gidsid = "200:1000"
+prefix = "testa"
+count=1
+output_path = "."
+
+dynamo_region="cn-north-1"
+#dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+#dynamo_secretAccessKey="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"
+dynamo_db_Name="Name_G200"
+
+auth_url = "54.223.67.141:8081"
+
+redis = "10.33.1.27:6379"
+redis_db = 1
+redis_auth = ""
+
+write_account = true
+account_json = "conf/1-16-b1f82181-cb0e-4644-892a-3c1fb853179d.json"
+

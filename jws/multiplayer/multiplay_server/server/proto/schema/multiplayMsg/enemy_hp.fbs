@@ -1,0 +1,9 @@
+namespace multiplayMsg;
+
+/// [EnemyHP]伤害\损失HP通知
+table EnemyHP {
+    waves : int;
+    hp    : [long];
+}
+
+root_type EnemyHP;

@@ -1,0 +1,29 @@
+{% set etcdkey = item.key %}
+{% set etcdvalue = item.value %}
+
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="dev"
+url="{{ ansible_eth0.ipv4.address }}:8791"
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+etcd_root = {{etcdvalue.etcd_root}}
+
+
+#匹配参数配置
+matchTimeoutSecond = 3600
+newEnterMatchLv = 0
+tickMax = 600 # 6 seconds per tick
+matchTicks = [1, 2,  3,  4,  10]
+matchLvs   = [5, 10, 20, 30, 600]
+
+# 游戏大区ID GID
+gid = "{{etcdvalue.gid}}"
+
+#等待机器人时间
+waitRobotTimeMax = 28
+waitRobotTimeMin = 23

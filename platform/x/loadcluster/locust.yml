@@ -1,0 +1,145 @@
+- hosts: localhost
+  connection: local
+
+  tasks:
+  - name: "Create security group"
+    ec2_group:
+      name: locust_group
+      description: "Locust Security group"
+      vpc_id: "{{vpc_id}}"
+      region: "{{aws_region}}"
+      rules:
+        - proto: tcp
+          type: ssh
+          from_port: 22
+          to_port: 22
+          cidr_ip: 0.0.0.0/0
+
+        - proto: tcp
+          type: http
+          from_port: 80
+          to_port: 80
+          cidr_ip: 0.0.0.0/0
+
+        - proto: tcp
+          type: http
+          from_port: 8089
+          to_port: 8089
+          cidr_ip: 0.0.0.0/0
+
+        - proto: tcp
+          type: Custom TCP Rule
+          from_port: 1024
+          to_port: 65535
+          cidr_ip: "{{ cidr_ip }}"
+
+      rules_egress:
+        - proto: all
+          type: all
+          cidr_ip: 0.0.0.0/0
+
+    register: ec2_firewall
+    tags:
+      - always
+
+  - name: "Create Locust Master"
+    ec2:
+        key_name: "{{ssh_key_name}}"
+
+        assign_public_ip: yes
+        vpc_subnet_id: "{{subnet_id}}"
+
+        group_id: "{{ec2_firewall.group_id}}"
+        instance_type: "{{instance_type}}"
+        image: "{{ami_id}}"
+        wait: true
+        region: "{{aws_region}}"
+        exact_count: 1
+        count_tag:
+            Name: LocustMaster
+        instance_tags:
+            Name: LocustMaster
+    register: locust_master
+    tags:
+      - always
+
+  - name: "Create Locust Slaves"
+    ec2:
+        key_name: "{{ssh_key_name}}"
+
+        assign_public_ip: yes
+        vpc_subnet_id: "{{subnet_id}}"
+
+        group_id: "{{ec2_firewall.group_id}}"
+        instance_type: "{{instance_type}}"
+        image: "{{ami_id}}"
+        wait: true
+        region: "{{aws_region}}"
+        exact_count: "{{ slave_count }}"
+        count_tag:
+            Name: LocustSlave
+        instance_tags:
+            Name: LocustSlave
+    register: locust_slaves
+    tags:
+      - always
+  # - debug: var=locust_master
+  # - debug: var=locust_master.instances
+  # - debug: var=locust_master.tagged_instances
+  #
+  # - debug: var=locust_slaves
+  # - debug: var=locust_slaves.instances
+  # - debug: var=locust_slaves.tagged_instances
+
+  - name: "Add host to slaves"
+    add_host: hostname={{ item.public_ip }} groupname=slaves
+    with_items: locust_slaves.tagged_instances
+    tags:
+      - always
+
+  - name: "Add host to masters"
+    add_host: hostname={{ item.public_ip }} groupname=masters
+    with_items: locust_master.tagged_instances
+    tags:
+      - always
+
+  - name: "Add master invalid IP addr"
+    add_host: hostname={{ item.private_ip}} groupname=private_ips
+    with_items: locust_master.tagged_instances
+    tags:
+      - always
+
+  - name: "Wait for confirmation at port 22"
+    wait_for: port=22 host="{{ item.public_ip }}" search_regex=OpenSSH delay=10
+    with_items: locust_slaves.tagged_instances
+    tags:
+      - waithosts
+
+# locust.io master
+- hosts: masters
+  sudo: True
+  remote_user: "{{ sshuser }}"
+  gather_facts: True
+  vars:
+    - master: "{{ groups['private_ips'] | join(',') }}"
+    - master_node: True
+  roles:
+    - kunik.system-limits
+    - common
+    - python
+    - locust
+
+# locust.io slaves
+- hosts: slaves
+  sudo: True
+  remote_user: "{{ sshuser }}"
+  gather_facts: True
+  vars:
+    - master: "{{ groups['private_ips'] | join(',') }}"
+    - master_node: False
+  roles:
+    - kunik.system-limits
+    - common
+    - python
+    - locust
+    - { role: botx, tags: ['botx'] }

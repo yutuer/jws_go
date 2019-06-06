@@ -1,0 +1,23 @@
+[CommonConfig]
+gid="207"
+market_version="3.4.300"
+
+[CommonConfig.EtcdConfig]
+etcd_root = "/SL100"
+etcd_endpoint =  ["http://10.35.1.4:2379/","http://10.35.1.5:2379/","http://10.35.1.6:2379/"]
+
+[CommonConfig.DynamoConfig]
+dynamo_region="ap-northeast-2"
+dynamo_accessKeyID=""
+dynamo_secretAccessKey=""
+dynamo_sessionToken=""
+dynamo_deviceName="Devices_G207"
+
+[[CommonConfig.Platform]]
+name="EG"
+host=":8900"
+key="7nYfm4NG$Bz8zr&r"
+
+
+
+

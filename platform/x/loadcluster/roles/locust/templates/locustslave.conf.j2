@@ -1,0 +1,6 @@
+#TODO 根据机器内核的数量启动vCPU数量个实例，起到能够充分利用CPU作用
+[program:locustslave]
+command=/usr/local/bin/locust -f /opt/app/{{ testfile }} --slave --master-host={{ master }} --host={{ test_host }}
+redirect_stderr=true
+stdout_logfile=/var/log/locust_slave.log
+stdout_logfile_maxbytes=100MB

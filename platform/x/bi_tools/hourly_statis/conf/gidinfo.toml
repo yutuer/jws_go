@@ -1,0 +1,41 @@
+[GidConfig]
+
+[[GidConfig.GidInfo]]
+Gid = 0
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 1
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 100
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 101
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 102
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 200
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 201
+Channel = "11"
+
+[[GidConfig.GidInfo]]
+Gid = 202
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 203
+Channel = "13"
+
+[[GidConfig.GidInfo]]
+Gid = 204
+Channel = "13"

@@ -1,0 +1,38 @@
+include "fenghuo.fbs";
+include "account_info.fbs";
+namespace fenghuomsg;
+
+/// [Notify]客户端通知服务器伤害\损失HP通知
+table HPNotify {
+    ///玩家账号ID
+    myidx : int;
+    ///玩家自身血量变化
+    myHpD : int;
+    ///玩家对敌兵造成的血量变化
+    enemiesHpD   : [int];
+}
+
+
+/// [Notify][Push]
+/// 进入房间后,可以开始战斗时Notify信号通知服务器
+/// 服务器任何可以战斗的时候Push信号到客户端
+table StartFightNotify {
+    ///当前战斗小关
+    sublevel : int;
+    ///玩家血量
+    Hps   : [int];
+    ///敌兵所有血量
+    enemiesHp : [int];
+}
+
+// [Notify] 战斗状态同步给客户端
+table AllHPNotify {
+    ///当前战斗小关
+    sublevel : int;
+    ///玩家血量
+    Hps   : [int];
+    ///敌兵所有血量
+    enemiesHp : [int];
+}
+
+

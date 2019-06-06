@@ -1,0 +1,8 @@
+// ser->cli
+namespace gen;
+
+table PingMsg {
+    ping: string;
+}
+
+root_type PingMsg;

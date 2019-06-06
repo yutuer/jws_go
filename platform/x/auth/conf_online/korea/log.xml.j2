@@ -1,0 +1,21 @@
+<seelog type="adaptive" mininterval="200000" maxinterval="1000000000" critmsgcount="500"  minlevel="info"> 
+    <!--should have minlevel="info"-->
+    <outputs formatid="common" >
+        <console formatid="debug"/>
+        <filter levels="info,warn"  formatid="common">
+            <!--access log-->
+            <rollingfile type="date" filename="/opt/supervisor/log/auth_info" datepattern="02.01.2006.log" maxrolls="7" />
+        </filter>
+        <filter levels="error,critical" formatid="error">
+            <!--access log-->
+            <custom name="sentry" formatid="sentry"/>
+            <rollingfile type="date" filename="/opt/supervisor/log/auth_error" datepattern="02.01.2006.log" maxrolls="7" />
+        </filter>
+    </outputs>
+	<formats>
+        <format id="common"  format="%Msg%n"/>
+        <format id="error"  format="[%Date %Time] [%LEV] [%Func] %Msg%n"/>
+        <format id="debug"  format="[%Date %Time] [%LEV] [%Func] %Msg%n"/>
+        <format id="sentry"  format="%Msg%n"/>
+	</formats>
+</seelog>

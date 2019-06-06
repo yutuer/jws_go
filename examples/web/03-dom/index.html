@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Hello</title>
+      <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getValue()
+      {
+          var x=document.getElementById("t1")
+          alert(x.value)
+      }
+    </script>
+    <div>
+        <h2>Hello Web!</h2>
+        <hr />
+        <form>
+            Text1：<input id="t1" type="text" name="firstname">
+            <br />
+            Text2：<input id="t2" type="text" name="lastname">
+            <br />
+            <input id="myHeader" onclick="getValue()" type="button" value="Hello!">
+        </form>
+    </div>
+  </body>
+</html>

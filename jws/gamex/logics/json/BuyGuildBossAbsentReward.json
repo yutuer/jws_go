@@ -1,0 +1,27 @@
+[
+  {
+    "name": "BuyGuildBossAbsentReward",
+    "title": "购买公会BOSS未参与的奖励",
+    "path": "Attr",
+    "comment": "购买公会BOSS未参与的奖励",
+    "req": {
+      "params": [
+        [
+          "BossType",
+          "long",
+          "BOSS 0 小BOSS， 1 大BOSS",
+          "boss_type"
+        ],[
+          "BuyType",
+          "long",
+          "0免费 1 购买",
+          "buy_type"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  }
+]

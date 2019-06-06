@@ -1,0 +1,29 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/Device_prod", 
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Id", 
+        "AttributeType": "S"
+      }
+    ], 
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0, 
+      "WriteCapacityUnits": 50, 
+      "LastIncreaseDateTime": 1476839650.496, 
+      "ReadCapacityUnits": 50, 
+      "LastDecreaseDateTime": 1476426599.604
+    }, 
+    "TableSizeBytes": 11893728, 
+    "TableName": "Device_prod", 
+    "TableStatus": "ACTIVE", 
+    "KeySchema": [
+      {
+        "KeyType": "HASH", 
+        "AttributeName": "Id"
+      }
+    ], 
+    "ItemCount": 94349, 
+    "CreationDateTime": 1458722611.551
+  }
+}

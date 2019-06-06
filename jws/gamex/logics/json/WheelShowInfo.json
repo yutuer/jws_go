@@ -1,0 +1,128 @@
+[
+  {
+    "name": "WheelShowInfo",
+    "title": "幸运转盘展示",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params":[
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "ItemID",
+          "string[]",
+          "道具ID",
+          "item_id"
+        ],
+        [
+          "ItemCount",
+          "long[]",
+          "道具数量",
+          "item_c"
+        ],
+        [
+          "HcBase",
+          "long",
+          "充值基数",
+          "hc_base"
+        ],
+        [
+          "GetCoin",
+          "long",
+          "充值可得积分",
+          "get_coin_c"
+        ],
+        [
+          "GetCoinMax",
+          "long",
+          "充值可得积分上限",
+          "coin_max_c"
+        ],
+        [
+          "Index",
+          "long",
+          "兑换次数",
+          "index"
+        ],
+        [
+          "Special",
+          "long[]",
+          "是否流光",
+          "special"
+        ],
+        [
+          "CurCoin",
+          "long",
+          "当前代币数",
+          "cur_coin_c"
+        ],
+        [
+          "GachaCoin",
+          "string",
+          "兑换所需代币种类",
+          "gacha_coin"
+        ],
+        [
+          "CoinCost",
+          "long",
+          "消耗代币的数量",
+          "coin_cost"
+        ],
+        [
+          "DontShow",
+          "long[]",
+          "已经被抽取",
+          "dont_show"
+        ],
+        [
+          "RareLevel",
+          "long[]",
+          "稀有度",
+          "rare_level"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "UseWheelOne",
+    "title": "转动一次转盘",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+        [
+          "ItemID",
+          "string",
+          "道具ID",
+          "item_id"
+        ],
+        [
+          "ItemCount",
+          "long",
+          "道具数量",
+          "item_c"
+        ],
+        [
+          "Unusual",
+          "long",
+          "稀有烟花特效",
+          "unusual"
+        ],
+        [
+          "NextCost",
+          "long",
+          "下一次的消耗",
+          "next_cost"
+        ]
+      ]
+    }
+  }
+]

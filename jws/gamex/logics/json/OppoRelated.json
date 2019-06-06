@@ -1,0 +1,48 @@
+[
+  {
+    "name": "OppoSign",
+    "title": "oppo签到",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  },
+  {
+    "name": "OppoDailyQuest",
+    "title": "oppo每日任务",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  },
+  {
+    "name": "OppoLogin",
+    "title": "oppo每日任务",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "IsOppo",
+          "bool",
+          "是否是oppo游戏中心启动",
+          "is_oppo"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": []
+    }
+  }
+]

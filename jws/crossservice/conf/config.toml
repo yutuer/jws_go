@@ -1,0 +1,43 @@
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="dev"
+
+# 服务监听地址需要完整的内网地址
+publicip="127.0.0.1"
+publicport=9527
+internal_http_port = 40077
+
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+etcd_root = "/a4k"
+
+# db的 redis服务地址
+db_redis="127.0.0.1:6379"
+db_redis_db=8
+db_redis_Auth=""
+db_key_etcd_path="CrossService/Common/dbs"
+
+# 服务发现的redis服务地址
+discover_redis="127.0.0.1:6379"
+discover_redis_db=7
+discover_redis_Auth=""
+discover_key_etcd_path="Discover/dbs"
+
+#大区号
+gid=0
+# 持有的分组ID
+group_ids=[0,1]
+
+shard_range=[[10,12]]
+exclusion_num=1
+
+#sentry
+DSN = ""
+
+#ip_filter
+ip_filter=[]

@@ -1,0 +1,32 @@
+[PayConfig]
+sdk_http_port=":9080" # 对外公开
+dynamo_db_pay_index = "uid-tistatus-index"
+SentryDSN="https://be6857e4cfd8492faaecb01944f28e08:0b562b7924074c2181ed45868eaefc47@sentry.io/111080"
+
+[[PayService]]
+name="android"
+
+[PayService.SDK.QUICK]
+sdk_url_rel_path="quick/android/v1/billingcb"
+params = ["36883952788207341780469960584187"]
+
+[PayService.SDK.QUICKMUBAO]
+sdk_url_rel_path="quickmubao/android/v1/billingcb"
+params = ["83103548193506109841635344185783"]
+
+[PayService.SDK.VIVO]
+sdk_url_rel_path="vivo/android/v1/billingcb"
+params = ["798fd875853cee449c088c8187984425"]
+
+[PayService.Mail.PROD]
+db_name="Mail_G202"
+dynamo_region="cn-north-1"
+db_driver= "DynamoDB"
+mongo_url="127.0.0.1"
+
+
+[PayService.Pay.PROD]
+db_name="QuickPay_G202"
+dynamo_region="cn-north-1"
+db_driver= "DynamoDB"
+mongo_url="127.0.0.1"

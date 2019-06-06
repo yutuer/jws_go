@@ -1,0 +1,32 @@
+{% set etcdvalue = item.value %}
+
+[CommonCfg]
+
+ElasticUrl="{{etcdvalue.ElasticUrl}}"
+
+# 需要所有服务在一个index
+Index="{{etcdvalue.Index}}"
+
+time_local="Asia/Shanghai"
+
+# log文件前缀
+log_prefix="{{etcdvalue.log_prefix}}"
+log_output="output"
+
+Graphite="{{etcdvalue.Graphite}}"
+
+[CommonCfg.Gid2Shard.200]
+From = 1000
+To = 1999
+
+[CommonCfg.Gid2Shard.201]
+From = 2000
+To = 2999
+
+[CommonCfg.Gid2Shard.202]
+From = 3000
+To = 3999
+
+[CommonCfg.Gid2Shard.203]
+From = 4000
+To = 4999

@@ -1,0 +1,19 @@
+include "vector.fbs";
+namespace multiplayMsg;
+/// [Notify]伤害\损失HP通知
+table PlayerSimpleData {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    state : int;
+    position : Vector;
+    direction : Vector;
+    curSpeed : float;
+    notifyTimeStamp : long;
+    anim : int;
+    hp : long;
+    avatarID : int;
+}
+
+root_type PlayerSimpleData;

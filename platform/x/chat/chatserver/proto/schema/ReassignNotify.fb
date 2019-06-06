@@ -1,0 +1,8 @@
+// ser->cli，目前用于回收房间，让客户端断开重连
+namespace gen;
+
+table ReassignNotify {
+
+}
+
+root_type ReassignNotify;

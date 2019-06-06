@@ -1,0 +1,301 @@
+[
+  {
+    "name": "SetStateOfShowMagicPet",
+    "title": "设置灵宠显示状态",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ReqStateOfShowMagicPet",
+          "bool",
+          "客户端发送的灵宠形象状态",
+          "req_state_of_show_magic_pet"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "ResStateOfShowMagicPet",
+          "bool",
+          "服务器返回的灵宠形象状态",
+          "res_state_of_show_magic_pet"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "ShowMagicPet",
+    "title": "传输英雄灵宠信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": []
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "HeroMagicPetsInfo",
+          "HeroMagicPetInfo[]",
+          "所有英雄的灵宠信息",
+          "hero_magic_pet_info"
+        ]
+      ]
+    },
+    "objects": [{
+      "name": "HeroMagicPetInfo",
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "PetLev",
+          "long",
+          "灵宠等级",
+          "pet_lev"
+        ],
+        [
+          "PetStar",
+          "long",
+          "灵宠星级",
+          "pet_star"
+        ],
+        [
+          "PetAptitudes",
+          "MagicPetAptitude[]",
+          "灵宠资质",
+          "pet_aptitude"
+        ],
+        [
+          "CasualPetAptitude",
+          "MagicPetAptitude[]",
+          "临时资质",
+          "casual_pet_aptitude"
+        ],
+        [
+          "PetCompreTalent",
+          "long",
+          "综合资质",
+          "pet_compre_talent"
+        ],
+        [
+          "CasualCompreTalent",
+          "long",
+          "临时综合",
+          "casual_compre_talent"
+        ],
+        [
+          "ShowMagicPet",
+          "bool",
+          "显示灵宠形象",
+          "show_magic_pet"
+        ]
+      ]
+    },
+      {
+        "name": "MagicPetAptitude",
+        "params": [
+          [
+            "PetAptitudeType",
+            "long",
+            "灵宠资质类型",
+            "pet_aptitude_type"
+          ],
+          [
+            "PetAptitudeValue",
+            "long",
+            "灵宠资质数值",
+            "pet_aptitude_value"
+          ]
+        ]
+      }
+    ]
+  },
+
+  {
+    "name": "MagicPetLevUp",
+    "title": "英雄灵宠升级",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "Level",
+          "long",
+          "灵宠升级后等级",
+          "level"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "MagicPetStarUp",
+    "title": "英雄灵宠升星",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "Hero_id"
+        ],
+        [
+          "Special",
+          "bool",
+          "是否使用保星符",
+          "special"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "Star",
+          "long",
+          "灵宠升星后星级",
+          "star"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "MagicPetChangeTalent",
+    "title": "英雄灵宠洗练",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "Special",
+          "bool",
+          "是否使用道具",
+          "special"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "CompreTalent",
+          "long",
+          "综合资质",
+          "compre_talent"
+        ],
+        [
+          "CasualCompreTalent",
+          "long",
+          "临时综合",
+          "casual_compre_talent"
+        ],
+        [
+          "Talents",
+          "MagicPetAptitude[]",
+          "灵宠资质",
+          "talents"
+        ],
+        [
+          "CasualTalents",
+          "MagicPetAptitude[]",
+          "临时资质",
+          "casual_talnets"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "MagicPetSaveTalent",
+    "title": "英雄灵宠洗练保存",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "HeroID",
+          "long",
+          "武将ID",
+          "hero_id"
+        ],
+        [
+          "CompreTalent",
+          "long",
+          "综合资质",
+          "compre_talent"
+        ],
+        [
+          "CasualCompreTalent",
+          "long",
+          "临时综合",
+          "casual_compre_talent"
+        ],
+        [
+          "Talents",
+          "MagicPetAptitude[]",
+          "灵宠资质",
+          "talents"
+        ],
+        [
+          "CasualTalents",
+          "MagicPetAptitude[]",
+          "临时资质",
+          "casual_talnets"
+        ]
+      ]
+    }
+  }
+]

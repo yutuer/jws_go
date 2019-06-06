@@ -1,0 +1,34 @@
+[CommonCfg]
+
+ElasticUrl="http://es-search.es50-prod.yingxiong.net:9200" # 正式服
+#ElasticUrl="http://10.222.0.129:9200"  # qa服
+
+# 需要所有服务在一个index
+Index="bilogs-logics-*"
+
+time_local="Asia/Shanghai"
+
+# log文件前缀
+log_prefix="134_"
+log_output="output"
+
+Graphite="http://graphite.yingxiong.net:8081" # 正式服
+#Graphite="http://10.222.0.224:8080" # qa服
+
+
+
+[CommonCfg.Gid2Shard.200]
+From = 1000
+To = 1999
+
+[CommonCfg.Gid2Shard.201]
+From = 2000
+To = 2999
+
+[CommonCfg.Gid2Shard.202]
+From = 3000
+To = 3999
+
+[CommonCfg.Gid2Shard.203]
+From = 4000
+To = 4999

@@ -1,0 +1,23 @@
+{% set etcdkey = item.key %}
+{% set etcdvalue = item.value %}
+
+[CommonCfg]
+run_mode="dev"
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+etcd_root = {{etcdvalue.etcd_root}}
+net_type="websocket" # websocket tcp
+net_address=":10010"
+city_init_room_num=1
+room_player_max_num=15
+room_player_min_num=5
+room_player_adjust_num=10
+# net, private network
+net_gamex_address=":10011"
+
+[LimitConfig]
+[[LimitConfig.InternalIPs]]
+from = "10.0.0.0"
+to = "10.255.255.255"
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.255.255.255"

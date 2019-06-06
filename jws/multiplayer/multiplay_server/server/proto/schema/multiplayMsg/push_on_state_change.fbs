@@ -1,0 +1,27 @@
+include "stat_info.fbs";
+include "stat_info2.fbs";
+include "stat_param.fbs";
+namespace multiplayMsg;
+
+/// [Push]当前战斗状态
+/// multi -> client 战斗信息
+table StatePush {
+    ///当前战斗状态(等待开始\已开始\已结束)
+    stat       : int;
+    ///当前状态开始时间
+    startTime  : long;
+    ///当前状态结束时间
+    endTime    : long;
+    GameClass  : int;
+    GameScene  : string;
+    ///当前房间中玩家的状态
+    playerStat : [PlayerState];
+    ///当前房间中Boss的状态
+    bossStat   : [BossState];
+    ///boss护甲
+    bossArmor : [long];
+    ///玩家上次伤害类型
+    lastDamageTyp : int;
+}
+
+root_type StatePush;

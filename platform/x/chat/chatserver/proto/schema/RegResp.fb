@@ -1,0 +1,10 @@
+// ser->cli, RegReq的回复，带有当前房间里所有人的信息
+include "RegReq.fb";
+namespace gen;
+
+table RegResp {
+    room_id: string;
+    roles: [RoleInfo];
+}
+
+root_type RegResp;

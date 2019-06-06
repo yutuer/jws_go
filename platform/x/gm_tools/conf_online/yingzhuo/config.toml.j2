@@ -1,0 +1,75 @@
+{% set etcdvalue = item.value %}
+
+[CommonCfg]
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+GameSerEtcdRoot = {{etcdvalue.etcd_root}}
+GidFilter = {{etcdvalue.GidFilter}}
+GameMachineEtcdRoot = {{etcdvalue.GameMachineEtcdRoot}}
+#[dev release]
+runmode = "dev"
+
+# 对外的Url
+Url= {{etcdvalue.Listen}}
+
+#配置时区
+TimeLocal="Asia/Shanghai"
+
+RedisName=[]
+
+RedisAddress =[]
+
+
+RedisDB =[]
+ServerName =[]
+MailDBNames =[]
+MailDBDrivers =[]
+MailMongoUrls =[]
+
+# 跑马灯服务器Url
+SysRollNoticeUrl=[]
+
+AuthApi=[]
+
+ServerHotDataUrl=[]
+
+MailDBName={{etcdvalue.MailDBName}}
+MailMongoUrl={{etcdvalue.MailMongoUrl}}
+MailDBDriver={{etcdvalue.MailDBDriver}}
+
+AWS_Region="ap-southeast-1"
+AWS_AccessKey = {{etcdvalue.AWS_AccessKey}}
+AWS_SecretKey = {{etcdvalue.AWS_SecretKey}}
+
+auth_db_driver={{etcdvalue.auth_db_driver}}
+auth_dynamo_db_Device={{etcdvalue.auth_dynamo_db_Device}}
+auth_dynamo_db_Name={{etcdvalue.auth_dynamo_db_Name}}
+auth_dynamo_db_UserInfo={{etcdvalue.auth_dynamo_db_UserInfo}}
+auth_mongodb_url={{etcdvalue.auth_mongodb_url}}
+auth_mongodb_name={{etcdvalue.auth_mongodb_name}}
+
+
+ElasticUrl={{etcdvalue.ElasticUrl}}
+ElasticIndex = {{etcdvalue.ElasticIndex}}
+
+PayDBDriver={{etcdvalue.PayDBDriver}}
+PayMongoUrl={{etcdvalue.PayMongoUrl}}
+PayAndroidDBName={{etcdvalue.PayAndroidDBName}}
+PayIOSDBName={{etcdvalue.PayIOSDBName}}
+
+s3_buckets_verupdate={{etcdvalue.s3_buckets_verupdate}}
+verupdate_filename="ver_url.csv"
+verupdate_meta_filename="ver_url_meta"
+s3_buckets_gonggao = "yingzhuocdn"
+
+DBStoreFile = "/opt/supervisor/gm_data{{etcdvalue.Gid}}/data_sl{{etcdvalue.Gid}}.db"
+
+store_driver = "S3"
+oss_endpoint=""
+oss_access_id=""
+oss_access_key=""
+oss_channle_bucket=""
+oss_public_bukcet=""
+
+s3_gonggao_region = "ap-southeast-1"
+notice_watch_key="notice_watch"

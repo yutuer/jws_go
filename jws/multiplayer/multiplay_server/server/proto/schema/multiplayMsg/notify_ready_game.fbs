@@ -1,0 +1,19 @@
+include "avatar_hp.fbs";
+namespace multiplayMsg;
+
+///[Notify]准备开始战斗
+table ReadyMultiplayGameNotify {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    // 延迟
+    latency   : int;
+    /// hp
+    playerHP : long;
+
+    avatarHP : [AvatarHP];
+
+}
+
+root_type ReadyMultiplayGameNotify;

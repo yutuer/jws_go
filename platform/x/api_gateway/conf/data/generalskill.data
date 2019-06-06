@@ -1,0 +1,106 @@
+
+a
+	dongzhuo1ActiveActive_0 *IDS_GEN_SKILL_DONGZHUO_12GBUFF_PD_10per:0.0Bgen_dongzhuoJ0.0
+_
+	dongzhuo2ActiveActive_0 *IDS_GEN_SKILL_DONGZHUO_22GBUFF_PD_20per:0.0Bgen_dongzhuoJ1
+_
+	dongzhuo3ActiveActive_0 *IDS_GEN_SKILL_DONGZHUO_32GBUFF_PD_30per:0.0Bgen_dongzhuoJ2
+_
+	dongzhuo4ActiveActive_0 *IDS_GEN_SKILL_DONGZHUO_42GBUFF_PD_40per:0.0Bgen_dongzhuoJ2
+_
+	dongzhuo5ActiveActive_0 *IDS_GEN_SKILL_DONGZHUO_52GBUFF_PD_50per:0.0Bgen_dongzhuoJ2
+^
+beigong1ActiveActive_0 *IDS_GEN_SKILL_BEIGONG_12GBUFF_PB_10per:0.0Bgen_beigongJ0.0
+\
+beigong2ActiveActive_0 *IDS_GEN_SKILL_BEIGONG_22GBUFF_PB_20per:0.0Bgen_beigongJ1
+\
+beigong3ActiveActive_0 *IDS_GEN_SKILL_BEIGONG_32GBUFF_PB_30per:0.0Bgen_beigongJ2
+\
+beigong4ActiveActive_0 *IDS_GEN_SKILL_BEIGONG_42GBUFF_PB_40per:0.0Bgen_beigongJ2
+\
+beigong5ActiveActive_0 *IDS_GEN_SKILL_BEIGONG_52GBUFF_PB_50per:0.0Bgen_beigongJ2
+e
+
+zhangjiao1ActiveActive_0 *IDS_GEN_SKILL_ZHANGJIAO_12GBUFF_PB_5per_1:0.0Bgen_zhangjiaoJ0.0
+d
+
+zhangjiao2ActiveActive_0 *IDS_GEN_SKILL_ZHANGJIAO_22GBUFF_PB_15per_2:0.0Bgen_zhangjiaoJ1
+d
+
+zhangjiao3ActiveActive_0 *IDS_GEN_SKILL_ZHANGJIAO_32GBUFF_PB_15per_3:0.0Bgen_zhangjiaoJ2
+d
+
+zhangjiao4ActiveActive_0 *IDS_GEN_SKILL_ZHANGJIAO_42GBUFF_PB_25per_4:0.0Bgen_zhangjiaoJ2
+d
+
+zhangjiao5ActiveActive_0 *IDS_GEN_SKILL_ZHANGJIAO_52GBUFF_PB_35per_5:0.0Bgen_zhangjiaoJ2
+Q
+lvbu1ActiveActive_0 *IDS_GEN_SKILL_LVBU_1:0.0Bgen_lvbuJ0.0RrageZ33.0
+O
+lvbu2ActiveActive_0 *IDS_GEN_SKILL_LVBU_2:0.0Bgen_lvbuJ1RrageZ66.0
+P
+lvbu3ActiveActive_0 *IDS_GEN_SKILL_LVBU_3:0.0Bgen_lvbuJ2RrageZ100.0
+`
+lvbu4ActiveActive_0 *IDS_GEN_SKILL_LVBU_42GBUFF_PB_10per:0.0Bgen_lvbuJ2RrageZ100.0
+`
+lvbu5ActiveActive_0 *IDS_GEN_SKILL_LVBU_52GBUFF_PB_20per:0.0Bgen_lvbuJ2RrageZ100.0
+O
+	jiangwei1ActiveActive_0 *IDS_GEN_SKILL_JIANGWEI_12GBUFF_PB_5per_1:0.0
+P
+	jiangwei2ActiveActive_0 *IDS_GEN_SKILL_JIANGWEI_22GBUFF_PB_15per_2:0.0
+P
+	jiangwei3ActiveActive_0 *IDS_GEN_SKILL_JIANGWEI_32GBUFF_PB_15per_3:0.0
+P
+	jiangwei4ActiveActive_0 *IDS_GEN_SKILL_JIANGWEI_42GBUFF_PB_25per_4:0.0
+P
+	jiangwei5ActiveActive_0 *IDS_GEN_SKILL_JIANGWEI_52GBUFF_PB_35per_5:0.0
+J
+weiyan1ActiveActive_0 *IDS_GEN_SKILL_WEIYAN_12GBUFF_PB_10per:0.0
+J
+weiyan2ActiveActive_0 *IDS_GEN_SKILL_WEIYAN_22GBUFF_PB_20per:0.0
+J
+weiyan3ActiveActive_0 *IDS_GEN_SKILL_WEIYAN_32GBUFF_PB_30per:0.0
+J
+weiyan4ActiveActive_0 *IDS_GEN_SKILL_WEIYAN_42GBUFF_PB_40per:0.0
+J
+weiyan5ActiveActive_0 *IDS_GEN_SKILL_WEIYAN_52GBUFF_PB_50per:0.0
+H
+madai1ActiveActive_0 *IDS_GEN_SKILL_MADAI_12GBUFF_PD_10per:0.0
+H
+madai2ActiveActive_0 *IDS_GEN_SKILL_MADAI_22GBUFF_PD_20per:0.0
+H
+madai3ActiveActive_0 *IDS_GEN_SKILL_MADAI_32GBUFF_PD_30per:0.0
+H
+madai4ActiveActive_0 *IDS_GEN_SKILL_MADAI_42GBUFF_PD_40per:0.0
+H
+madai5ActiveActive_0 *IDS_GEN_SKILL_MADAI_52GBUFF_PD_50per:0.0
+J
+huatuo1ActiveActive_0 *IDS_GEN_SKILL_HUATUO_12GBUFF_HP_20per:0.0
+J
+huatuo2ActiveActive_0 *IDS_GEN_SKILL_HUATUO_22GBUFF_HP_40per:0.0
+J
+huatuo3ActiveActive_0 *IDS_GEN_SKILL_HUATUO_32GBUFF_HP_60per:0.0
+J
+huatuo4ActiveActive_0 *IDS_GEN_SKILL_HUATUO_42GBUFF_HP_80per:0.0
+K
+huatuo5ActiveActive_0 *IDS_GEN_SKILL_HUATUO_52GBUFF_HP_100per:0.0
+L
+	pangtong1ActiveActive_0 *IDS_GEN_SKILL_PANGTONG_1:0.0RenergyZ10.0
+L
+	pangtong2ActiveActive_0 *IDS_GEN_SKILL_PANGTONG_2:0.0RenergyZ20.0
+L
+	pangtong3ActiveActive_0 *IDS_GEN_SKILL_PANGTONG_3:0.0RenergyZ30.0
+L
+	pangtong4ActiveActive_0 *IDS_GEN_SKILL_PANGTONG_4:0.0RenergyZ40.0
+L
+	pangtong5ActiveActive_0 *IDS_GEN_SKILL_PANGTONG_5:0.0RenergyZ50.0
+F
+xushu1ActiveActive_0 *IDS_GEN_SKILL_XUSHU_1:0.0RenergyZ10.0
+F
+xushu2ActiveActive_0 *IDS_GEN_SKILL_XUSHU_2:0.0RenergyZ20.0
+F
+xushu3ActiveActive_0 *IDS_GEN_SKILL_XUSHU_3:0.0RenergyZ30.0
+F
+xushu4ActiveActive_0 *IDS_GEN_SKILL_XUSHU_4:0.0RenergyZ40.0
+F
+xushu5ActiveActive_0 *IDS_GEN_SKILL_XUSHU_5:0.0RenergyZ50.0

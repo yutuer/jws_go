@@ -1,0 +1,9 @@
+<seelog>
+    <outputs formatid="common">
+        <rollingfile type="date" filename="logics_multiplayer" datepattern="02.01.2006.log" maxrolls="7" />
+        <custom name="herologiclog_multiplayer" formatid="common" data-filename="hero_multiplayer.log"/>
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

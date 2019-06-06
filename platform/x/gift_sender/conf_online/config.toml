@@ -1,0 +1,37 @@
+etcd_root = "/SL200"
+etcd_endpoint = ["http://10.33.2.6:2379/","http://10.33.2.7:2379/","http://10.33.2.8:2379/"]
+secret_key = "b0802611d6a412603f7dfc3bf99494be"
+
+key = ""
+aws_region = "cn-north-1"
+
+aws_access_key = ""
+aws_secret_key = ""
+
+[mail_db]
+  [mail_db.200]
+    name = "Mail_G200"
+  [mail_db.201]
+    name = "Mail_G201"
+  [mail_db.202]
+    name = "Mail_G202"
+  [mail_db.203]
+    name = "Mail_G203"
+[host]
+    [host.hero]
+     host = ":7777"
+    [host.alibaba_uc]
+     host = ":7778"
+
+[uc]
+     dynamo_db_Device="Devices_G200"
+     dynamo_db_Name="Name_G200"
+     dynamo_db_UserInfo="UserInfo_G200"
+     dynamo_db_GM="GMInfo"
+     dynamo_db_UserShardInfo="UserShardInfo_G200"
+     apiKey="cd1892bfde1fdde92c3c974c275449f3"
+     caller="taihehudong"
+     SecretKey="3p3286dw7zQ5s1eK"
+     gid=200
+
+

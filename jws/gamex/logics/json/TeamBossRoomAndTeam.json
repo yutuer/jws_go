@@ -1,0 +1,567 @@
+[
+    {
+        "name": "GetTBTeamList",
+        "title": "获取组队BOSS的队伍列表",
+        "path": "Attr",
+        "comment": "获取组队BOSS的队伍信息",
+        "req": {
+            "params": [
+                [
+                    "DifficultyId",
+                    "long",
+                    "请求的难度ID",
+                    "diff_id"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TeamList",
+                    "TBTeamSimple[]",
+                    "队伍列表",
+                    "team_list"
+                ],[
+                    "TBTeamDayOfWeek",
+                    "long",
+                    "组队boss星期几 0开始周一",
+                    "tb_tdow"
+                ]
+            ]
+        },
+        "objects": [
+            {
+                "name": "TBTeamSimple",
+                "params": [
+                    [
+                        "TeamId",
+                        "string",
+                        "队伍id",
+                        "tm_id"
+                    ],
+                    [
+                        "TeamMemberCount",
+                        "long",
+                        "队伍人数",
+                        "tm_c"
+                    ],
+                    [
+                        "LeaderPlayerName",
+                        "string",
+                        "队长名字",
+                        "leader_pn"
+                    ],
+                    [
+                        "LeaderPlayerSid",
+                        "long",
+                        "队长区服",
+                        "leader_sid"
+                    ],
+                    [
+                        "FightAvatarIds",
+                        "long[]",
+                        "出战的角色avatarId",
+                        "f_ava_ids"
+                    ],
+                    [
+                        "AvatarLevel",
+                        "long[]",
+                        "出战的主将等级",
+                        "f_ava_lv"
+                    ],
+                    [
+                        "AvatarStarLevel",
+                        "long[]",
+                        "出战的主将星级",
+                        "f_av_slv"
+                    ],
+                    [
+                        "TeamState",
+                        "long",
+                        "队伍状态 0=开放;1=无法加入；2=满员",
+                        "t_state"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TBTeamReady",
+        "title": "在队中准备",
+        "path": "Attr",
+        "comment": "在队中准备",
+        "req": {
+            "params": [
+                [
+                    "ReadyTeamDiff",
+                    "long",
+                    "准备进入的难度",
+                    "t_rd_tdf"
+                ],
+                [
+                    "ReadyTeamId",
+                    "string",
+                    "准备的队伍id",
+                    "t_rd_tid"
+                ],
+                [
+                    "ReadyNowStatus",
+                    "long",
+                    "队伍目前准备状态 0未准备 1已准备",
+                    "t_rd_st"
+                ],
+                [
+                    "ReadyHeroId",
+                    "long",
+                    "准备的武将id",
+                    "t_rd_hid"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [ ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "CreatTBTeam",
+        "title": "创建组队BOSS队伍",
+        "path": "Attr",
+        "comment": "创建组队BOSS队伍",
+        "req": {
+            "params": [
+                [
+                    "CreateDifficultyId",
+                    "long",
+                    "请求的难度ID",
+                    "c_diff_id"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "MyTeamInfo",
+                    "TBTeamDetail",
+                    "个人队伍信息",
+                    "my_team"
+                ]
+            ]
+        },
+        "objects": [
+            {
+                "name": "TBTeamDetail",
+                "params": [
+                    [
+                        "MyTeamId",
+                        "string",
+                        "队伍id",
+                        "my_tm_id"
+                    ],
+                    [
+                        "MyTeamDifficulty",
+                        "long",
+                        "个人队伍难度",
+                        "my_t_diff"
+                    ],
+                    [
+                        "LeaderIndex",
+                        "long",
+                        "个人队伍队长索引 0队长是本人 1队长是队友",
+                        "my_lead_ind"
+                    ],
+                    [
+                        "MyTeamSetting",
+                        "long",
+                        "个人队伍当前加入设定",
+                        "my_t_s"
+                    ],
+                    [
+                        "RedBoxTickState",
+                        "long",
+                        "房间必得红宝箱勾选状态",
+                        "my_rb_t"
+                    ],[
+                        "TBTeamTypeId",
+                        "long",
+                        "TB阵容组合id",
+                        "tb_ttid"
+                    ],[
+                        "LevelInfoId",
+                        "string",
+                        "战斗场景id",
+                        "tb_lviid"
+                    ],
+                    [
+                        "TBWbossId",
+                        "string",
+                        "组队bossId",
+                        "tb_wbid"
+                    ],
+                    [
+                        "MyTeamMember",
+                        "TeamMember[]",
+                        "个人队伍成员信息",
+                        "my_t_mems"
+                    ]
+                ]
+            },
+            {
+                "name": "TeamMember",
+                "params": [
+                    [
+                        "PosId",
+                        "long",
+                        "选择上阵武将的位置",
+                        "t_mem_pos"
+                    ],
+                    [
+                        "HeroId",
+                        "long",
+                        "个人队伍成员选择武将id",
+                        "t_mem_hid"
+                    ],[
+                        "HeroMagicPet",
+                        "long",
+                        "武将灵宠形象id，0无，1~6不同形象",
+                        "t_mem_hmp"
+                    ],
+                    [
+                        "HeroSwing",
+                        "long",
+                        "个人队伍成员武将翅膀",
+                        "t_mem_hsw"
+                    ],
+                    [
+                        "HeroFashion",
+                        "string[]",
+                        "个人队伍成员武将时装",
+                        "t_mem_hfa"
+                    ],
+                    [
+                        "HeroGlory",
+                        "string",
+                        "个人队伍成员神兵id",
+                        "t_mem_g"
+                    ],
+                    [
+                        "TeamMemAcid",
+                        "string",
+                        "个人队伍成员acid",
+                        "t_mem_acid"
+                    ],[
+                        "TBMemLevel",
+                        "long",
+                        "角色等级",
+                        "tb_m_liid"
+                    ],
+                    [
+                        "TBMemHeroStar",
+                        "long",
+                        "角色星级",
+                        "tb_m_hs"
+                    ],
+                    [
+                        "TeamMemGs",
+                        "long",
+                        "个人队伍成员战力",
+                        "t_mem_gs"
+                    ],[
+                        "TeamMemSid",
+                        "long",
+                        "个人队伍成员服务器id",
+                        "t_mem_sid"
+                    ],
+                    [
+                        "TeamMemName",
+                        "string",
+                        "个人队伍成员名字",
+                        "t_mem_name"
+                    ],
+                    [
+                        "TeamMemReadyState",
+                        "long",
+                        "个人队伍成员准备状态",
+                        "t_mem_ready"
+                    ],
+                    [
+                        "TeamMemCompressGs",
+                        "long",
+                        "个人队伍成员压缩过的战力",
+                        "t_mem_cgs"
+                    ],
+                    [
+                        "TeamMemVIPLvl",
+                        "long",
+                        "个人队伍成员vip等级",
+                        "t_mem_vip"
+                    ],
+                    [
+                        "TeamMemIcon",
+                        "long",
+                        "个人队伍成员头像",
+                        "t_mem_ic"
+                    ]
+                ]
+            }
+        ]
+    },
+    {
+        "name": "TBChooseHero",
+        "title": "房间中选将界面确认选将",
+        "path": "Attr",
+        "comment": "房间中选将界面确认选将",
+        "req": {
+            "params": [
+                [
+                    "TbChooseHeroId",
+                    "long",
+                    "选将界面选择武将的id",
+                    "t_chava"
+                ],
+                [
+                    "TbChooseHeroTeamId",
+                    "string",
+                    "选将的所在房间id",
+                    "t_cha_tid"
+                ],
+                [
+                    "TbChooseHeroPos",
+                    "long",
+                    "选将界面选择武将的位置",
+                    "t_cha_p"
+                ],
+                [
+                    "TbChooseHeroDiff",
+                    "long",
+                    "选将所在房间的难度",
+                    "t_cha_di"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "ChooseHeroId",
+                    "long",
+                    "成员选择武将id",
+                    "t_c_hid"
+                ],[
+                    "ChooseHeroMagicPet",
+                    "long",
+                    "选择武将灵宠形象id，0无，1~6不同形象",
+                    "t_c_hmp"
+                ],
+                [
+                    "ChooseHeroSwing",
+                    "long",
+                    "选择武将翅膀",
+                    "t_c_hsw"
+                ],
+                [
+                    "ChooseHeroFashion",
+                    "string[]",
+                    "选择武将时装",
+                    "t_c_hfa"
+                ],
+                [
+                    "ChooseHeroPost",
+                    "long",
+                    "选择武将选择后的位置",
+                    "t_c_post"
+                ],
+                [
+                    "ChooseHeroCompressGs",
+                    "long",
+                    "选择武将的压缩战力",
+                    "t_c_gs"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "TBTeamJoinSetting",
+        "title": "队中邀请加入设定 0开放 1仅限邀请",
+        "path": "Attr",
+        "comment": "队中邀请加入设定",
+        "req": {
+            "params": [
+                [
+                    "TeamJoinSetting",
+                    "long",
+                    "队中邀请加入设定",
+                    "t_set"
+                ],[
+                    "TeamSettingTeamId",
+                    "string",
+                    "邀请设定更改的队伍id",
+                    "t_se_tid"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TeamJoinSetting",
+                    "long",
+                    "队中邀请加入设定",
+                    "t_set"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "JoinTBTeam",
+        "title": "加入组队BOSS的队伍",
+        "path": "Attr",
+        "comment": "加入组队BOSS的队伍",
+        "req": {
+            "params": [
+                [
+                    "JoinTeamId",
+                    "string",
+                    "想加入队伍的ID",
+                    "j_id"
+                ],
+                [
+                    "JoinLeaderId",
+                    "string",
+                    "想加入队伍的队长ID",
+                    "j_l_id"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "MyTeamInfo",
+                    "TBTeamDetail",
+                    "个人队伍信息",
+                    "my_team"
+                ],
+                [
+                    "JoinTBTeamResult",
+                    "long",
+                    "加入房间结果，0成功，1房间不存在，2距离上次离开房间时间过短，3房间已满，4内部错误",
+                    "j_t_ret"
+                ]
+            ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "LeaveTBTeam",
+        "title": "离开组队BOSS的队伍",
+        "path": "Attr",
+        "comment": "离开组队BOSS的队伍",
+        "req": {
+            "params": [
+                [
+                    "LeaveTeamId",
+                    "string",
+                    "想退出队伍的ID",
+                    "l_id"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [ ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "TBTeamKick",
+        "title": "踢出组队boss某人",
+        "path": "Attr",
+        "comment": "踢出组队boss某人",
+        "req": {
+            "params": [
+                [
+                    "BeKickedAcid",
+                    "string",
+                    "被踢的人的acid",
+                    "tbk_ac"
+                ],[
+                    "BeKickedTeamId",
+                    "string",
+                    "被踢的人所在的队伍id",
+                    "tbk_tid"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [ ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "GetRedBoxCostHC",
+        "title": "房间中勾选花费钻石一定获得红宝箱",
+        "path": "Attr",
+        "comment": "房间中勾选花费钻石一定获得红宝箱",
+        "req": {
+            "params": [
+                [
+                    "TBCostTeamID",
+                    "string",
+                    "勾选红宝箱的teamid",
+                    "t_rb_tid"
+                ],
+                [
+                    "IsTickRedBox",
+                    "long",
+                    "是勾选还是放弃勾选红宝箱 0不勾 1勾",
+                    "t_rb"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [ ]
+        },
+        "objects": [ ]
+    },
+    {
+        "name": "GetTBMemberInfo",
+        "title": "获取组队BOSS的队友信息",
+        "path": "Attr",
+        "comment": "获取组队BOSS的队友信息",
+        "req": {
+            "params": [
+                [
+                    "TeamMemAcid",
+                    "string",
+                    "队友的acid",
+                    "t_m_id"
+                ],[
+                    "TeamMemTeamId",
+                    "string",
+                    "队友的TeamId",
+                    "t_m_tid"
+                ]
+            ]
+        },
+        "rsp": {
+            "base": "",
+            "params": [
+                [
+                    "TBTeammate",
+                    "WSPVPRankInfo",
+                    "队友信息",
+                    "t_tm"
+                ]
+            ]
+        },
+        "objects": []
+    }
+]

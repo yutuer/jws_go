@@ -1,0 +1,44 @@
+- name: "Install python-related packages debian/ubuntu"
+  apt: pkg={{ item }} state=present
+  when: ansible_pkg_mgr == 'apt'
+  with_items:
+    - python
+    - python-dev
+    - python-setuptools
+
+- name: "Install python-related packages RedHat"
+  yum: name={{ item }} state=present
+  when: ansible_pkg_mgr == 'yum'
+  with_items:
+    - python27-devel
+    - libffi-devel
+    - openssl-devel
+    # - python27-pyOpenSSL
+    # - python27-pyasn1
+
+- name: Check if /usr/bin/pip is installed
+  stat: path=/usr/bin/pip
+  register: pip_installed
+
+- name: "Install pip"
+  easy_install: name=pip
+  when: pip_installed.stat.exists == false
+
+- name: Add CN pip Mirror
+  copy: src=pip.conf dest=/etc/pip.conf
+
+- name: "Install virtualenv"
+  pip: name=virtualenv state=present
+
+- name: "Install pyzmq supervisor"
+  pip: name={{ item }} state=present
+  with_items:
+    - pyzmq
+    - pyopenssl
+    - ndg-httpsclient
+    - pyasn1
+    #for websocket app
+    - websocket-client
+    - gevent-websocket
+
+- include: supervisor.yml

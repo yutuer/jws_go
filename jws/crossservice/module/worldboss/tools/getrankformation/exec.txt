@@ -1,0 +1,6 @@
+200
+./getrankformation_linux getRankFormation -i 10.33.4.240 -a mUEiGo1Vy1bZeFhVsPN3VKnV -n 23 -d 20170709 -d 20170708 -o worldboss_data_200.data
+202
+./getrankformation_linux getRankFormation -i 10.33.4.240 -a mUEiGo1Vy1bZeFhVsPN3VKnV -n 25 -d 20170709 -d 20170708 -o worldboss_data_202.data
+203
+./getrankformation_linux getRankFormation -i 10.33.4.240 -a mUEiGo1Vy1bZeFhVsPN3VKnV -n 26 -d 20170709 -d 20170708 -o worldboss_data_203.data

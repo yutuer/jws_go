@@ -1,0 +1,144 @@
+[
+  {
+    "name": "GetOpRank",
+    "title": "获取运营活动排行榜",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ActivityType",
+          "long",
+          "请求某个类型的运营活动排行榜",
+          "activity_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "RankInfo",
+          "OpRankInfo[]",
+          "运营活动排行榜排行信息",
+          "rank_info"
+        ],
+        [
+          "SelfRank",
+          "long",
+          "个人排名",
+          "self_rank"
+        ],
+        [
+          "SelfScore",
+          "long",
+          "个人分数",
+          "self_score"
+        ]
+      ]
+    },
+    "objects": [{
+      "name": "OpRankInfo",
+      "params": [
+        [
+          "Acid",
+          "string",
+          "角色acid",
+          "acid"
+        ],
+        [
+          "Rank",
+          "long",
+          "排名",
+          "rank"
+        ],
+        [
+          "Name",
+          "string",
+          "名字",
+          "name"
+        ],
+        [
+          "Score",
+          "long",
+          "分数",
+          "score"
+        ]
+      ]
+    }]
+  },
+  {
+    "name": "GetOpRankRewardInfo",
+    "title": "获取运营活动排行榜可获得的奖励",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ActivityType",
+          "long",
+          "请求某个类型的运营活动排行榜",
+          "activity_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "OpRankReward",
+          "OpRankRewardInfo[]",
+          "运营活动排行榜奖励信息",
+          "rank_reward_info"
+        ],
+        [
+          "SelfRank",
+          "long",
+          "个人排名",
+          "self_rank"
+        ],
+        [
+          "SelfScore",
+          "long",
+          "个人分数",
+          "self_score"
+        ]
+      ]
+    },
+    "objects": [{
+      "name": "OpRankRewardInfo",
+      "params": [
+        [
+          "RewardID",
+          "string[]",
+          "奖励道具ID",
+          "reward_id"
+        ],
+        [
+          "RewardCount",
+          "long[]",
+          "奖励数量",
+          "reward_c"
+        ],
+        [
+          "RankMin",
+          "long",
+          "排名下限",
+          "rank_min"
+        ],
+        [
+          "RankMax",
+          "long",
+          "排名上限",
+          "rank_max"
+        ],
+        [
+          "MinCond",
+          "long",
+          "条件限制",
+          "min_cond"
+        ]
+      ]
+    }]
+  }
+]

@@ -1,0 +1,27 @@
+package protogen;
+
+import "common.proto";
+
+// 获取章节信息
+message GetChapterInfoReq {
+    required Req Req = 1;
+    required string ChapterId = 2; // 该字段已经区分了难度
+}
+
+message GetChapterInfoResp {
+    required Resp Resp = 1;
+    required ChapterInfo hapter = 2;
+}
+
+// 章节信息
+message ChapterInfo {
+    required string Id = 1;
+    repeated LevelInfo OpenLevels = 2; // 已开启的关卡信息
+    repeated int32 HasRewardStar = 3; // 已经领取过奖励的星级
+}
+
+message LevelInfo {
+    required string Id = 1;
+    repeated bool Star = 2;
+    required int32 UsedCount = 3; // 已经挑战过的次数
+}

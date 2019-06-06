@@ -1,0 +1,9 @@
+{% set etcdvalue = item.value %}
+<seelog>
+    <outputs formatid="common">
+        <rollingfile type="date" filename="/opt/supervisor/log/anticheat_shard{{etcdvalue.shard_id}}" datepattern="02.01.2006.log" maxrolls="30" />
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

@@ -1,0 +1,284 @@
+[
+  {
+    "name": "GetPackageInfo",
+    "title": "获取兑礼包信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "PackagePropInfo",
+          "PackagePropInfo[]",
+          "礼包信息",
+          "package_prop_info"
+        ]
+      ]
+    },
+    "object": {
+      "name": "PackagePropInfo",
+      "params": [
+        [
+          "PackageID",
+          "long",
+          "礼包ID",
+          "package_id"
+        ],
+        [
+          "PackageType",
+          "long",
+          "礼包类型",
+          "package_type"
+        ],
+        [
+          "PackageName",
+          "string",
+          "礼包名称",
+          "package_name"
+        ],
+        [
+          "IapId",
+          "string",
+          "购买iapid",
+          "iap_id"
+        ],
+        [
+          "VipLevel",
+          "long",
+          "vip等级",
+          "vip_level"
+        ],
+        [
+          "LimitType",
+          "long",
+          "限购类型",
+          "limit_type"
+        ],
+        [
+          "Limitcount",
+          "long",
+          "限购数量",
+          "limit_buy_t"
+        ],
+        [
+          "Count",
+          "long",
+          "已经购买数量",
+          "have_count"
+        ],
+        [
+          "PackageItem",
+          "string[]",
+          "包内物品id",
+          "package_item"
+        ],
+        [
+          "PackageCount",
+          "long[]",
+          "包内物品数量",
+          "package_count"
+        ],
+        [
+          "StartTime",
+          "long",
+          "开始时间",
+          "start_time"
+        ],
+        [
+          "SubPackageId",
+          "long",
+          "子礼包id",
+          "sub_package_id"
+        ],
+        [
+          "EndTime",
+          "long",
+          "结束时间",
+          "end_time"
+        ],
+        [
+          "BackRatio",
+          "long",
+          "返还比例",
+          "back_ratio"
+        ],
+        [
+          "HCValue",
+          "long",
+          "钻石数量",
+          "hc_value"
+        ],
+        [
+          "ShowValue",
+          "long",
+          "原价",
+          "show_value"
+        ],
+        [
+          "ConditionType",
+          "long",
+          "条件类型",
+          "condition_type"
+        ],
+        [
+          "ConditionIp1",
+          "long",
+          "条件数值参数1",
+          "condition_ip_1"
+        ],
+        [
+          "ConditionIp2",
+          "long",
+          "条件数值参数2",
+          "condition_ip_2"
+        ],
+        [
+          "ConditionSp1",
+          "string",
+          "条件数值参数1",
+          "condition_sp_1"
+        ],
+        [
+          "ConditionSp2",
+          "string",
+          "条件数值参数2",
+          "condition_sp_2"
+        ],
+        [
+          "CanBuyPackage",
+          "long",
+          "是否满足条件",
+          "can_buy_this_package"
+        ],
+        [
+          "CurrentPos",
+          "long",
+          "阶梯礼包购买阶段",
+          "cur_pos"
+        ],
+        [
+          "QuestName",
+          "string",
+          "任务名称",
+          "quest_name"
+        ],
+        [
+          "QuestDes",
+          "string",
+          "任务描述",
+          "quest_des"
+        ],
+        [
+          "BuyPackage",
+          "long",
+          "是否购买条件礼包",
+          "have_buy_package"
+        ],
+        [
+          "Progress",
+          "long",
+          "当前进度",
+          "quest_progress"
+        ],
+        [
+          "All",
+          "long",
+          "总进度",
+          "quest_all"
+        ],
+        [
+          "BackImage",
+          "long",
+          "背景模板",
+          "back_image"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "GetSpecialPackageInfo",
+    "title": "获取特殊礼包信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+        "SpackageNum",
+        "long",
+        "特殊礼包号",
+        "special_package_number"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "ContinueShow",
+          "long",
+          "是否继续",
+          "continue_show"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "ReceiveConditionPackage",
+    "title": "领取条件礼包",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "PackageId",
+          "long",
+          "礼包号",
+          "package_id"
+        ],
+        [
+          "SubPackageId",
+          "long",
+          "礼包号",
+          "sub_package_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+      ]
+    }
+  },
+  {
+    "name": "CloseSendInfo",
+    "title": "关闭页面发送信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "PackageId",
+          "long[]",
+          "礼包号",
+          "package_id"
+        ],
+        [
+          "SubPackageId",
+          "long[]",
+          "礼包号",
+          "sub_package_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+      ]
+    }
+  }
+]
+

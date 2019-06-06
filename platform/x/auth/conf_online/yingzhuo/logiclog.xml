@@ -1,0 +1,8 @@
+<seelog type="adaptive" mininterval="200000" maxinterval="1000000000" critmsgcount="500"  minlevel="debug">
+	<outputs formatid="common">
+        <rollingfile type="date" filename="/opt/supervisor/log/logics_auth" datepattern="02.01.2006.log" maxrolls="7" />
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

@@ -1,0 +1,14 @@
+include "vector.fbs";
+include "player_simple_data.fbs";
+namespace multiplayMsg;
+/// [Notify]伤害\损失HP通知
+table PlayerData {
+    simpleData : PlayerSimpleData;
+    releaseSkillID : int;
+    comboCount : int;
+    startAttackPos : Vector;
+    startAttackDir : Vector;
+    startAttackTimeStamp : long;
+}
+
+root_type PlayerData;

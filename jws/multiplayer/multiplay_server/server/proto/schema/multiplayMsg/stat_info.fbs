@@ -1,0 +1,11 @@
+namespace multiplayMsg;
+
+///Boss状态(数组中以Boss数据中的idx为索引)
+table BossState {
+    ///boss hp
+    hp        : int;
+    ///boss 仇恨值(数组中以玩家数据中的idx为索引)
+    hatred    : [int];
+}
+
+root_type BossState;

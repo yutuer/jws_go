@@ -1,0 +1,5 @@
+[program:botx]
+command=/opt/botx/botx mbot -s {{botx_speed_factor}} --rpc "{{botx_target_gate_rpc}}" --server "{{botx_target_gamex_gate}}" replay
+redirect_stderr=true
+stdout_logfile=/var/log/botx.log
+stdout_logfile_maxbytes=100MB

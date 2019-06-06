@@ -1,0 +1,17 @@
+{
+    "default": {
+        "AddrPort": "10.33.4.240:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 21
+    },
+    "3001": {
+        "AddrPort": "10.33.4.240:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 21
+    },
+    "3002": {
+        "AddrPort": "10.33.4.240:6379",
+        "Auth": "mUEiGo1Vy1bZeFhVsPN3VKnV",
+        "DB": 21
+    }
+}

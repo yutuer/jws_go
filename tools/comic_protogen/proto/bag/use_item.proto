@@ -1,0 +1,11 @@
+package protogen;
+import "common.proto";
+
+message UseItemReq {
+    required Req Req = 1;
+    required string ItemId = 2;
+}
+
+message UseItemResp {
+    required Resp Resp = 1;
+}

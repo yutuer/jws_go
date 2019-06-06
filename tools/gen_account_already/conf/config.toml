@@ -1,0 +1,12 @@
+gidsid = "200:999"
+
+redis = "10.33.1.27:6379"
+redis_db = 1
+redis_auth = ""
+
+account_num = 700
+account_uid_csv = "conf/gen_account.csv"
+account_jsons = ["conf/1-16-a8920bb5-1bce-42b0-9c9e-fea6341fdccf-小R.json",
+"conf/1-16-44d8dc01-013e-4656-8fc7-e08069623558-中R.json",
+"conf/1-16-c08056af-f79e-4ad9-8cff-bbe4b793cbea-大R.json"]
+account_split_num = [100,400,200]

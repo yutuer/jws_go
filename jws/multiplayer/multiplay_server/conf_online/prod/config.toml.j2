@@ -1,0 +1,24 @@
+{% set etcdvalue = item.value %}
+[CommonCfg]
+#通用配置
+
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+
+run_mode="dev"
+
+# 游戏同步服务地址 需要完整的公网地址
+
+listen=":{{etcdvalue.listen}}"
+publicip = {{etcdvalue.publicip}}
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+
+match_token = {{etcdvalue.match_token}}
+
+# 游戏开始通知api地址 需要内网ip
+listen_notify_addr="{{ ansible_eth0.ipv4.address }}:{{etcdvalue.listen_notify_addr}}"
+
+# 游戏大区ID GID
+gid = "{{etcdvalue.gid}}"

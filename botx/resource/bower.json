@@ -1,0 +1,25 @@
+{
+  "name": "botx",
+  "version": "0.0.1",
+  "authors": [
+    "timesking <timesking@gmail.com>"
+  ],
+  "description": "for demo",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.0",
+    "react-bootstrap": "~0.23.2",
+    "react.backbone": "~0.6.0",
+    "react": "~0.13.3"
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "name": "ExchangeHeroPiece",
+    "title": "请求兑换武将碎片",
+    "path": "Attr",
+    "comment": "武将碎片兑换令牌",
+    "req": {
+      "params": [
+        [
+          "HeroAvatar",
+          "long",
+          "武将int类型的ID",
+          "hero_avatar"
+        ],
+        [
+          "IsTen",
+          "bool",
+          "是否是兑换10次",
+          "is_ten"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": []
+    }
+  },
+  {
+    "name": "DrawHeroPieceGacha",
+    "title": "武将碎片抽奖",
+    "path": "Attr",
+    "comment": "武将碎片抽奖",
+    "req": {
+      "params": [
+        [
+          "HeroPieceGachaId",
+          "long",
+          "想要抽奖的ID",
+          "hpg_id"
+        ],
+        [
+          "HeroPieceGachaSubId",
+          "long",
+          "想要抽奖的SubID",
+          "hpg_subid"
+        ],
+        [
+          "IsTen",
+          "bool",
+          "是否是十连抽",
+          "is_ten"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+        [
+          "GiveRewardId",
+          "string",
+          "想要抽奖的ID",
+          "bg_grid"
+        ],
+        [
+          "GiveRewardCount",
+          "long",
+          "想要抽奖的ID",
+          "bg_grc"
+        ],
+        [
+          "ExtRewardId",
+          "string[]",
+          "想要抽奖的ID",
+          "bg_extid"
+        ],
+        [
+          "ExtRewardCount",
+          "long[]",
+          "想要抽奖的ID",
+          "bg_extc"
+        ],
+        [
+          "ExtRewardData",
+          "string[]",
+          "想要抽奖的ID",
+          "bg_extd"
+        ]
+      ]
+    }
+  }
+]

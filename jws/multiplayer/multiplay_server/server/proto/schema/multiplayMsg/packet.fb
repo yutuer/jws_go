@@ -1,0 +1,61 @@
+include "enter_multiplay_game_req.fbs";
+include "enter_multiplay_game_rsp.fbs";
+include "get_game_data_req.fbs";
+include "get_game_data_rsp.fbs";
+include "get_game_stat_req.fbs";
+include "get_game_stat_rsp.fbs";
+include "notify_leave_multiplay_game.fbs";
+include "push_on_account_enter.fbs";
+include "push_on_state_change.fbs";
+include "notify_ready_game.fbs";
+include "hp.fbs";
+include "ping.fbs";
+include "pong.fbs";
+include "get_game_reward_req.fbs";
+include "get_game_reward_rsp.fbs";
+include "boss_data.fbs";
+include "boss_simple_data.fbs";
+include "player_data.fbs";
+include "player_simple_data.fbs";
+include "scene_activity.fbs";
+include "enemy_hp.fbs";
+include "change_avatar.fbs";
+
+namespace multiplayMsg;
+
+// multi -> client 战斗信息
+
+union Datas {
+    EnterMultiplayGameReq,
+    EnterMultiplayGameRsp,
+    GetGameStateReq,
+    GetGameStateRsp,
+    GetGameDatasReq,
+    GetGameDatasRsp,
+    HPNotify,
+    LeaveMultiplayGameNotify,
+    OnAccountEnterMultiplayGamePush,
+    StatePush,
+    ReadyMultiplayGameNotify,
+    Ping,
+    Pong,
+    GetGameRewardsReq,
+    GetGameRewardsRsp,
+    BossData,
+    BossSimpleData,
+    PlayerData,
+    PlayerSimpleData,
+    EnemyHP,
+    SceneActivity,
+    ChangeAvatar
+}
+
+
+table Packet {
+    typ       : int;
+    number    : long;
+    code      : int;
+    data      : Datas;
+}
+
+root_type Packet;

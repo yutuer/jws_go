@@ -1,0 +1,28 @@
+[
+  {
+    "name": "TwitterShare",
+    "title": "Twitter分享",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+      ]
+    }
+  },
+  {
+    "name": "LineShare",
+    "title": "Line分享",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+      ]
+    }
+  }
+]

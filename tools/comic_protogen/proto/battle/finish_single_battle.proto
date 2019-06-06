@@ -1,0 +1,16 @@
+package protogen;
+
+import "common.proto";
+
+
+//
+message FinishSingleBattleReq {
+    required Req Req = 1;
+    required int32 BattleId = 2; // 战斗ID
+    required bool IsWin = 3;
+    repeated bool StarState = 4;
+}
+
+message FinishSingleBattleResp {
+    required Resp Resp = 1;
+}

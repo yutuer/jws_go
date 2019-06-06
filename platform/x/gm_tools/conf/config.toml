@@ -1,0 +1,102 @@
+[CommonCfg]
+etcd_endpoint = ["http://127.0.0.1:2379/"] # 10.222.1.4
+#GmToolsCfg = "/a3k/GmTool"
+GameSerEtcdRoot = "/a4k"
+GidFilter = ["/a4k/1"]
+GameMachineEtcdRoot = "/skydns/net/taiyouxi/gamex"
+
+
+#配置时区
+TimeLocal="Asia/Shanghai"
+
+
+#一下配置是考虑给开发时本机起GmTools用的
+#[dev release]
+runmode = "dev"
+
+# 对外的Url
+Url=":8080"
+
+RedisName=["0:10", "0:1", "1:10", "1:11", "1:12"]
+
+
+RedisAddress=["127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379"]
+RedisDB=[1, 2, 0, 0, 0]
+
+RedisRankAddress=["127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379", "127.0.0.1:6379"]
+RedisRankDB=[5, 6, 0, 0, 0]
+
+ServerName=["0:10", "0:1", "1:10", "1:11", "1:12"]
+
+MailDBNames=["LocalMail","LocalMail","LocalMail","LocalMail","LocalMail"]
+MailDBDrivers=["DynamoDB", "DynamoDB", "DynamoDB", "DynamoDB", "DynamoDB"]
+MailMongoUrls=["127.0.0.1", "127.0.0.1", "127.0.0.1", "127.0.0.1", "127.0.0.1"]
+
+SysRollNoticeUrl=["http://172.31.7.230:10010/broadcast","http://172.31.7.230:10010/broadcast","http://172.31.7.230:10010/broadcast","http://172.31.7.230:10010/broadcast","http://172.31.7.230:10010/broadcast"]
+
+AuthApi=["http://127.0.0.1:8789/auth/v1/api/user/ban/","http://127.0.0.1:8789/auth/v1/user/ban/","http://127.0.0.1:8789/auth/v1/user/ban/","http://127.0.0.1:8789/auth/v1/user/ban/","http://127.0.0.1:8789/auth/v1/user/ban/"]
+
+AuthGagApi=["http://127.0.0.1:8789/auth/v1/api/user/gag/","http://127.0.0.1:8789/auth/v1/api/user/gag/","http://127.0.0.1:8789/auth/v1/api/user/gag/","http://127.0.0.1:8789/auth/v1/api/user/gag/","http://127.0.0.1:8789/auth/v1/api/user/gag/"]
+
+ServerHotDataUrl=["http://127.0.0.1:8790/gamex/v1/hotupdatedata","http://127.0.0.1:8790/gamex/v1/hotupdatedata","http://127.0.0.1:8790/gamex/v1/hotupdatedata","http://127.0.0.1:8790/gamex/v1/hotupdatedata","http://127.0.0.1:8790/gamex/v1/hotupdatedata"]
+
+ElasticUrl="http://10.222.0.129:9200"
+ElasticIndex = "bilogs5-logics-%s.*"
+# zhangzhen aws key
+AWS_Region="cn-north-1"
+AWS_AccessKey="AKIAOXC6JHPK7YYB6QBA"
+AWS_SecretKey="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"
+
+#选择使用哪种数据库运行Auth注册服务DynamoDB or MongoDB
+auth_db_driver="DynamoDB"
+#auth_db_driver="MongoDB"
+
+auth_dynamo_db_Device="LocalDevice"
+auth_dynamo_db_Name="LocalName"
+auth_dynamo_db_UserInfo="LocalUserInfo"
+
+#Auth注册服务MongoDB的链接参数
+#参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+auth_mongodb_url="127.0.0.1"
+
+#数据库的名称, 如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+auth_mongodb_name="AuthDB"
+
+PayDBDriver="DynamoDB"
+PayMongoUrl="127.0.0.1"
+PayAndroidDBName="AndroidPay"
+PayIOSDBName="IOSPay"
+
+s3_buckets_verupdate = "verupdate"
+verupdate_filename = "ver_url.csv"
+verupdate_meta_filename = "ver_url_meta"
+
+FtpAddress="proxy.wsfdupload.lxdns.com:21"
+FtpUser="ifsgcdn"
+FtpPasswd="ifsgcdn#1118"
+
+QiNiuAccKey="_N4StMhwFM9oSkQ3SqDmpN1LGLfDljZ7K_-xmc-Q"
+QiNiuSecKey="4AiW-FXGBn3YUWjNyD-IW40gRskx20XTfq1zmi49"
+
+DBStoreFile = "./data2.db"
+RankReloadUrl = ["http://127.0.0.1:8790/gamex/v1/api/rank/reload"]
+
+ks3_domain = "ks3-cn-beijing.ksyun.com"
+ks3_bucket = "jws"
+ks3_access_key = "AKLTUbZusSAJRgKNGdnQDQAutQ"
+ks3_secret_key = "ODbVk1BZ4LDQlBKSMEUxITqOnItOzHDWW70cGHA7m7Xdp/0L6SWwYKxH13MqcRiu0Q=="
+
+store_driver = "S3"
+oss_endpoint=""
+oss_access_id=""
+oss_access_key=""
+oss_channle_bucket=""
+oss_public_bukcet=""
+
+notice_watch_key="notice_watch"
+s3_gonggao_region = "cn-north-1"
+s3_buckets_gonggao="gonggao"

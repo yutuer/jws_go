@@ -1,0 +1,46 @@
+include "fenghuo.fbs";
+include "account_info.fbs";
+namespace fenghuomsg;
+
+
+/// [RPC]进入同步战斗服务器, 重连也适用
+table EnterGameReq {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+    ///房间密码
+    secret    : string;
+}
+
+
+/// [RPC]进入同步战斗服务器 resp
+table EnterGameResp {
+    ///当前玩家索引
+    myidx : int;
+
+    ///当前服务器状态
+    gamestatus : FenghuoGameStatus;
+    ///敌兵所有血量
+    enemiesHp   : [int];
+    ///玩家血量
+    Hps   : [int];
+    ///玩家Avatar属性
+    avatars : [AccountInfo];
+}
+
+// [RPC] 复活请求
+table ReviveReq {
+    ///玩家账号ID
+    accountId : string;
+    ///房间密码
+    hp    : int;
+    idx   : int;
+}
+
+table ReviveResp {
+    ///玩家账号ID
+    accountId : string;
+    ///房间密码
+    hp    : int;
+}

@@ -1,0 +1,36 @@
+[CommonCfg]
+
+#AWS_Region="cn-north-1"
+#AWS_AccessKey="AKIAOXC6JHPK7YYB6QBA"
+#AWS_SecretKey="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"
+#
+#pay_table="AndroidPay"
+#res_path="gen" # 需要提前创建个gen目录
+#
+## 所有要关注的服务器
+#gidshard = ["1:14","1:16"]
+#
+#time_begin="2016-8-25"
+## 分割两次测试的时间点,空字符则取全部
+#time_division="2016-10-30"
+
+
+# 越南
+AWS_Region="ap-southeast-1"
+AWS_AccessKey="AKIAJZPHB4MKIMDWVSAA"
+AWS_SecretKey="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"
+
+pay_table="QuickPay_G206"
+res_path="gen" # 需要提前创建个gen目录
+
+# 所有要关注的服务器
+gidshard = ["206:6001"]
+
+time_begin="2017-7-20"
+# 分割两次测试的时间点,空字符则取全部
+#time_division="2016-10-30"
+
+CorrectFromRedis = true
+Redis = "10.32.2.11:16379"
+RedisAuth = "mUEiGo1Vy1bZeFhVsPN3VKnV"
+RedisDB = 1

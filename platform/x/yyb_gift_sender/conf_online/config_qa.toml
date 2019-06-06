@@ -1,0 +1,33 @@
+#发货URL
+Url="/ticore/yyb/gift"
+
+#Host
+Host=":8082"
+
+#Appkey and AppID
+Appkey="4ikIJ8wzQCUFXIdV"
+AppID="1105027816"
+DeviceSuffix="@32@quick.com"
+
+etcd_root = "/SL200"
+etcd_endpoint = ["http://10.30.1.2:2379/"]
+#
+GiftMongoDBUrl = "mongodb://mongouser:eC3XRJDhn6f3@10.30.4.203:27017/?authSource=admin"
+MailMongoDBUrl = "mongodb://mongouser:eC3XRJDhn6f3@10.30.4.203:27017/?authSource=admin"
+AuthMongoDBUrl = "mongodb://mongouser:eC3XRJDhn6f3@10.30.4.203:27017/?authSource=admin"
+
+GiftMongoDBName = "YYB_G203"
+MailMongoDBName = "Mail_G203"
+AuthMongoDBName = "AuthDB_G203"
+
+dynamo_region="cn-north-1"
+dynamo_accessKeyID="AKIAOXC6JHPK7YYB6QBA"
+dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+dynamo_db_Device="LocalDevice"
+dynamo_db_Name="LocalName"
+dynamo_db_UserInfo="LocalUserInfo"
+dynamo_db_GM="LocalGM"
+
+db = "DynamoDB"

@@ -1,0 +1,12 @@
+namespace multiplayMsg;
+
+///[RPC]获取当前战斗状态
+/// client -> multi 申请进入房间
+table GetGameStateReq {
+    ///玩家账号ID
+    accountId : string;
+    ///请求进入房间ID
+    roomID    : string;
+}
+
+root_type GetGameStateReq;

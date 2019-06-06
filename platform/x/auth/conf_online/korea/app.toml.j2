@@ -1,0 +1,114 @@
+{% set etcdvalue = item.value %}
+
+[CommonConfig]
+# [dev, prod]
+runmode = "prod"
+
+inner_experience = {{etcdvalue.inner_experience}} # 标示auth是否体验服状态，即只运行体验服的服务器可见
+
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+gids=[{{etcdvalue.gids}}]
+
+EnableHttpTLS = ""
+HttpsPort = ":10443"
+HttpCertFile = "conf/server.crt"
+HttpKeyFile = "conf/server.key"
+
+auth_redis_addr="{{etcdvalue.auth_redis_addr}}"
+auth_redis_db="{{etcdvalue.auth_redis_db}}"
+auth_redis_db_pwd={{etcdvalue.auth_redis_db_pwd|default('""')}}
+
+login_redis_addr="{{etcdvalue.login_redis_addr}}"
+login_redis_db="{{etcdvalue.login_redis_db}}"
+login_redis_db_pwd={{etcdvalue.login_redis_db_pwd|default('""')}}
+
+dynamo_region = "ap-northeast-2"
+
+verupdate_valid = true
+s3_buckets_verupdate = {{etcdvalue.s3_buckets_verupdate}}
+verupdate_is_remote = true
+verupdate_filename = "ver_url.csv"
+verupdate_meta_filename = "ver_url_meta"
+
+
+#选择使用哪种数据库运行Auth注册服务DynamoDB or MongoDB
+auth_db_driver={{etcdvalue.auth_db_driver|default('"DynamoDB"')}}
+
+
+#Auth注册服务MongoDB的链接参数
+#参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+mongodb_url={{etcdvalue.mongodb_url|default('"127.0.0.1:27017"')}}
+
+#数据库的名称, 如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+mongodb_name={{etcdvalue.mongodb_name|default('""')}}
+
+dynamo_db_Device = {{etcdvalue.dynamo_db_Device}}
+dynamo_db_Name = {{etcdvalue.dynamo_db_Name}}
+dynamo_db_UserInfo = {{etcdvalue.dynamo_db_UserInfo}}
+dynamo_db_GM={{etcdvalue.dynamo_db_GM}}
+dynamo_db_UserShardInfo = {{etcdvalue.dynamo_db_UserShardInfo}}
+
+dynamo_accessKeyID = {{etcdvalue.AWS_AccessKey}}
+dynamo_secretAccessKey = {{etcdvalue.AWS_SecretKey}}
+
+
+login_api_addr="http://127.0.0.1:{{etcdvalue.httpport}}/login/v1/api/authtoken"
+login_kick_api_addr="http://127.0.0.1:{{etcdvalue.httpport}}/login/v1/api/kick"
+
+passwd_b64map="f1zJ7AerIatj_gncV0y26ZwqTS4vF3okHxRUQY8GENBlK5O9PpuCLhWDMsXb-dmi"
+passwd_salt="fmdsa48idm38jd"
+
+httpport = ":{{etcdvalue.httpport}}"
+gmhttpport = ":{{etcdvalue.gmhttpport}}"
+
+
+SentryDSN={{etcdvalue.DSN}}
+
+#选择使用哪种云存储
+store_driver = "S3"
+
+oss_endpoint = ""
+oss_access_id = ""
+oss_access_key = ""
+oss_bucket=""
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.33.0.0"
+to = "10.33.0.255"
+
+[[LimitConfig.InternalIPs]]
+from = "10.31.0.0"
+to = "10.31.0.255"
+
+[[LimitConfig.InternalIPs]]
+from = "10.35.0.0"
+to = "10.35.0.255"
+
+[[LimitConfig.AdminIPs]]
+from = "218.247.7.194"
+to = "218.247.7.194"
+
+[[LimitConfig.AdminIPs]]
+from = "121.69.47.158"
+to = "121.69.47.158"
+
+[[LimitConfig.AdminIPs]]
+from = "114.111.167.236"
+to = "114.111.167.236"
+
+limit_url_regex = ".*" # 这些url做限制（http header和ratelimit）
+rate_limit_valid = true                 # 限制访问速度的开关
+rate_limit_Average = 10                 # 限速每秒平均数量
+rate_limit_Burst = 10                  # 限速每秒最多数量
+
+[SdkEnjoyConfig]
+url = "http://egapi.enjoygame.com:8093/gameusersdk/user/login_token/check"
+test_url = "http://123.59.61.216/gameusersdk/user/login_token/check"

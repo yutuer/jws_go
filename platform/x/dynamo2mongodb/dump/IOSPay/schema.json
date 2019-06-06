@@ -1,0 +1,28 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/IOSPay", 
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "order_no", 
+        "AttributeType": "S"
+      }
+    ], 
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0, 
+      "WriteCapacityUnits": 2, 
+      "ReadCapacityUnits": 2, 
+      "LastDecreaseDateTime": 1470104179.279
+    }, 
+    "TableSizeBytes": 39437, 
+    "TableName": "IOSPay", 
+    "TableStatus": "ACTIVE", 
+    "KeySchema": [
+      {
+        "KeyType": "HASH", 
+        "AttributeName": "order_no"
+      }
+    ], 
+    "ItemCount": 140, 
+    "CreationDateTime": 1468552199.706
+  }
+}

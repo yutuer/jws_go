@@ -1,0 +1,11 @@
+package protogen;
+import "common.proto";
+
+message GetProtoVerReq {
+    required Req Req = 1;
+}
+
+message GetProtoVerResp {
+    required Resp Resp = 1;
+    required int32 Version = 2;
+}

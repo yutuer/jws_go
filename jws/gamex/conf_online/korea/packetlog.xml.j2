@@ -1,0 +1,9 @@
+{% set etcdvalue = item.value %}
+<seelog type="adaptive" mininterval="200000" maxinterval="1000000000" critmsgcount="500">
+    <outputs formatid="common">
+        <rollingfile type="date" filename="/opt/supervisor/log/packet_shard{{etcdvalue.shard_id}}" datepattern="02.01.2006.log" maxrolls="30" />        
+	</outputs>
+	<formats>
+		<format id="common"  format="%Msg%n"/>
+	</formats>
+</seelog>

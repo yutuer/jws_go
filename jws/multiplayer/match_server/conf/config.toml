@@ -1,0 +1,33 @@
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+# now only use for output statistic
+#
+run_mode="dev"
+url=":8791"
+etcd_endpoint = ["http://127.0.0.1:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "/a4k"
+
+# 匹配参数配置
+matchTimeoutSecond = 3600
+newEnterMatchLv = 0
+tickMax = 1200 # 6 seconds per tick
+matchTicks = [1, 2,  3,  4,  10]
+matchLvs   = [5, 10, 20, 30, 600]
+
+#不限制等级上限?
+#matchTimeoutSecond = 3600
+#newEnterMatchLv = 0
+#tickMax = 600 # 6 seconds per tick
+#matchTicks = [600]
+#matchLvs   = [600]
+
+# 游戏大区ID GID
+gid = "0"
+
+#等待机器人时间
+waitRobotTimeMax = 10
+waitRobotTimeMin = 5

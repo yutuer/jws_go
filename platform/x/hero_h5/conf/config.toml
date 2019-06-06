@@ -1,0 +1,6 @@
+
+Etcd_Root = "/a6k"
+Etcd_Endpoint = ["http://10.222.1.4:2379/"]
+Port = ":1111"
+IosGid = [0]
+AndGid = [1]

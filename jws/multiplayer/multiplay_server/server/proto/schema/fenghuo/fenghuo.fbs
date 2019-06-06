@@ -1,0 +1,12 @@
+namespace fenghuomsg;
+
+enum FenghuoGameStatus:byte {
+    WaitingInit = 0,
+    /// 可以开始战斗,选择小关卡后,收到了StartFight消息
+    SubLevelStart,
+    /// 小关卡战斗胜利后
+    SubLevelDone,
+    GameOver,
+    /// 强制结束
+    ForceOver,
+}

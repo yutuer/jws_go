@@ -1,0 +1,26 @@
+
+include "fenghuo_notify.fbs";
+include "fenghuo_push.fbs";
+include "fenghuo_rpc.fbs";
+namespace fenghuomsg;
+
+union Datas {
+    EnterGameReq,
+    EnterGameResp,
+    ReviveReq,
+    ReviveResp,
+    HPNotify,
+    StartFightNotify,
+    AllHPNotify,
+}
+
+
+table Packet {
+    typ       : int;
+    number    : long;
+    code      : int;
+    data      : Datas;
+}
+
+root_type Packet;
+

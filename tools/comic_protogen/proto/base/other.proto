@@ -1,0 +1,15 @@
+package protogen;
+
+import "common.proto";
+
+message OnConnectReq {
+    required Req Req = 1;
+    required string DeviceId    = 2;
+    required string AccountName = 3;
+    required string ChannelId   = 4;
+    required string PlatformId  = 5;
+}
+
+message OnConnectResp {
+    required Resp Resp = 1;
+}

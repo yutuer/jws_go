@@ -1,0 +1,35 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/Mail_prod",
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "t",
+        "AttributeType": "N"
+      },
+      {
+        "AttributeName": "uid",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0,
+      "WriteCapacityUnits": 100,
+      "ReadCapacityUnits": 100
+    },
+    "TableSizeBytes": 34507919,
+    "TableName": "Mail_prod",
+    "TableStatus": "ACTIVE",
+    "KeySchema": [
+      {
+        "KeyType": "HASH",
+        "AttributeName": "uid"
+      },
+      {
+        "KeyType": "RANGE",
+        "AttributeName": "t"
+      }
+    ],
+    "ItemCount": 86312,
+    "CreationDateTime": 1476839695.163
+  }
+}

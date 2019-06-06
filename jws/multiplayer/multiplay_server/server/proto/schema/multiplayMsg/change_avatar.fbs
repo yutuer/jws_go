@@ -1,0 +1,17 @@
+namespace multiplayMsg;
+
+///玩家状态(数组中以玩家数据中的idx为索引)
+table ChangeAvatar {
+    // ID
+    AccountID: string;
+    ///玩家状态 1-掉线 2-已退出 3-未准备 4-已准备 5-已死亡 6-战斗中
+    state : int;
+    /// maxhp
+    maxHp : int;
+    ///玩家hp
+    hp    : int;
+    /// avatar id
+    avatarID : int;
+}
+
+root_type ChangeAvatar;

@@ -1,0 +1,76 @@
+
+{% set etcdvalue = item.value %}
+
+[CommonConfig]
+# [dev, test, prod]
+runmode = "test"
+
+
+EnableHttpTLS = ""
+HttpsPort = ":10443"
+HttpCertFile = "conf/server.crt"
+HttpKeyFile = "conf/server.key"
+
+
+dynamo_region="cn-north-1"
+#dynamo_accessKeyID="AKIAPLNPSQYENX3LGB5A"
+#dynamo_secretAccessKey="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"
+dynamo_sessionToken=""
+
+httpport = {{etcdvalue.httpport}}
+
+
+#SentryDSN={{etcdvalue.DSN}}
+
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+
+#选择使用哪种云存储
+store_driver = "S3"
+
+oss_endpoint = ""
+oss_access_id = ""
+oss_access_key = ""
+oss_bucket=""
+
+watch_key = "notice_watch"
+s3_bucket_notice =  {{etcdvalue.s3_bucket_notice}}
+
+maxconn = 3
+listen_try_ssl = ":8085"
+[GateConfig.SslCfg]
+cert = "conf/gate.crt"
+key = "conf/gate.key"
+
+[GateConfig.SslCaCfg]
+cert = "conf/ca.crt"
+
+[LimitConfig]
+
+[[LimitConfig.InternalIPs]]
+from = "10.222.0.0"
+to = "10.222.0.255"
+
+[[LimitConfig.InternalIPs]]
+from = "192.0.0.0"
+to = "192.0.0.255"
+
+[[LimitConfig.AdminIPs]]
+from = "218.247.7.194"
+to = "218.247.7.194"
+
+[[LimitConfig.AdminIPs]]
+from = "121.69.47.158"
+to = "121.69.47.158"
+
+[[LimitConfig.AdminIPs]]
+from = "114.111.167.236"
+to = "114.111.167.236"
+
+limit_url_regex = ".*" # 这些url做限制（http header和ratelimit）
+rate_limit_valid = true                 # 限制访问速度的开关
+rate_limit_Average = 10                 # 限速每秒平均数量
+rate_limit_Burst = 10                  # 限速每秒最多数量
+
+

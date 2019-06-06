@@ -1,0 +1,13 @@
+{% set etcdvalue = item.value %}
+
+# merge后的shard以及DB qa7
+ResRedis="{{etcdvalue.redis}}"
+ResRedisDB={{etcdvalue.redis_db}}
+ResRedisDBAuth="{{etcdvalue.redis_auth}}"
+ResRedisRank="{{etcdvalue.redis}}"
+ResRedisRankDB={{etcdvalue.rank_redis_db}}
+ResRedisRankDBAuth="{{etcdvalue.redis_auth}}"
+ResShardId={{etcdvalue.shard_id}}
+
+DelAccountCorpLvl=30 # 角色多级之下，可能删除， 要求30
+DelAccountNotLoginMin=10080 # 角色多少分钟未登录，可能删除，要求7天=10080，方便qa测试是用p.LogoutTime+p.DebugAbsoluteTime

@@ -1,0 +1,16 @@
+include "account_info.fbs";
+include "stat_info2.fbs";
+
+namespace multiplayMsg;
+
+
+/// [Push]进入玩家信息通知 <不需要了>
+/// multi -> client 战斗信息
+table OnAccountEnterMultiplayGamePush {
+    ///当前房间中玩家的状态
+    playerStat : [PlayerState];
+    ///当前房间中玩家的数据
+    accDatas   : [AccountInfo];
+}
+
+root_type OnAccountEnterMultiplayGamePush;

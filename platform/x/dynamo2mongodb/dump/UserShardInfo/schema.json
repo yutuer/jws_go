@@ -1,0 +1,35 @@
+{
+  "Table": {
+    "TableArn": "arn:aws-cn:dynamodb:cn-north-1:811329096534:table/UserShardInfo",
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "Uid",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "gid_sid",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "NumberOfDecreasesToday": 0,
+      "WriteCapacityUnits": 50,
+      "ReadCapacityUnits": 50
+    },
+    "TableSizeBytes": 2723240,
+    "TableName": "UserShardInfo",
+    "TableStatus": "ACTIVE",
+    "KeySchema": [
+      {
+        "KeyType": "HASH",
+        "AttributeName": "Uid"
+      },
+      {
+        "KeyType": "RANGE",
+        "AttributeName": "gid_sid"
+      }
+    ],
+    "ItemCount": 41896,
+    "CreationDateTime": 1476839661.623
+  }
+}

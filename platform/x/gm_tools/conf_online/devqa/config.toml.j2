@@ -1,0 +1,70 @@
+[CommonCfg]
+etcd_endpoint = ["http://etcd.taiyouxi.net:2379/"]
+#[dev release]
+runmode = "dev"
+# Etcd Root Path 注意以/开头 如 /a4k
+GameSerEtcdRoot = {{item.value.etcd_root}}
+GidFilter = ["/a6k/1","/a6k/0","/a6k/5","/a6k/202"]
+GameMachineEtcdRoot = "/skydns/net/taiyouxi/gamex"
+
+# 对外的Url
+Url=":8082"
+#配置时区
+TimeLocal="Asia/Shanghai"
+
+RedisName=[]
+RedisAddress =[]
+RedisDB =[]
+ServerName =[]
+MailDBNames =[]
+MailDBDrivers =[]
+MailMongoUrls =[]
+SysRollNoticeUrl=[]
+
+AuthApi=[]
+
+ServerHotDataUrl=[]
+
+ElasticUrl="http://10.222.0.129:9200"
+ElasticIndex = "bilogs5-logics-%s.*"
+
+
+AWS_Region="cn-north-1"
+auth_dynamo_db_Device="Device"
+auth_dynamo_db_Name="Name"
+auth_dynamo_db_UserInfo="UserInfo"
+auth_mongodb_url="127.0.0.1"
+auth_mongodb_name="AuthDB"
+
+PayDBDriver="DynamoDB"
+PayMongoUrl="127.0.0.1"
+PayAndroidDBName="AndroidPay"
+PayIOSDBName="IOSPay"
+
+
+FtpAddress=""
+FtpUser=""
+FtpPasswd=""
+
+QiNiuAccKey="_N4StMhwFM9oSkQ3SqDmpN1LGLfDljZ7K_-xmc-Q"
+QiNiuSecKey="4AiW-FXGBn3YUWjNyD-IW40gRskx20XTfq1zmi49"
+s3_buckets_verupdate="verupdate"
+verupdate_filename="ver_url.csv"
+verupdate_meta_filename="ver_url_meta"
+DBStoreFile = "/opt/supervisor/gm_data/data2.db"
+
+ks3_domain = "ks3-cn-beijing.ksyun.com"
+ks3_bucket = "jws"
+ks3_access_key = "AKLTUbZusSAJRgKNGdnQDQAutQ"
+ks3_secret_key = "ODbVk1BZ4LDQlBKSMEUxITqOnItOzHDWW70cGHA7m7Xdp/0L6SWwYKxH13MqcRiu0Q=="
+
+store_driver = "S3"
+oss_endpoint=""
+oss_access_id=""
+oss_access_key=""
+oss_channle_bucket=""
+oss_public_bukcet=""
+
+notice_watch_key="notice_watch"
+s3_gonggao_region = "cn-north-1"
+s3_buckets_gonggao="gonggao"

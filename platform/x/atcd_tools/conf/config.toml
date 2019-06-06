@@ -1,0 +1,13 @@
+[CommonCfg]
+#通用配置
+#[dev release]
+runmode = "dev"
+
+# Atc Http Api地址头
+AtcUrlHead="http://10.0.1.222"
+
+# Atc DB 文件地址
+DBAddress="./atcd.db"
+
+# 对外的Url
+Url=":8080"

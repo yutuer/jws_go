@@ -1,0 +1,226 @@
+{% set hostip = ansible_eth0.ipv4.address %}
+{% set etcdkey = item.key %}
+{% set etcdvalue = item.value %}
+
+[SentryConfig]
+DSN = ""
+
+
+[RPCConfig]
+listen_addr = "{{ hostip }}:{{etcdvalue.listen_rpcaddr_port}}"
+
+[GateConfig]
+# runmode = [dev, prod]
+run_mode="dev" # prod: 1.控制gate是否向etcd注册
+publicip = {{etcdvalue.publicip}}
+shard_id = [{{etcdvalue.shard_id}}]
+merge_rel = [{{etcdvalue.merge_rel}}]
+
+maxconn = 10000
+
+listen = ":{{etcdvalue.listen}}"
+
+[GateConfig.SslCfg]
+cert = "confd/server.crt"
+key = "confd/server.key"
+
+[GateConfig.SslCaCfg]
+cert = "confd/ca.crt"
+
+[GameConfig]
+#Mail服务使用的数据库类型DynamoDB or MongoDB
+MailDBDriver={{etcdvalue.MailDBDriver}}
+
+#MongoDB的链接参数参考
+#https://docs.mongodb.com/manual/reference/connection-string/
+#mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+#qcloud: mongodb://rwuser:******@10.30.4.202:27017/admin?authMechanism=MONGODB-CR
+MailMongoUrl={{etcdvalue.MailMongoUrl}}
+
+#数据库的名称, DynamoDB表名,或者MongoDB数据库名称
+#如果再mongodb://中设置了,这里可以为空,如果配置了这个值
+#将覆盖mongodb://中的数据库
+MailDBName={{etcdvalue.MailDBName|default('"Mails"')}}
+
+PayDBDriver={{etcdvalue.PayDBDriver|default('"DynamoDB"')}}
+PayMongoUrl={{etcdvalue.PayMongoUrl|default('"127.0.0.1"')}}
+PayAndroidDBName={{etcdvalue.PayAndroidDBName|default('"AndroidPay"')}}
+PayIOSDBName={{etcdvalue.PayIOSDBName|default('"IOSPay"')}}
+
+RedeemCodeMongoUrl = "127.0.0.1"
+RedeemCodeDriver = "DynamoDB"
+
+redis_auth = {{etcdvalue.redis_auth|default('""')}}
+server_start_time = {{etcdvalue.server_start_time}}
+AWS_Region = "cn-north-1"
+redis = "{{etcdvalue.redis}}"
+AWS_Multiplier = 1.5
+sysnotice_valid = 1
+AWS_MaxElapsedTime = 300
+redis_db = {{etcdvalue.redis_db}}
+shard_id = [{{etcdvalue.shard_id}}]
+merge_rel = [{{etcdvalue.merge_rel}}]
+time_local = {{etcdvalue.time_local}}
+broadCast_url = "http://{{ hostip }}:10011/broadcast"
+listen = ":8444"
+AWS_InitialInterval = 500
+run_mode = {{etcdvalue.run_mode}}
+chatAuth_url = "http://{{ hostip }}:10011/auth"
+limit_valid = false
+# 限制url的信息格式：url,单位时间(秒),单位时间内的次数，并用";"隔开
+ratelimit_url_info = "PlayLevel/DeclareLvlEnmyLootRequest,1,1;PlayerAttr/GetInfoRequest,1,10;PlayerAttr/TrialSweepAwardForShowReq,5,1"
+
+lang = {{etcdvalue.lang}} # 多语言选择
+
+# 建立新角色时通知auth
+auth_notifyNewRole_url="http://{{ etcdvalue.auth }}:8081/login/v1/api/notifyuserinfo"
+
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+
+discover_redis="127.0.0.1:6379"
+discover_redis_db=7
+discover_redis_Auth=""
+discover_key_etcd_path="Discover/dbs"
+
+# 反作弊
+anticheat_valid = true
+ban_url = "http://{{ etcdvalue.auth }}:8789/auth/v1/api/user/ban"
+ban_time = 300 # 封禁时间，秒
+
+# 查找账号是否已注册Url
+auth_isreg_url = "http://{{ etcdvalue.auth }}:8789/auth/v1/api/user/isHasReg"
+
+# 内部通知Post监听地址 内网地址
+listen_post_addr = [
+    {% set listen_post_addrs = etcdvalue.listen_post_port.split(',') %}
+    {% for pport in listen_post_addrs -%}
+        "{{ hostip }}:{{ pport }}",
+    {%- endfor %}
+]
+
+# 数据热更，url
+hot_data_url = "gamex/v1/hotupdatedata"
+hot_s3_path = "teamcity"
+
+cloud_db_driver = "S3"
+oss_endpoint=""
+oss_access_id=""
+oss_access_key=""
+
+# rank reload
+rank_reload_url = "gamex/v1/api/rank/reload"
+
+hour_log_valid = true
+
+new_redisPool = true
+
+[[GameConfig.AntiCheat]] # 0 最大单招伤害
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 1 最大防御力
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 2 MP消耗和获取
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 3 通关时间
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 4 HP/MP/Rage上限
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 5 技能CD
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 6 免伤
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 7 HP/MP/Rage消耗和获取
+is_check = false
+is_rec = true
+is_ban = false
+
+[[GameConfig.AntiCheat]] # 8 hero gs 检查
+is_check = true
+is_rec = true
+is_ban = false
+param_int = 10
+
+[[GameConfig.AntiCheat]] # 9 通关时间 检查
+is_check = true
+is_rec = true
+is_ban = false
+
+# limit ip 白名单，在limit_valid为true时有效
+[[GameConfig.AdminIPs]]
+from = "218.247.7.194"
+to = "218.247.7.194"
+
+[[GameConfig.AdminIPs]]
+from = "121.69.47.158"
+to = "121.69.47.158"
+
+[[GameConfig.AdminIPs]]
+from = "114.111.167.236"
+to = "114.111.167.236"
+
+[JWSConfig]
+# MatchServer Url
+match_url = "http://{{ hostip }}:8791"
+match_token = {{etcdvalue.match_token}}
+
+# GVE通知相关Post Url
+gve_start_url = "gamex/v1/api/user/gvestart"
+gve_stop_url = "gamex/v1/api/user/gvestop"
+
+
+[RankConfig]
+rank_redis_db = {{etcdvalue.rank_redis_db}}
+rank_redis = "{{etcdvalue.rank_redis}}"
+rank_redis_auth = {{etcdvalue.rank_redis_auth|default('""')}}
+
+
+[CCUMetricsConfig]
+etcd_endpoint = {{etcdvalue.etcd_endpoint}}
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = {{etcdvalue.etcd_root}}
+LoginConnector_tick_time = 10
+URI_logout = "notifylogout"
+loginurl = "http://{{ etcdvalue.auth }}:8081/login/v1/api"
+URI_login = "notifylogin"
+URI_ccu = "gateregister"
+
+
+[ChatConfig]
+publicip={{etcdvalue.publicip}}
+listen = ":10010"
+
+[VivoConfig]
+url="https://pay.vivo.com.cn/vcoin/trade"
+sdk_notify_url="http://54.223.61.58:9080/vivo/android/v1/billingcb"
+app_id="8fa36149ea45179061a6062c7a3aa780"
+cp_id="20150701180733584845"
+cp_key="798fd875853cee449c088c8187984425"
+
+[SamsungConfig]
+url="http://siapcn1.ipengtai.com:7002/payapi/order"
+sdk_notify_url="http://54.223.61.58:9080/samsung/android/v1/billingcb"
+app_id="5000204106"
+private_key="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKoV4XnueeNAkvzsgyCAzddxGZXybbQa8ZIwAzQmDurTNzbSctHU6kkJuapsgdyD2Aq39k8nieFUYonYot3v0pqy5OzVeZDZ0mu/GiwCx9nMkKJtjlgdSaRji8ffZeUvZ/JGY+3C1pTB4v15+0ky5SqXkHoGqFgNyTXCJayAnPZDAgMBAAECgYAulGd3mRPQZLLciXkvwZad1d+H7SiWFnrp6jQ2Z+XV8ZpBbUj8pi6zafJq9eRqm8Dizpap/s4H47BIyAdyeGdYfCsEar0VaACSJcTZS5hnnzVdb5gX6pdbvun/Fi1HNZFW+XCByyNPGQuLjczg4dvFY/2bNYt6LpPLHrJsChuogQJBANV+GBdwGIqnnjOQGH+UWbxyzm3QrILxBqGltgS/8UB0obHYEZMIL6UUjDfW40J7xPXhYsNqwU7KO+Q8xs/XEfECQQDL80n2cRPSegUU/v4cbFY/g5pN01uTSCbEnMjEDL5u+Jzvf1G48peZmiw0RZ9LzWxA0jC4gTOOs0xx8TAjV1dzAkBOfq4c7/oWAMsJ6lEXl1PnFc8QUUkcW8I0bNkfpfLt3/QTj33msXvTFlr3rOqh5x/jx5qofvfUIEclA7OVd14BAkAUjGeYT95KZ4bZjbN2k6fA8HZ8ft4MIcneJ1nG/u206pGNQ8utEawaisEHZzhcf873XPYRsNrL9t6t4DoUZXlnAkEAgZa3aD/rvNPNVp64+KEFBh3XyTodrE5jmLgNBQUsV7VQNT9/qkPJrAniMys4gCeWZZCc3ayVnc/qmHO3mS+UCg=="
+public_key="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCn3RIAam9MMoEMtFz82DfByfMoWIcMqDtUILkzWdyXK7/oAL2bzc1BdU9BnEuI2ZoiMVWYkDoGksVxaODfbAiTjACiqsubiRT+s0TouLYiUMA3I/ncS6UEwqR0hrWIAJe0Bv8VmHcgvhu/SbMv2Uloc/eEKl4sxzMb+fMfc/80UQIDAQAB"

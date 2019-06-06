@@ -1,0 +1,26 @@
+#
+#如果全部删除 使用数组，删除xxx个使用map
+[RmoveInfoConfig]
+[[RmoveInfoConfig.PerInfo]] #0
+redis="10.33.4.183:6379"       #[prod]
+redis_db=9          #[prod]
+acid="202:3086:3f173760-fa58-40b0-82de-2308e750e002"
+password="mUEiGo1Vy1bZeFhVsPN3VKnV"
+#mat=["MAT_GWStone_3","MAT_GWC_ZGL"]
+#xp=["USEI_XP_4","USEI_XP_3",]
+#virtual_money=["VI_BAOZI","VI_HC"]
+[RmoveInfoConfig.PerInfo.heropiece]
+   [RmoveInfoConfig.PerInfo.heropiece.3]
+       number = 47721859
+   [RmoveInfoConfig.PerInfo.heropiece.25]
+       number = 102261200
+
+#[RmoveInfoConfig.PerInfo.jade]
+#   [RmoveInfoConfig.PerInfo.jade.JD_RED_9]
+#       number = 457
+#   [RmoveInfoConfig.PerInfo.jade.JD_CHING_9]
+#       number = 45
+#   [RmoveInfoConfig.PerInfo.jade.JD_GREEN_9]
+#       number = 457
+
+

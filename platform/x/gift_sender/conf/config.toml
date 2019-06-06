@@ -1,0 +1,40 @@
+#Host
+
+etcd_root = "/a6k"
+etcd_endpoint = ["http://10.222.1.4:2379/"]
+secret_key = "b0802611d6a412603f7dfc3bf99494be"
+
+key = ""
+aws_region = "cn-north-1"
+
+aws_access_key = "AKIAOXC6JHPK7YYB6QBA"
+aws_secret_key = "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"
+
+[mail_db]
+  [mail_db.1]
+  name = "Mail-QA"
+  [mail_db.0]
+  name = "Mail"
+[host]
+    [host.hero]
+     host = ":7777"
+    [host.alibaba_uc]
+     host = ":7778"
+    [host.hmt_gift]
+     host = ":7779"
+
+
+[uc]
+     dynamo_db_Device="Device"
+     dynamo_db_Name="Name"
+     dynamo_db_UserInfo="UserInfo"
+     dynamo_db_GM="GMInfo"
+     dynamo_db_UserShardInfo="QaUserShardInfo"
+     apiKey="cd1892bfde1fdde92c3c974c275449f3"
+     caller="taihehudong"
+     SecretKey="3p3286dw7zQ5s1eK"
+#     caller="changyou"
+#     apiKey="202cb962234w4ers2aa"
+#     SecretKey="1234567890123456"
+     gid=1
+

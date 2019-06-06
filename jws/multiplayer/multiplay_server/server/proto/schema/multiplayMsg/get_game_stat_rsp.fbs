@@ -1,0 +1,20 @@
+include "ac_data_info.fbs";
+include "account_info.fbs";
+include "stat_info.fbs";
+include "stat_info2.fbs";
+
+namespace multiplayMsg;
+
+table GetGameDatasRsp {
+    stat       : int;
+    startTime  : long;
+    endTime    : long;
+    GameClass  : int;
+    GameScene  : string;
+    playerStat : [PlayerState];
+    bossStat   : [BossState];
+    accDatas   : [AccountInfo];
+    acDatas    : [AcDataInfo];
+}
+
+root_type GetGameDatasRsp;

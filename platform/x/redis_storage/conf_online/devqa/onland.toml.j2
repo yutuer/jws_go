@@ -1,0 +1,174 @@
+[CommonCfg]
+#通用配置
+
+#
+# runmode = [dev, test, preview, prod]
+#
+run_mode="dev"
+
+#决定了ElasticSearch 和 RedisBiLog的索引和文件名称
+#warm模式下用这个决定shard_id和回档的数据库地址
+shard_id="{{item.key}}"
+
+#大区id，RedisBiLog的文件名称
+gid={{item.value.gid}}
+
+#需要存储的key的头，类似于“key:XXXX”的都会被存储; 只支持hashmap
+# hashmap: "profile,tmp,bag,pguild,store,general,anticheat,simpleinfo,names,guild:Info,guild:name,guild:id2uuid,guild:account2guild,guild:playerapply,guild:guildapply"
+NeedStoreHead="profile,tmp,bag,pguild,store,general,anticheat,simpleinfo,names,guild:Info,guild:name,guild:id2uuid,guild:account2guild,guild:playerapply,guild:guildapply"
+
+#for RedisBiLog配置
+#NeedStoreHead="profile"
+#NeedStoreHead="profile:0:10"
+
+
+# HGETALL模式下，只能处理Redis HashMap
+# DUMP模式下，利用Redis的DUMP，RESTORE指令，可以处理所有类型
+# 但是不能还原有过期时间的KEY
+#
+# HGETALL 这些驱动只能用HGETALL模式，PostgreSQL, DynamoDB, Stdout, RedisBiLog, ElasticS
+# DUMP 可以配合LevelDB, SSDB, Redis, S3等使用, 这4个驱动是对内容没有要求的
+StoreMode="HGETALL"
+#StoreMode="DUMP"
+
+
+# 下面S3, DynamoDB等AWS服务的通用配置，可以被S3, DynamoDB里面进行覆盖配置。
+# 如果都未配置，则尝试使用IAM Role权限
+AWS_Region="cn-north-1"
+AWS_AccessKey="AKIAPLNPSQYENX3LGB5A"
+AWS_SecretKey="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"
+
+# 监听命令的地址
+Command_Addr=":18899"
+
+# Etcd
+etcd_endpoint = ["http://{{etcdhosts}}:2379/"]
+# Etcd Root Path 注意以/开头 如 /a4k
+etcd_root = "{{item.value.etcd_root}}"
+
+# Api监听地址(全的)
+Api_Addr="127.0.0.1:188{{item.key}}"
+
+# 落地key格式 时间是 2006/1/2 15:04:05
+# Onland_Format_Separator 是指分隔符
+# 最终格式是 {Onland_Format}{Onland_Format_Separator}{key}
+# 如 Onland_Format="2006/1/2" Onland_Format_Separator="|" key=profile:0:0:1001
+# 落地的结果为 2015/4/22|profile:0:0:1001
+# 回档时要保证分隔符相同
+
+[Redis]
+Server="127.0.0.1:6379"
+Password=""
+DbSeleccted=10
+
+[S3]
+Onland_Format="2006/1/2"
+Onland_Format_Separator="/"
+Bucket="redis-onland"
+
+
+[SSDB]
+Onland_Format=""
+Onland_Format_Separator=""
+Address ="127.0.0.1:8888"
+
+[DynamoDB]
+Onland_Format="2006/1/2"
+Onland_Format_Separator="/"
+DB="redis-onland"
+
+[ElasticS]
+Elastic_Url="http://10.222.0.129:9200"
+
+[PostgreSQL]
+Host="10.0.1.234"
+Port=5432
+DB="test"
+User="postgres"
+Pass="19880118"
+
+[LevelDB]
+DBPath="/opt/supervisor/redisstoragedb/levedb{{item.key}}.db"
+
+
+[RedisBiLog]
+time=0
+[[RedisBiLog.GidInfo]]
+Gid = 0
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 1
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 100
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 101
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 102
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 200
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 201
+Channel = "11"
+
+[[RedisBiLog.GidInfo]]
+Gid = 202
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 203
+Channel = "13"
+
+[[RedisBiLog.GidInfo]]
+Gid = 206
+Channel = "18"
+
+[OnlandCfg]
+#落地数据源和监听配置
+Redis="{{item.value.redis}}"
+Redis_auth=""
+Redis_db={{item.value.redis_db}}
+
+# 落地Worker协程的数量
+# 当DynamoDB S3 ElasticS等系统写相对较慢的系统增大workder比较有好的性能提升
+# 但是最终性能瓶颈是Redis的读
+#
+# 全量落地时(onlandall)，由于S3和DynamoDB的区别，需要特定的配置Workers_Max，
+# 对于S3，如果都是在AWS上，Workers_Max配置为32-64比较好。
+# 对于DynamoDB，Workers_Max配置为8比较好。
+Workers_Max=1
+
+# 支持落地到下面几种数据库， ["S3", "SSDB", "DynamoDB", "LevelDB", "RedisBiLog", "Stdout", "DynamoDBGZip", "ElasticS", "PostgreSQL"] 可以并存
+# 其中任何类型后缀为GZip则输出内容是通过GZip压缩过的数据,例如DynamoDBGZip 是压缩存DynamoDB
+# RedisBiLog 新增类型，用户导出当前数据库存档状态并整理成bilog，只在onlanddall模式下有效
+# ElasticS 落地到elasticsearch
+Backends = ["LevelDB"]
+
+
+[RestoreCfg]
+#回档功能 --------------------------------------
+#回档目标配置 warm模式下不使用这里的redis配置 改从etcd中读取
+Redis_Restore=":6379"
+Redis_Restore_auth=""
+Redis_Restore_db=2
+
+# 遍历时每个包得大小
+Restore_Scan_Len=100
+
+# 回档Worker协程的数量
+# 对于DynamoDB LevelDB这种扫描中已经取出value的驱动，设置为1
+# 对于SSDB和PostgresSQL这种需要通过并发读来获取更好的速度的情况可以适当放大，但此时瓶颈可能在Redis本身是单线程的。
+Workers_Restore_Max=1
+
+# [S3, DynamoDB, SSDB, "PostgreSQL"] 表示数据源类型
+Restore_Data_from="LevelDB"

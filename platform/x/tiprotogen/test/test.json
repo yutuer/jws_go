@@ -1,0 +1,115 @@
+[
+  {
+    "name": "ExchangeProp",
+    "title": "兑换商品道具",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ExchangeID",
+          "long",
+          "请求兑换的商品ID",
+          "exchange_id"
+        ],
+        [
+          "ActivityID",
+          "long",
+          "兑换商店活动ID",
+          "activity_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "WithRewards",
+      "params": [
+        [
+          "AlreadyExchangeTimes",
+          "long",
+          "已经兑换的次数",
+          "a_exchange_t"
+        ]
+      ]
+    }
+  },
+  {
+    "name": "GetExchangeShopInfo",
+    "title": "获取兑换商店信息",
+    "path": "Attr",
+    "comment": "",
+    "req": {
+      "params": [
+        [
+          "ActivityID",
+          "long",
+          "兑换商店活动ID",
+          "activity_id"
+        ]
+      ]
+    },
+    "rsp": {
+      "base": "",
+      "params": [
+        [
+          "ExchangePropInfo",
+          "ExchangePropInfo[]",
+          "兑换商店商品信息",
+          "exchange_prop_info"
+        ],
+        [
+          "HasAutoProp",
+          "long",
+          "是否有道具自动转换，0代表无，1代表有",
+          "has_auto_prop"
+        ]
+      ]
+    },
+    "objects": [{
+      "name": "ExchangePropInfo",
+      "params": [
+        [
+          "ExchangeID",
+          "string[]",
+          "兑换商品所需道具ID",
+          "exchange_id"
+        ],
+        [
+          "ExchangeCount",
+          "long[]",
+          "兑换商品所需道具数量",
+          "exchange_c"
+        ],
+        [
+          "ShowPropID",
+          "string",
+          "展示物品ID",
+          "show_prop_id"
+        ],
+        [
+          "ShowPropCount",
+          "long",
+          "展示物品数量",
+          "show_prop_c"
+        ],
+        [
+          "ExchangeLimitTimes",
+          "long",
+          "兑换限制次数",
+          "exchange_limit_times"
+        ],
+        [
+          "ExchangePropIndex",
+          "long",
+          "兑换商店商品索引",
+          "exchange_prop_i"
+        ],
+        [
+          "AlreadyExchangeTimes",
+          "long",
+          "已经兑换的次数",
+          "a_exchange_t"
+        ]
+      ]
+    }]
+  }
+]
