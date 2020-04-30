@@ -11,7 +11,7 @@
     "bootstrap": "^3.3.6",
     "es3ify-loader": "^0.1.0",
     "history": "*",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "jsoneditor": "^4.2.1",
     "md5": "^2.0.0",
     "react": "0.14.x",
